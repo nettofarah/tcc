@@ -1,0 +1,1433 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=latex 2010.3.19)  8 SEP 2010 14:12
+entering extended mode
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**principal.tex
+(./principal.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, basque, danish, dutch, finnish, french, german, ngerman, hungarian,
+ italian, bokmal, nynorsk, polish, portuguese, spanish, swedish, ukenglish, loa
+ded.
+(./uflamon.cls
+Document Class: uflamon 2007/09/11
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/base/bk11.clo
+File: bk11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count88
+\calc@Bcount=\count89
+\calc@Adimen=\dimen103
+\calc@Bdimen=\dimen104
+\calc@Askip=\skip43
+\calc@Bskip=\skip44
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count90
+\calc@Cskip=\skip45
+)
+
+! LaTeX Error: File `lastpage.sty' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
+
+Enter file name: 
+\bottommargin=\skip46
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip47
+\f@ncyO@elh=\skip48
+\f@ncyO@erh=\skip49
+\f@ncyO@olh=\skip50
+\f@ncyO@orh=\skip51
+\f@ncyO@elf=\skip52
+\f@ncyO@erf=\skip53
+\f@ncyO@olf=\skip54
+\f@ncyO@orf=\skip55
+)
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 92.
+
+
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 94.
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/pslatex/pslatex.sty
+Package: pslatex 1996/07/24 v1.2 pslatex emulation (DPC)
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 65.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/ptmcm/m/n on input line 65.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptmcm/m/n on input line 65.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 66.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/ptmcm/m/it on input line 66.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/ptmcm/m/it on input line 66.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 67.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/pzccm/m/n on input line 67.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/pzccm/m/n on input line 67.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 68.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/psycm/m/n on input line 68.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/psycm/m/n on input line 68.
+\symbold=\mathgroup4
+\symitalic=\mathgroup5
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 74.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 74.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 74.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 75.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 75.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 75.
+)
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/psnfss/mathptmx.sty
+Package: mathptmx 2005/04/12 PSNFSS-v9.2a Times w/ Math, improved (SPQR, WaS) 
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 28.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/ptmcm/m/n --> OT1/ztmcm/m/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/ptmcm/m/n --> OT1/ztmcm/m/n on input line 28.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 29.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/ptmcm/m/it --> OML/ztmcm/m/it on input line 29.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/ptmcm/m/it --> OML/ztmcm/m/it on input line 29.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 30.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/pzccm/m/n --> OMS/ztmcm/m/n on input line 30.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/pzccm/m/n --> OMS/ztmcm/m/n on input line 30.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 31.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/psycm/m/n --> OMX/ztmcm/m/n on input line 31.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/psycm/m/n --> OMX/ztmcm/m/n on input line 31.
+LaTeX Font Info:    Redeclaring symbol font `bold' on input line 32.
+LaTeX Font Info:    Overwriting symbol font `bold' in version `normal'
+(Font)                  OT1/ptm/bx/n --> OT1/ptm/bx/n on input line 32.
+LaTeX Font Info:    Overwriting symbol font `bold' in version `bold'
+(Font)                  OT1/ptm/bx/n --> OT1/ptm/bx/n on input line 32.
+LaTeX Font Info:    Redeclaring symbol font `italic' on input line 33.
+LaTeX Font Info:    Overwriting symbol font `italic' in version `normal'
+(Font)                  OT1/ptm/m/it --> OT1/ptm/m/it on input line 33.
+LaTeX Font Info:    Overwriting symbol font `italic' in version `bold'
+(Font)                  OT1/ptm/m/it --> OT1/ptm/m/it on input line 33.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/ptm/bx/n --> OT1/ptm/bx/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/ptm/bx/n --> OT1/ptm/bx/n on input line 34.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/ptm/m/it --> OT1/ptm/m/it on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/ptm/m/it --> OT1/ptm/m/it on input line 35.
+LaTeX Font Info:    Redeclaring math symbol \omicron on input line 36.
+LaTeX Info: Redefining \hbar on input line 50.
+)
+\nohyphen=\language20
+)
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+(/usr/local/texlive/2009basic/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2008/07/06 v3.8l The Babel package
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/generic/babel/portuges.ldf
+Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2008/07/06 v3.8l Babel common definitions
+\babel@savecnt=\count91
+\U@D=\dimen105
+)
+\l@brazil = a dialect from \language\l@portuges 
+Package babel Info: Making " an active character on input line 145.
+))
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip56
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen106
+))
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen107
+)
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count92
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count93
+\leftroot@=\count94
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count95
+\DOTSCASE@=\count96
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen108
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count97
+\c@MaxMatrixCols=\count98
+\dotsspace@=\muskip10
+\c@parentequation=\count99
+\dspbrk@lvl=\count100
+\tag@help=\toks17
+\row@=\count101
+\column@=\count102
+\maxfields@=\count103
+\andhelp@=\toks18
+\eqnshift@=\dimen109
+\alignsep@=\dimen110
+\tagshift@=\dimen111
+\tagwidth@=\dimen112
+\totwidth@=\dimen113
+\lineht@=\dimen114
+\@envbody=\toks19
+\multlinegap=\skip57
+\multlinetaggap=\skip58
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\symAMSa=\mathgroup6
+\symAMSb=\mathgroup7
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup8
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+)
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: dvips.def on input line 91.
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen115
+\Gin@req@width=\dimen116
+)
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count104
+\lst@gtempboxa=\box28
+\lst@token=\toks22
+\lst@length=\count105
+\lst@currlwidth=\dimen117
+\lst@column=\count106
+\lst@pos=\count107
+\lst@lostspace=\dimen118
+\lst@width=\dimen119
+\lst@newlines=\count108
+\lst@lineno=\count109
+\lst@maxwidth=\dimen120
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+\c@lstnumber=\count110
+\lst@skipnumbers=\count111
+\lst@framebox=\box29
+)
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2007/02/22 1.4 listings configuration
+))
+Package: listings 2007/02/22 1.4 (Carsten Heinz)
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)
+\FV@CodeLineNo=\count112
+\FV@InFile=\read1
+\FV@TabBox=\box30
+\c@FancyVerbLine=\count113
+\FV@StepNumber=\count114
+\FV@OutFile=\write3
+)
+
+! LaTeX Error: File `fmtcount.sty' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
+
+Enter file name: 
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2001/02/13 v0.1j Color table columns (DPC)
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen121
+\extrarowheight=\dimen122
+\NC@list=\toks23
+\extratabsurround=\skip59
+\backup@length=\skip60
+)
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: dvips.def on input line 130.
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\everycr=\toks24
+\minrowclearance=\skip61
+)
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: dvips.def on input line 225.
+LaTeX Info: Redefining \color on input line 702.
+\rownum=\count115
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen123
+\lightrulewidth=\dimen124
+\cmidrulewidth=\dimen125
+\belowrulesep=\dimen126
+\belowbottomsep=\dimen127
+\aboverulesep=\dimen128
+\abovetopsep=\dimen129
+\cmidrulesep=\dimen130
+\cmidrulekern=\dimen131
+\defaultaddspace=\dimen132
+\@cmidla=\count116
+\@cmidlb=\count117
+\@aboverulesep=\dimen133
+\@belowrulesep=\dimen134
+\@thisruleclass=\count118
+\@lastruleclass=\count119
+\@thisrulewidth=\dimen135
+)
+
+! LaTeX Error: File `multirow.sty' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
+
+Enter file name: 
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+Package: pdflscape 2008/08/11 v0.10 Landscape pages in PDF (HO)
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+(/usr/local/texlive/2009basic/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2009/04/10 v2.0 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in pdf mode not detected.
+)
+(/usr/local/texlive/2009basic/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2009/01/23 v0.5 Provides ifxetex conditional
+)
+Package pdflscape Info: Auto-detected driver: dvips (dvips) on input line 119.
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2009/12/02 v1.10 At begin shipout hook (HO)
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2007/09/09 v1.2 Providing info/warning/message (HO)
+)))
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2010/01/11 v6.80b Hypertext links for LaTeX
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2009/12/22 v1.7 Key value parser (HO)
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2007/12/12 v1.2 Prefix for e-TeX command names (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+))
+(/usr/local/texlive/2009basic/texmf-dist/tex/generic/oberdiek/pdfescape.sty
+Package: pdfescape 2007/11/11 v1.8 Provides hex, PDF name and string conversion
+s (HO)
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2009/12/12 v0.7 Utility functions of pdfTeX for LuaTeX (HO)
+
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2009/04/17 v1.2 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2009basic/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2009/12/12 v1.1 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+))
+(/usr/local/texlive/2009basic/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2008/11/04 v1.4 Switches for detecting VTeX and its modes (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/oberdiek/hycolor.sty
+Package: hycolor 2009/12/12 v1.6 Color options of hyperref/bookmark (HO)
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/oberdiek/xcolor-patch.sty
+Package: xcolor-patch 2009/12/12 xcolor patch
+))
+\@linkdim=\dimen136
+\Hy@linkcounter=\count120
+\Hy@pagecounter=\count121
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2010/01/11 v6.80b Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/local/texlive/2009basic/texmf-dist/tex/generic/oberdiek/intcalc.sty
+Package: intcalc 2007/09/27 v1.1 Expandable integer calculations (HO)
+)
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2009/12/08 v3.6 Keyval support for LaTeX options (HO)
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 3209.
+Package hyperref Info: Hyper figures OFF on input line 3290.
+Package hyperref Info: Link nesting OFF on input line 3295.
+Package hyperref Info: Hyper index ON on input line 3298.
+Package hyperref Info: Plain pages OFF on input line 3305.
+Package hyperref Info: Backreferencing OFF on input line 3310.
+
+Implicit mode ON; LaTeX internals redefined
+Package hyperref Info: Bookmarks ON on input line 3506.
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/ltxmisc/url.sty
+\Urlmuskip=\muskip11
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 3743.
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/generic/oberdiek/bitset.sty
+Package: bitset 2007/09/28 v1.0 Data type bit set (HO)
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/generic/oberdiek/bigintcalc.sty
+Package: bigintcalc 2007/11/11 v1.1 Expandable big integer calculations (HO)
+))
+\Fld@menulength=\count122
+\Field@Width=\dimen137
+\Fld@charsize=\dimen138
+\Field@toks=\toks25
+Package hyperref Info: Hyper figures OFF on input line 4702.
+Package hyperref Info: Link nesting OFF on input line 4707.
+Package hyperref Info: Hyper index ON on input line 4710.
+Package hyperref Info: backreferencing OFF on input line 4717.
+Package hyperref Info: Link coloring ON on input line 4720.
+Package hyperref Info: Link coloring with OCG OFF on input line 4727.
+Package hyperref Info: PDF/A mode OFF on input line 4732.
+\Hy@abspage=\count123
+\c@Item=\count124
+\c@Hfootnote=\count125
+)
+*hyperref using default driver hdvips*
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/hyperref/hdvips.def
+File: hdvips.def 2010/01/11 v6.80b Hyperref driver for dvips
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/hyperref/pdfmark.def
+File: pdfmark.def 2010/01/11 v6.80b Hyperref definitions for pdfmark specials
+\pdf@docset=\toks26
+\pdf@box=\box31
+\pdf@toks=\toks27
+\pdf@defaulttoks=\toks28
+\Fld@listcount=\count126
+\c@bookmark@seq@number=\count127
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/generic/oberdiek/rerunfilecheck.st
+y
+Package: rerunfilecheck 2009/12/18 v1.2 Rerun checks for auxiliary files (HO)
+ (/usr/local/texlive/2009basic/texmf-dist/tex/generic/oberdiek/atveryend.sty
+Package: atveryend 2009/12/11 v1.3 Hooks at very end of document (HO)
+Package atveryend Info: \enddocument detected (standard).
+)
+(/usr/local/texlive/2009basic/texmf-dist/tex/generic/oberdiek/uniquecounter.sty
+Package: uniquecounter 2009/12/18 v1.1 Provides unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 3
+26.
+)
+\Hy@SectionHShift=\skip62
+)) (/usr/local/texlive/2009basic/texmf-dist/tex/latex/caption/caption2.sty
+Package: caption2 2008/07/01 v2.2c Customising captions (AS)
+
+
+Package caption2 Warning: ****************************************************
+(caption2)                THIS PACKAGE IS OBSOLETE:
+(caption2)                This package attempts to provide an `caption2'
+(caption2)                package v2.0/2.1 author environment so that OLD
+(caption2)                documents can be successfully processed. It should
+(caption2)                NOT be used for NEW documents! New documents should
+(caption2)                use the regular `caption' package v3.x instead.
+(caption2)                ****************************************************
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2010/01/14 v3.1m caption3 kernel (AR)
+\captionmargin=\dimen139
+\captionmargin@=\dimen140
+\captionwidth=\dimen141
+\caption@indent=\dimen142
+\caption@parindent=\dimen143
+\caption@hangindent=\dimen144
+)
+Package caption2 Info: Running in caption2 v2.0 compatibility mode on input lin
+e 209.
+\captionlinewidth=\dimen145
+\realcaptionwidth=\dimen146
+)
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+
+LaTeX Warning: Unused global option(s):
+    [letter].
+
+(./principal.aux)
+\openout1 = `principal.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 163.
+LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 16
+3.
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/psnfss/omspzccm.fd
+File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
+)
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+\c@lstlisting=\count128
+\AtBeginShipoutBox=\box32
+Package hyperref Info: Link coloring ON on input line 163.
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2009/12/18 v2.35 Cross-referencing by name of section
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/oberdiek/refcount.sty
+Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
+)
+(/usr/local/texlive/2009basic/texmf-dist/tex/generic/oberdiek/gettitlestring.st
+y
+Package: gettitlestring 2009/12/18 v1.3 Cleanup title references (HO)
+)
+\c@section@level=\count129
+)
+LaTeX Info: Redefining \ref on input line 163.
+LaTeX Info: Redefining \pageref on input line 163.
+ (./principal.out) (./principal.out)
+\@outlinefile=\write4
+\openout4 = `principal.out'.
+
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 172.
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 17
+2.
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
+File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 17
+2.
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/psnfss/omlztmcm.fd
+File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 17
+2.
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/psnfss/omsztmcm.fd
+File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 17
+2.
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/psnfss/omxztmcm.fd
+File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 172.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 172.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 172.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 172.
+
+(/usr/local/texlive/2009basic/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+) [1
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 172--172
+
+ []
+
+[2]
+\mylen=\skip63
+\mylenn=\skip64
+ [3] [4]
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 178.
+ (./principal.lof
+Overfull \hbox (5.25058pt too wide) in paragraph at lines 6--6
+ [][] [] [][]  
+ []
+
+
+Overfull \hbox (246.11612pt too wide) in paragraph at lines 13--13
+ [][] [] [][]  
+ []
+
+
+Overfull \hbox (148.22313pt too wide) in paragraph at lines 14--14
+ [][] [] [][]  
+ []
+
+)
+\tf@lof=\write5
+\openout5 = `principal.lof'.
+
+ [1
+
+] (./principal.lot
+Overfull \hbox (141.66534pt too wide) in paragraph at lines 7--7
+ [][] [] [][]  
+ []
+
+
+Overfull \hbox (176.7927pt too wide) in paragraph at lines 8--8
+ [][] [] [][]  
+ []
+
+
+Overfull \hbox (214.46051pt too wide) in paragraph at lines 9--9
+ [][] [] [][]  
+ []
+
+)
+\tf@lot=\write6
+\openout6 = `principal.lot'.
+
+ [2
+
+] (./principal.toc [3
+
+])
+\tf@toc=\write7
+\openout7 = `principal.toc'.
+
+ [4] (./abstract.tex
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 6.
+ [1
+
+
+] [2]) (./intro.tex
+Cap\'{\i }tulo 1.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
+[3
+
+
+]
+Overfull \hbox (4.60443pt too wide) in paragraph at lines 12--13
+\T1/ptm/m/n/10.95 dado evento de in-te-resse, isto é, en-trada de um in-truso n
+a área, en-quanto os UAVs re-
+ []
+
+[4] [5]
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 37.
+
+Overfull \hbox (7.12265pt too wide) in paragraph at lines 43--44
+[]
+ []
+
+
+Overfull \hbox (10.37463pt too wide) in paragraph at lines 45--46
+[]
+ []
+
+[6]
+Overfull \hbox (1.82321pt too wide) in paragraph at lines 47--48
+[]
+ []
+
+[7] [8]
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10.95> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 75.
+ [9]
+
+./intro.tex:85: LaTeX Error: Cannot determine size of graphic in pictures/appli
+cation.png (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...hics[width=12cm]{pictures/application.png}
+                                                  
+? 
+File: pictures/application.png Graphic file (type eps)
+<pictures/application.png>
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 86.
+ [10]) (./bib_review.tex [11]
+Cap\'{\i }tulo 2.
+(./wsn_review.tex [12
+
+] [13]
+Overfull \hbox (2.03038pt too wide) in paragraph at lines 30--31
+[]\T1/ptm/m/n/10.95 Mobilidade es-pa-cial refere-se à mo-vi-men-ta-ção ge-
+ []
+
+[14]
+Overfull \hbox (4.85605pt too wide) in paragraph at lines 50--51
+[]\T1/ptm/m/n/10.95 Uma RSSF pode uti-li-zar amos-
+ []
+
+[15] [16] [17] [18]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 91.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 91.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 93.
+
+./wsn_review.tex:96: Undefined control sequence.
+l.96 		\multirow
+                {2}{*}{\textbf{ComposiÃ§Ã£o}}
+? 
+./wsn_review.tex:102: Undefined control sequence.
+l.102 		\multirow
+                 {2}{*}{\textbf{OrganizaÃ§Ã£o}}
+? 
+./wsn_review.tex:108: Undefined control sequence.
+l.108 		\multirow
+                 {2}{*}{\textbf{Mobilidade}}
+? 
+./wsn_review.tex:114: Undefined control sequence.
+l.114 		\multirow
+                 {3}{*}{\textbf{Densidade}}
+? 
+./wsn_review.tex:122: Undefined control sequence.
+l.122 		\multirow
+                 {2}{*}{\textbf{DistribuiÃ§Ã£o}}
+? 
+
+Overfull \hbox (21.8709pt too wide) in paragraph at lines 91--128
+ [][] 
+ []
+
+./wsn_review.tex:142: Undefined control sequence.
+l.142 		\multirow
+                 {4}{*}{\textbf{Coleta}}
+? 
+
+Overfull \hbox (7.45752pt too wide) in paragraph at lines 137--152
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+./wsn_review.tex:166: Undefined control sequence.
+l.166 		\multirow
+                 {3}{*}{\textbf{CooperaÃ§Ã£o}}
+? 
+
+Overfull \hbox (4.75853pt too wide) in paragraph at lines 161--174
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[19] [20]
+
+./wsn_review.tex:197: LaTeX Error: Cannot determine size of graphic in pictures
+/overview_node.png (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.197 ...s[width=10cm]{pictures/overview_node.png}
+                                                  
+? 
+File: pictures/overview_node.png Graphic file (type eps)
+<pictures/overview_node.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[21] [22] [23]
+
+./wsn_review.tex:244: LaTeX Error: Cannot determine size of graphic in pictures
+/sensor_nodes.png (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.244 ...cs[width=12cm]{pictures/sensor_nodes.png}
+                                                  
+? 
+File: pictures/sensor_nodes.png Graphic file (type eps)
+<pictures/sensor_nodes.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (./uav_review.tex [24] [25]
+Overfull \hbox (0.91348pt too wide) in paragraph at lines 22--23
+[]\T1/ptm/m/n/10.95 UAVs po-dem re-a-li-zar mis-sões con-si-de-ra-das te-di-o-s
+as para pi-lo-tos. Como
+ []
+
+[26]
+Overfull \hbox (7.40694pt too wide) in paragraph at lines 38--39
+\T1/ptm/m/n/10.95 mento de tro-pas ini-mi-gas à au-xí-lio de ar-ti-lha-ria em b
+a-ta-lhas [[]]. 
+ []
+
+[27]
+Underfull \hbox (badness 1005) in paragraph at lines 57--57
+[]|\T1/ptm/m/n/10 Medium Range En-
+ []
+
+
+Underfull \hbox (badness 2189) in paragraph at lines 58--58
+[]|\T1/ptm/m/n/10 Low Al-ti-tude Deep
+ []
+
+
+Underfull \hbox (badness 2181) in paragraph at lines 59--59
+[]|\T1/ptm/m/n/10 Low Al-ti-tude Long
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+[]|\T1/ptm/m/n/10 Medium Al-ti-tude
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 89.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 89.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 89.
+[28] [29]
+
+./uav_review.tex:108: LaTeX Error: Cannot determine size of graphic in pictures
+/global_hawk.png (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 ...ics[width=10cm]{pictures/global_hawk.png}
+                                                  
+? 
+File: pictures/global_hawk.png Graphic file (type eps)
+<pictures/global_hawk.png> [30]
+Overfull \hbox (3.92053pt too wide) in paragraph at lines 118--119
+[]\T1/ptm/m/n/10.95 Mais in-for-ma-ções po-dem ser en-con-tra-das em: [[], [],
+ []
+
+
+./uav_review.tex:128: LaTeX Error: Cannot determine size of graphic in pictures
+/predator.png (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.128 ...aphics[width=10cm]{pictures/predator.png}
+                                                  
+? 
+File: pictures/predator.png Graphic file (type eps)
+<pictures/predator.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[31] [32]
+
+./uav_review.tex:173: LaTeX Error: Cannot determine size of graphic in pictures
+/launching_raven.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.173 ...width=10cm]{pictures/launching_raven.jpg}
+                                                  
+? 
+File: pictures/launching_raven.jpg Graphic file (type eps)
+<pictures/launching_raven.jpg> [33] [34]
+
+./uav_review.tex:189: LaTeX Error: Cannot determine size of graphic in pictures
+/launching_pointer.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.189 ...idth=6cm]{pictures/launching_pointer.jpg}
+                                                  
+? 
+File: pictures/launching_pointer.jpg Graphic file (type eps)
+<pictures/launching_pointer.jpg> [35]
+Overfull \hbox (11.99562pt too wide) in paragraph at lines 201--202
+\T1/ptm/m/n/10.95 pos de ope-ra-ção, como in-fil-tra-ção, mo-ni-to-ra-mento e v
+i-gi-lân-cia [[]]. 
+ []
+
+
+./uav_review.tex:208: LaTeX Error: Cannot determine size of graphic in pictures
+/batcam_system.png (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.208 ...s[width=10cm]{pictures/batcam_system.png}
+                                                  
+? 
+File: pictures/batcam_system.png Graphic file (type eps)
+<pictures/batcam_system.png> [36]
+
+./uav_review.tex:226: LaTeX Error: Cannot determine size of graphic in pictures
+/dragon_eye_system.jpg (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.226 ...dth=10cm]{pictures/dragon_eye_system.jpg}
+                                                  
+? 
+File: pictures/dragon_eye_system.jpg Graphic file (type eps)
+<pictures/dragon_eye_system.jpg>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+./uav_review.tex:268: LaTeX Error: Cannot determine size of graphic in pictures
+/qt_uavs_app.png (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.268 ...ics[width=13cm]{pictures/qt_uavs_app.png}
+                                                  
+? 
+File: pictures/qt_uavs_app.png Graphic file (type eps)
+<pictures/qt_uavs_app.png>
+Overfull \hbox (11.66562pt too wide) in paragraph at lines 268--269
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[37] [38]
+Overfull \hbox (8.44272pt too wide) in paragraph at lines 280--281
+[]\T1/ptm/m/n/10.95 Na ta-bela [][][][][][] encontram-se os da-dos re-su-mi-dos
+ do de-sen-vol-vi-mento de UAVs em
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (3.02715pt too wide) in paragraph at lines 310--312
+[]\T1/ptm/m/n/10.95 [[]] mos-tra em \T1/ptm/m/it/10.95 Sci-en-ti-fic UAS Mis-
+ []
+
+[39] [40]
+
+./uav_review.tex:319: LaTeX Error: Cannot determine size of graphic in pictures
+/mq4200.png (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.319 ...graphics[width=10cm]{pictures/mq4200.png}
+                                                  
+? 
+File: pictures/mq4200.png Graphic file (type eps)
+<pictures/mq4200.png> [41] [42] [43]
+Overfull \hbox (10.00284pt too wide) in paragraph at lines 341--342
+[]\T1/ptm/m/n/10.95 Trabalhos re-la-ci-o-na-dos po-dem ser en-con-tra-dos em [[
+],
+ []
+
+) (./state_of_art.tex [44]
+Overfull \hbox (0.68983pt too wide) in paragraph at lines 14--15
+[]\T1/ptm/m/n/10.95 Esta área de pes-quisa encontra-se ainda em ex-pan-são, con
+-se-quen-te-mente pouca
+ []
+
+[45])) (./metodologia.tex [46] [47]
+Cap\'{\i }tulo 3.
+) (./resultados_esperados.tex [48
+
+] [49]
+Cap\'{\i }tulo 4.
+[50
+
+]) (./cronograma.tex [51]
+Cap\'{\i }tulo 5.
+) (./principal.bbl [52
+
+]
+Underfull \hbox (badness 1406) in paragraph at lines 16--19
+[]\T1/ptm/m/n/10.95 BONE, E.; BOLK-COM, C. \T1/ptm/m/it/10.95 Un-man-ned Ae-ria
+l Vehi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--48
+[]\T1/ptm/m/n/10.95 CROSSBOW. \T1/ptm/m/it/10.95 Imote2 - High-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--48
+\T1/ptm/m/it/10.95 performance Wi-re-less Sen-sor Network Node\T1/ptm/m/n/10.95
+ . 2010.
+ []
+
+
+Overfull \hbox (98.5677pt too wide) in paragraph at lines 44--48
+[][][][][][]\T1/ptm/m/n/10.95 .
+ []
+
+[53
+
+]
+Underfull \hbox (badness 1248) in paragraph at lines 51--55
+[]\T1/ptm/m/n/10.95 CROSSBOW. \T1/ptm/m/it/10.95 Iris - WI-RE-LESS ME-A-SU-RE-M
+ENT SYS-TEM\T1/ptm/m/n/10.95 .
+ []
+
+
+Overfull \hbox (114.11671pt too wide) in paragraph at lines 51--55
+\T1/ptm/m/n/10.95 2010. [][][][][][].
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--62
+[]\T1/ptm/m/n/10.95 CROSSBOW. \T1/ptm/m/it/10.95 Mica 2 - WI-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--62
+\T1/ptm/m/it/10.95 RE-LESS ME-A-SU-RE-MENT SYS-TEM\T1/ptm/m/n/10.95 . 2010.
+ []
+
+
+Overfull \hbox (92.98323pt too wide) in paragraph at lines 58--62
+[][][][][][]\T1/ptm/m/n/10.95 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--69
+[]\T1/ptm/m/n/10.95 CROSSBOW. \T1/ptm/m/it/10.95 Mica Z - WI-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--69
+\T1/ptm/m/it/10.95 RE-LESS ME-A-SU-RE-MENT SYS-TEM\T1/ptm/m/n/10.95 . 2010.
+ []
+
+
+Overfull \hbox (92.98323pt too wide) in paragraph at lines 65--69
+[][][][][][]\T1/ptm/m/n/10.95 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--76
+[]\T1/ptm/m/n/10.95 CROSSBOW. \T1/ptm/m/it/10.95 Te-losB - WI-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--76
+\T1/ptm/m/it/10.95 RE-LESS ME-A-SU-RE-MENT SYS-TEM\T1/ptm/m/n/10.95 . 2010.
+ []
+
+
+Overfull \hbox (98.5677pt too wide) in paragraph at lines 72--76
+[][][][][][]\T1/ptm/m/n/10.95 .
+ []
+
+[54]
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
+[]\T1/ptm/m/it/10.95 AWARE: Plat-form for Au-to-no-mous Self-
+ []
+
+[55]
+Underfull \hbox (badness 10000) in paragraph at lines 169--172
+[]\T1/ptm/m/n/10.95 MATEUS, G. R.; LOU-REIRO, A. A. In-tro-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--172
+\T1/ptm/m/n/10.95 du-ção à com-pu-ta-ção mó-vel. Não pu-bli-cado. Dis-po-ní-vel
+ em:
+ []
+
+[56]
+Underfull \hbox (badness 2376) in paragraph at lines 205--208
+[]\T1/ptm/m/n/10.95 SARMIENTO, A.; MURRIETA-
+ []
+
+[57])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 230.
+ [58]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 230.
+ (./principal.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 230.
+
+
+Package rerunfilecheck Warning: File `principal.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `principal.out':
+(rerunfilecheck)             Before: E7332420029C7302B299B4EFAD292498;1558
+(rerunfilecheck)             After:  7D45804DA378AAF0019230B623A83E99;1536.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 9628 strings out of 494726
+ 138409 string characters out of 3170757
+ 245764 words of memory out of 3000000
+ 12580 multiletter control sequences out of 15000+200000
+ 67241 words of font info for 110 fonts, out of 3000000 for 9000
+ 197 hyphenation exceptions out of 8191
+ 36i,15n,51p,1640b,451s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on principal.dvi (66 pages, 211384 bytes).

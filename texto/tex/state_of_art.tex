@@ -1,0 +1,28 @@
+\section{Pesquisas em RSSFs e UAVs}
+
+Redes de sensores sem fio com nós estáticos (sem movimento) têm sido desenvolvidas, testadas e aplicadas em diversas atividades de detecção e monitoramento de fenômenos.
+Contudo, \rssfs estáticas apresentam algumas limitações. O uso de nós sensores móveis pode prover melhorias significativas. Nós moveis podem prover meios de se observar estes fenômenos
+com uma maior riquesa de detalhes e granularidade. Ainda mais, nós sensores móveis podem colher informações dos nós sensores estáticos no momento em que transitam
+ pela região de interesse \cite{Aware}. 
+
+Aliado às preocupações apresentados, um novo desafio em \rssfs é a coordenação de nós sensores heterogêneos com diferentes capacidades de sensoriamento, mobilidade e computação em uma única rede \cite{Freitas2009}. 
+
+Em complemento, as capacidades e papéis dos Veículos Aéreos Não Tripulados têm evoluido e têm requerido novos conceitos e técnicas para suas operações. Por exemplo, \vants atuais tipicamente requerem vários operadores, mas os próximos \vants serão projetados para tomar decisões táticas autonomamente e serão integrados em times que se coordenam para alcançar objetivos de mais alto nível \cite{Richards2002, Mehdi2003}. 
+
+Neste contexto existe uma proposta para se unir estes três desafios e preocupações (nós sensores móveis, coordenação de nós sensores heterogêneos e controle autônomo de UAVs): a utilização de \uavs em colaboração com redes de sensores sem fio. Este novo modelo de cooperação engloba os requisitos anteriormente citados. A idéia é que \vants sejam equipados com uma variedade de sensores e uma interface de comunicação sem fio, e a partir disso se estabeleçam conexões \emph{wireless} entre as aeronaves e os nós sensores estáticos da rede. 
+
+Esta área de pesquisa encontra-se ainda em expansão, consequentemente pouca literatura consolidade encontra-se disponível. Os principais esforços encontram-se na utilização dos nós sensores para realizar o controle do \vant, ou o inverso, utilização de \vants para coordenação da RSSF.
+
+
+Alguns dos primeiros passos neste tipo de combinação surgiram com o projeto \emph{Aware - Platform for Autonomous Self-Deploying and Operation of Wireless Sensor-
+Actuator Networks Cooperating with AeRial ObjEcts}. O principal objetivo do sistema \emph{Aware} é a detecção de eventos por meio de sensores terrestres, e posteriormente a entrega do alarme a um UAV. Outro objetivo do \emph{Aware} é a reparação automática de rede. Em casos onde nós são danificados ou perdidos, helicópteros não tripulados deverão ser capazes de reparar a conectividade da rede. Detalhes sobre a plataforma \emph{Aware} podem ser encontrados em \cite{Aware, Aware2}
+
+
+\cite{Lucchi2007} consideram a utilização de \vants como \emph{sinks}(nós concentradores) móveis em uma \rssf. Neste trabalho, \vants são utilizados para coletar os dados medidos pela rede de sensores e realizar tarefas de fusão de dados. Além disso, são apresentos critérios e técnicas para tratamento de ruído e falhas ocorridas na comunicação entre os nós sensores e os \vants utilizados.
+
+\vants também podem ser utilizados para prover suporte a algoritmos de localização em \rssfs. \cite{Guerrero2009} propoem uma solução baseada em agentes móveis para se definir a localização geográfica de cada nó sensor da rede. É utilizado um \vant carregando uma antena direcional e um dispositivo GPS. Basicamente, concentra-se na medida da intensidade do sinal recebida de cada nó, e a partir desta intensidade torna-se possível calcular a distância entre o \vant e o nó sensor em questão.
+
+\cite{Freitas20092} apresentam uma avaliação sobre estratégias de coordenação de nós sensores heterogêneos (\rssf e UAVs). Uma destas avaliações é um estudo baseado em ferormônios digitais para realizar uma comunicação mais eficiente entre os nós sensores estáticos e os UAVs. A segunda avalição é a definição de heurísticas, para casos em que se encontram vários \vants em uma mesma missão, para se selecionar o \vant mais hábil a tratar os alarmes acionados pela RSSF.
+
+
+
