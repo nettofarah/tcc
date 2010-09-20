@@ -1,0 +1,259 @@
+\documentclass{uflamon}          % classe base para a monografia
+
+
+%==============================================================================
+% Utilizacao de pacotes
+\usepackage[T1]{fontenc}         % usa fontes postscript com acentos
+%\usepackage{times}              % usa fonte times como default
+\usepackage[brazil]{babel}       % hifenização e títulos em português do Brasil
+\usepackage[utf8]{inputenc}     % permite edição direta com acentos
+\usepackage{amsmath}             % pacote da AMS para Matemática Avançada
+\usepackage{amssymb}             % símbolos extras da AMS
+\usepackage{latexsym}            % símbolos extras do LaTeX
+\usepackage{graphicx}            % para inserção de gráficos
+\usepackage{listings}            % para inserção de código
+\usepackage{fancyvrb}            % para inserção de saídas de comandos
+
+\usepackage{fmtcount}
+
+\usepackage{colortbl} % frescuras em tabelas
+\newcolumntype{L}{|>{\columncolor[gray]{0.9}}l|} %multicolunas boiolas
+
+\usepackage[table]{xcolor}
+
+\usepackage{booktabs}
+
+\usepackage{multirow}
+
+\usepackage{pdflscape}
+
+% cores para os links cruzados
+\usepackage{color}
+\definecolor{rltred}{rgb}{0.2,0,0}
+\definecolor{rltgreen}{rgb}{0,0.2,0}
+\definecolor{rltblue}{rgb}{0,0,0.2}
+
+\usepackage[colorlinks=true,
+	        urlcolor=rltblue,       % \href{...}{...} external (URL)
+   	     filecolor=rltgreen,     % \href{...} local file
+      	  linkcolor=rltred,       % \ref{...} and \pageref{...}
+     		  citecolor=rltgreen,
+    		  pdftitle={PO I - Ivayr Farah Netto},
+			  pdfauthor={Ivayr Farah Netto},
+           pdfsubject={Pré-projeto de Monografia.},
+           pdfkeywords={PO I. 2. Monografia . 3. Redes de Sensores Sem Fio. 
+ 					 4. Veículos Aéreos Não Tripulados. }%
+]{hyperref} % para referência cruzadas
+%\usepackage{hyperref}            % para referência cruzadas
+%\usepackage{subfigure}           % figuras dentro de figuras
+\usepackage{caption2}            % remodelando o formato dos títulos de 
+                                 % tabelas e figuras
+
+% configuração padrão do listings   
+\lstset{
+   language=Java,
+   extendedchars=true,
+   tabsize=3,
+   basicstyle=\footnotesize\ttfamily,
+   stringstyle=\em,
+   showstringspaces=false 
+}
+
+% para referências de acordo com a ABNT
+% precisa instalar o abntex antes!!!
+% http://abntex.codigolivre.org.br/
+% comente se pretende usar outro padrão
+%\usepackage[alf,abnt-etal-cite=3,abnt-etal-list=0,abnt-etal-text=emph]{abntcite}
+
+
+% redefinindo formatação de títulos de tabelas e figuras
+\renewcommand{\captionfont}{\footnotesize}
+\renewcommand{\captionlabelfont}{\footnotesize \bfseries}
+
+
+
+%numerando subsubsections e adicionando ao tableofcontents
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2}
+
+\makeatletter
+\renewcommand\paragraph{%
+   \@startsection{paragraph}{4}{0mm}%
+      {-\baselineskip}%
+      {.5\baselineskip}%
+      {\normalfont\normalsize\bfseries}}
+\makeatother
+
+\makeatletter
+\renewcommand\subparagraph{%
+   \@startsection{subparagraph}{5}{0mm}%
+      {-\baselineskip}%
+      {.5\baselineskip}%
+      {\normalfont\normalsize\bfseries}}
+\makeatother
+
+
+
+%==============================================================================
+% para os fãs do Word, descomente as linhas abaixo
+%\sloppy %mais espaço entre as linhas
+%\usepackage{identfirst} %identando-se a primeira linha de cada seção
+
+
+%==============================================================================
+% definido comandos na monografia - não é necessário na sua monografia 
+% apenas para exemplificar a definição de novos comandos
+\newcommand{\defs}[1]{\textsl{#1}}
+
+\newcommand{\wsn}{Redes de Sensores Sem Fio~}
+\newcommand{\rssf}{RSSF~}
+\newcommand{\rssfs}{RSSFs~}
+\newcommand{\uav}{Véiculo Aéreo Não Tripulado~}
+\newcommand{\vant}{UAV~}
+\newcommand{\vants}{UAVs~}
+\newcommand{\uavs}{Veículos Aéreos Não Tripulados~}
+
+
+% Especificando hifenizações que por ventura LaTeX não saiba fazer
+% Por padrão 99,9% dos termos em português devem ser hifenizados corretamente.
+\hyphenation{hardware software Li-nux am-bien-te diag-nos-ti-car coor-de-na-ção 
+FAE-PE Recovery TelEduc Williams Lyn-ch}
+
+%==============================================================================
+% Dados da monografia, capa: autor, titulo, banca, etc... - SUBSTITUA DE ACORDO
+%==============================================================================
+\author{Ivayr Dieb Farah Netto}
+\title{Monitoramento de Áreas Utilizando Redes de Sensores Sem Fio e Veículos Aéreos Não Tripulados}
+\date{2010}
+\tipo{Monografia apresentada ao Colegiado do Curso de Sistemas de Informação, para a obtenção do título de Bacharel em Sistemas de Informação.}
+\areaconcentracao{Redes de Sensores Sem Fio}
+\orientador{Prof. Tales Heimfarth}
+\coorientador{Prof. Luiz Henrique Andrade Correia} % comente se não tiver coorientador
+%\coorientadordois{Prof. Tiagão Meganha} % comente se não tiver coorientador
+\bancaum{Prof. Juliana Galvani Gregh}
+\bancadois{Prof. Marluce Rodrigues Pereira} % comente se sua banca tiver só um professor
+%\bancatres{Fulanim de Sicrano}% comente se sua banca tiver só um professor
+\defesa{26 de Junho de 2010}
+\palchaves{Redes de Sensores Sem Fio; Veículos Aéreos Não Tripulados; Auto-Organização; RSSF, UAV.}
+\keywords{Wireless Sensor Networks; Umanned Aerial Vehicles, Self-Organization, WSN, UAV.}
+%==============================================================================
+%
+%%% dados para ficha catalográfica
+%% primeiro autor
+%\fcautor{Netto, Ivayr Dieb Farah}
+%% autores, separados por vírgula
+%\fcautores{Netto, Ivayr Dieb Farah}
+%% dados para ficha catalográfica conforme modelo da BC-UFLA 
+%\fccatalogacao{1. Redes de Sensores Sem Fio. 2. Veículos Aéreos Não Tripulados. 3. Auto-Organização. 4. RSSF.
+%  5. UAV  I. Netto, I. D. F.
+%  II. Universidade Federal de Lavras.
+%  III. Fundação de Apoio ao Ensino, Pesquisa e Extensão. 
+%  IV. Título.}
+%% classificação de acordo com a CDD, comente se não tiver isso.
+%\fcclasi{003.5}
+%\fcclasii{005.43}
+
+
+
+
+
+
+
+% Aqui começa o documento propriamente dito
+\begin{document}
+
+
+
+
+%\dedic{Dedico esta monografia à minha unha encravada...}     % Dedicatórias
+%\thanks{Agradeço aos pingos da torneira da pia, que não me deixaram dormir enquanto escrevia
+%	o TCC!}         % Agradecimentos
+
+\maketitle
+
+\pagestyle{ufla}
+\pagenumbering{roman}
+
+                          % Sumário}
+\listoffigures                             % Lista de Figuras
+\listoftables                              % Lista de Tabelas
+
+\tableofcontents 
+
+%\abstract{O resumo deve ser a apresentação concisa dos pontos relevantes do conteúdo e das conclusões do trabalho. Deve ser redigido na terceira pessoa do singular, com o verbo na voz ativa, compondo-se de uma seqüência corrente de frases e não de enumeração de tópicos, não ultrapassando 
+%250 palavras (e/ou 25 linhas). Deve-se evitar o uso de parágrafos no meio do resumo, citações bibliográficas; bem como de fórmulas, equações, diagramas e símbolos, optando-se, 
+%quando necessário, pela transcrição na forma extensa. Além disso, deve incluir as palavras-chave do tabalho para facilitar a pesquisa em sistemas de buscas. Em geral, utilizam-se de três a seis 
+%palavras-chave.} {This Text is in English.}                         % Resumo (digite aqui o resumo)
+
+\clearpage
+
+%\pagestyle{ufla}
+\pagenumbering{arabic}
+
+%==============================================================================
+% incluindo os capitulos
+%\include{intro}
+%\include{elementos}
+%\include{conclusao}
+
+
+\input{abstract}
+
+\input{intro}
+
+\input{bib_review}
+
+\input{metodologia}
+
+\input{desenvolvimento}
+
+% \input{resultados_esperados}
+% 
+% \input{cronograma}
+
+
+%==============================================================================
+% Incluindo bibliografia
+%\bibliographystyle{plain}             % estilo para labels em numeros
+%\bibliographystyle{alpha}             % estilo para labels em iniciais
+\bibliographystyle{abnt-alf}           % estilo para referências usando ABNT, 
+                                       % precisa instalar o abntex para usar!!!
+%\bibliographystyle{apalike}
+\bibliography{bib_tcc}
+
+
+%==============================================================================
+% Incluindo anexos numerados com letras maiusculas.
+%\appendix
+%\include{apendice}
+
+%==============================================================================
+% Fim do texto
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%\title{Aplicação de Técnicas Auto-Organizáveis para Monitoramento e Detecção de Intrusos em Redes de Sensores sem Fio}
+%\author{Ivayr Dieb Farah Netto}
