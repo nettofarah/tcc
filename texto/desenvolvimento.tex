@@ -103,7 +103,89 @@ mais hábil para tratar o evento ocorrido.
 \end{description}
 
 As próximas seções discutem o problema apresentado em diferentes perspectivas, apresentando suas peculiaridades e possíveis
-soluções.
+soluções. Os algoritmos são introduzidos em uma sequência lógica para que se torne possível o entendimento do problema em questão. Vale 
+ressaltar que esta ordem foi escolhida para um melhor entendimento do problema, visto que cada seção apresenta dependência em relação aos conceitos
+apresentados nas seções anteriores. 
+
+\section{Detecção de Eventos}
+Para que um sistema de monitoramento realize seu papel de forma eficaz, espera-se, no mínimo, que este seja capaz de detectar eventos. Todo o funcionamento
+de um sistema deste tipo depende da detecção dos eventos de interesse. Contudo, o foco deste trabalho não está no desenvolvimento de algoritmos para 
+detecção de eventos. Portanto, adotou-se uma abordagem básica para a detecção de eventos pela \rssf, visto que a preocupação principal deste trabalho não se concentra neste problema.
+
+A estratégia de detecção dos eventos de interesse escolhida pode ser considerada simples. Entretanto, apresenta-se eficaz para o desenvolvimento deste trabalho.
+Cada nó sensor dá rede possui sensores dos mais variados tipos: umidade, temperatura, pressão, eletro-magnético, etc. Cada um destes sensores pode ser
+configurado de modo que possua um limite\footnote{O termo limite pode ser encontrado em literaturas internacionais como \emph{threshold}} aceitável de medição em determinado parâmetro. Definidos os limites, são agendadas algumas medições para aquele sensor. Em caso de uma medição exceder o limite aceitável
+para aquele parâmetro o nó sensor pode considerar este fenômeno como um evento de interesse detectado. Se a medição não exceder o limite, o nó simplesmente
+deverá agendar outra leitura em tempo futuro.
+
+O algoritmo a seguir demonstra o algoritmo em formato simplificado. \\
+
+\begin{algorithm}[H]
+	\SetAlgoLined
+	
+	\SetKwFunction{realizarMedicaoNoAmbiente}{realizarMedicaoNoAmbiente}
+	\SetKwFunction{acionarAlarme}{acionarAlarme}
+	\SetKwFunction{agendarAproximaMedicao}{agendarAproximaMedicao}
+
+	\Entrada{Parâmetros do Ambiente}
+	
+	\Enqto{ainda existem medições agendadas}{
+		medicao = \realizarMedicaoNoAmbiente() \;
+		\Se{medicao maior que LIMITE}{
+			\acionarAlarme()\;
+		}
+			\agendarAproximaMedicao(AtrasoParaProximaMedicao) \;
+	}
+\caption{Algorítmo para a detecção de eventos no ambiente.}
+\end{algorithm}
+
+
+\section{Distribuição de Ferormônio}
+
+\section{Propagação de Eventos}
+
+\section{Reforço dos Rastros de Ferormônio}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
