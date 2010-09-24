@@ -9,7 +9,10 @@
 *.nav
 *.snm
 *.toc
-
+*.lof
+*.blg
+*.lot
+*.bbl
 
 *.classpath
 *.project
