@@ -1,6 +1,8 @@
 package br.ufla.dcc.ucr.node;
 
+import java.util.Random;
 import java.util.Set;
+import java.util.SortedMap;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
@@ -14,11 +16,13 @@ import br.ufla.dcc.grubix.simulator.event.user.BeaconPacket;
 import br.ufla.dcc.grubix.simulator.kernel.Configuration;
 import br.ufla.dcc.grubix.simulator.kernel.SimulationManager;
 import br.ufla.dcc.grubix.simulator.movement.MovementManager;
+import br.ufla.dcc.grubix.simulator.node.Node;
 import br.ufla.dcc.grubix.simulator.node.user.MoveToCommand;
 import br.ufla.dcc.ucr.node.data.CoverageInformation;
 import br.ufla.dcc.ucr.packet.CoverageAlarmPacket;
 import br.ufla.dcc.ucr.statistics.Statistics;
 import br.ufla.dcc.ucr.wuc.BeaconWakeUpCall;
+import br.ufla.dcc.ucr.wuc.CheckEventWakeUpCall;
 import br.ufla.dcc.ucr.wuc.CheckTargetReachedWakeUpCall;
 import br.ufla.dcc.ucr.wuc.ScheduleCoverageWakeUpCall;
 
@@ -27,13 +31,11 @@ public class UAV extends GenericNode {
 	private static int SCHEDULLING_DELAY = 12000;
 	private static int CHECK_LOCATION = 300;
 	public static int BEACON_INTERVAL = 300;
-
+	
 	private SortedSet<CoverageInformation> nodesToCover = new TreeSet<CoverageInformation>();
 	private Set<CoverageInformation> coveringPath = new TreeSet<CoverageInformation>();
 	
 	private Position targetArea;
-	
-
 	
 	public void processEvent(StartSimulation start){
 		this.startSendingPackets();
@@ -45,6 +47,9 @@ public class UAV extends GenericNode {
 		
 		WakeUpCall wuc = new BeaconWakeUpCall(this.getSender(), BEACON_INTERVAL);
 		this.sendEventSelf(wuc);
+		
+		WakeUpCall checkEventWuc = new CheckEventWakeUpCall(this.getSender(), CHECK_EVENT_INTERVAL);
+		this.sendEventSelf(checkEventWuc);
 	}
 
 	private void addNodeToCover(CoverageInformation coverInfo){
@@ -137,8 +142,13 @@ public class UAV extends GenericNode {
 		
 		if (wuc instanceof BeaconWakeUpCall)
 			this.startSendingPackets();
+		
+		if	(wuc instanceof CheckEventWakeUpCall)
+			this.moveSomewhereFakingAnEvent();
 	}
 	
+	
+
 	private void removeNodeToCover(CoverageInformation oldInfo){
 		this.nodesToCover.remove(oldInfo);
 	}
@@ -171,7 +181,7 @@ public class UAV extends GenericNode {
 		boolean isThereAreaToVisit = this.coveringPath.size() > 0;
 		if(isThereAreaToVisit){
 			CoverageInformation nextToVisit = this.coveringPath.iterator().next();
-			this.coveringPath.remove(nextToVisit);		
+			this.coveringPath.remove(nextToVisit);
 			
 			this.visit(nextToVisit);
 		}else{
@@ -179,4 +189,28 @@ public class UAV extends GenericNode {
 		}
 	}
 	
+	/***************************************************************************************************/
+	/* Specific part for workaround */
+		private static int CHECK_EVENT_INTERVAL = 6000;
+		private Position eventPosition;
+		/*
+		 * This method is a kind of workaround for this problem.
+		 * Here, we are simulating the occurrence of an event of interest.
+		 * So, the UAV is doing something. In this case we are faking an event handling.
+		 * 
+		 * The justification for using it is the fact that the UAV might receive a mission,
+		 * or any other kind of task while it is flying over an area.
+		 */
+		private void moveSomewhereFakingAnEvent() {
+			SortedMap<NodeId, Node> allNodes = SimulationManager.getAllNodes();
+			int nodeToVisitIndex = new Random().nextInt(allNodes.size());
+			
+			Node[] nodes = allNodes.values().toArray(new Node[0]);
+			Node nodeToVisit = nodes[nodeToVisitIndex];
+			
+			this.addNodeToCover(new CoverageInformation(nodeToVisit.getId(), nodeToVisit.getPosition(), 0,true));
+		}
+	
+	/* End of workaround*/
+	/*****************************************************************************************************/
 }

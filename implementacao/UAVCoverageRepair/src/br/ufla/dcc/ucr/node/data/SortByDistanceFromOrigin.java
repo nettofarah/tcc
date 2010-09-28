@@ -4,6 +4,11 @@ public class SortByDistanceFromOrigin implements CoverageInfoComparator {
 
 	@Override
 	public int compare(CoverageInformation me, CoverageInformation other) {
+		if(me.isEvent())
+			return 1;
+		if(other.isEvent())
+			return -1;
+		
 		if (me.distanceFromOrigin() == other.distanceFromOrigin())
 			return 0;
 		

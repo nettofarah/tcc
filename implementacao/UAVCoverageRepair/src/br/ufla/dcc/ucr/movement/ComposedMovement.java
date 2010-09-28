@@ -9,15 +9,11 @@ import java.util.Set;
 import java.util.Vector;
 import java.util.logging.Logger;
 
-import javax.crypto.spec.RC2ParameterSpec;
-
 import br.ufla.dcc.grubix.simulator.event.Movement;
 import br.ufla.dcc.grubix.simulator.kernel.Configuration;
 import br.ufla.dcc.grubix.simulator.kernel.SimulationManager;
-import br.ufla.dcc.grubix.simulator.movement.HorizontalScan;
 import br.ufla.dcc.grubix.simulator.movement.MovementManager;
 import br.ufla.dcc.grubix.simulator.movement.NoMovement;
-import br.ufla.dcc.grubix.simulator.movement.VerticalScan;
 import br.ufla.dcc.grubix.simulator.node.Node;
 import br.ufla.dcc.grubix.simulator.node.user.Command;
 import br.ufla.dcc.grubix.simulator.node.user.MoveToCommand;
@@ -41,19 +37,6 @@ public class ComposedMovement extends MovementManager {
 	private Vector<MovementManager> movs = null;
 	private Vector<Node> excluded = new Vector<Node>();
 
-	/*
-	@ShoXParameter(description = "initialFirstMovement.", required = true)
-	private int initialFirstMovement;
-
-	@ShoXParameter(description = "finalFirstMovement.", required = true)
-	private int finalFirstMovement;
-
-	@ShoXParameter(description = "initialSecondMovement.", required = true)
-	private int initialSecondMovement;
-
-	@ShoXParameter(description = "findlaSecondMovement.", required = true)
-	private int finalSecondMovement;
-*/
 		
 	/**
 	 * Vector containing a list of moves for every node.

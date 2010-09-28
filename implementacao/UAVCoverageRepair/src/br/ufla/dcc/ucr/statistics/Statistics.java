@@ -17,6 +17,8 @@ public class Statistics {
 	private static Map<NodeId, Integer> nodesReached = new HashMap<NodeId, Integer>();
 	private static Map<NodeId, Double> firstTimeReached = new HashMap<NodeId, Double>();
 	
+	private static Map<NodeId, Double> eventOcurred = new HashMap<NodeId, Double>();
+	
 	private static List<Double> cyclesTime = new ArrayList<Double>();
 	
 	//any time a nod has a problem

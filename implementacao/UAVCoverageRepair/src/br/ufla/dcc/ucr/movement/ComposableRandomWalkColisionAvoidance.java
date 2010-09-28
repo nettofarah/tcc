@@ -160,10 +160,7 @@ public class ComposableRandomWalkColisionAvoidance extends MovementManager {
 				
 				Double duration = random.nextDouble() * maxTimeForMove;
 				double steps = Math.ceil(duration / configuration.getMovementTimeInterval());
-				//LOGGER.debug("CurrentToGoal: (" + currentToGoal[0] + ", " + currentToGoal[1] 
-				//    + "), duration:" + duration + ", steps:" + steps);
-
-				//shorten the vector
+				
 				currentToGoal[0] /= steps;
 				currentToGoal[1] /= steps;
 				
