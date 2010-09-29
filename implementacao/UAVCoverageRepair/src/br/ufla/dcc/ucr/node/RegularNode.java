@@ -1,6 +1,7 @@
 package br.ufla.dcc.ucr.node;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import br.ufla.dcc.grubix.simulator.LayerException;
@@ -24,6 +25,9 @@ public class RegularNode extends GenericNode {
 	
 	private List<String> sensors = new ArrayList<String>();
 	private static double deffectRate = .1;
+	
+	private static Integer[] deffectGroup = {1,2,3,4,5,6,7,8,9,10};
+	
 	private static int eventuallyDisasterRate = 5000;
 	private static int checkCoverageRate = 2000;
 	private static double minCoverageAllowed = .9;
@@ -87,8 +91,10 @@ public class RegularNode extends GenericNode {
 
 	private void occasionalyDeffectSomeSensors(){
 		double probabilityOfDeffectOccur = Math.random();
-		boolean deffectOcurred = deffectRate > probabilityOfDeffectOccur;
-		
+		//boolean deffectOcurred = deffectRate > probabilityOfDeffectOccur;
+		List<Integer> asList = Arrays.asList(deffectGroup);
+		boolean deffectOcurred = asList.contains(this.getId().asInt());
+			
 		if(deffectOcurred){
 			this.destroySomeSensors();
 		}

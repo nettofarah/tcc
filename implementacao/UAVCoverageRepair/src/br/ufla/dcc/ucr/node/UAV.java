@@ -1,7 +1,9 @@
 package br.ufla.dcc.ucr.node;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
-import java.util.Set;
 import java.util.SortedMap;
 import java.util.SortedSet;
 import java.util.TreeSet;
@@ -28,17 +30,22 @@ import br.ufla.dcc.ucr.wuc.ScheduleCoverageWakeUpCall;
 
 public class UAV extends GenericNode {
 	
-	private static int SCHEDULLING_DELAY = 12000;
+	private static int SCHEDULLING_DELAY = 10;//12000;
 	private static int CHECK_LOCATION = 300;
 	public static int BEACON_INTERVAL = 300;
 	
+	
+	
 	private SortedSet<CoverageInformation> nodesToCover = new TreeSet<CoverageInformation>();
-	private Set<CoverageInformation> coveringPath = new TreeSet<CoverageInformation>();
+	private List<CoverageInformation> coveringPath = new ArrayList<CoverageInformation>();
 	
 	private Position targetArea;
 	
 	public void processEvent(StartSimulation start){
 		this.startSendingPackets();
+		
+		WakeUpCall checkEventWuc = new CheckEventWakeUpCall(this.getSender(), CHECK_EVENT_INTERVAL);
+		this.sendEventSelf(checkEventWuc);
 	}
 	
 	private void startSendingPackets() {
@@ -47,9 +54,6 @@ public class UAV extends GenericNode {
 		
 		WakeUpCall wuc = new BeaconWakeUpCall(this.getSender(), BEACON_INTERVAL);
 		this.sendEventSelf(wuc);
-		
-		WakeUpCall checkEventWuc = new CheckEventWakeUpCall(this.getSender(), CHECK_EVENT_INTERVAL);
-		this.sendEventSelf(checkEventWuc);
 	}
 
 	private void addNodeToCover(CoverageInformation coverInfo){
@@ -90,23 +94,25 @@ public class UAV extends GenericNode {
 	}
 
 	private void cover(CoverageInformation coverageInfo) {
-		this.checkIfIsAlreadyCovering(coverageInfo);
+		//this.checkIfIsAlreadyCovering(coverageInfo);
 		this.addNodeToCover(coverageInfo);
 		
 		if(isTimeToStartANewCovering()){
 			this.scheduleCoverage();
 		}
 		
-		SimulationManager.logNodeState(this.getId(), "CoverageList", "int", this.nodesToCover.size()+"");
+		//SimulationManager.logNodeState(this.getId(), "CoverageList", "int", this.nodesToCover.size()+"");
 	}
 
 	private void generateCoveringPath(){
 		this.coveringPath.clear();
 		this.coveringPath.addAll(this.nodesToCover);
 		
-		for (CoverageInformation cInfo : this.coveringPath) {
+		Collections.sort(coveringPath);
+		
+	/*	for (CoverageInformation cInfo : this.coveringPath) {
 			SimulationManager.logNodeState(cInfo.getSenderId(), "Node to be covered", "int", "1");
-		}
+		}*/
 	}
 
 
@@ -171,7 +177,7 @@ public class UAV extends GenericNode {
 		this.targetArea = nextToVisit.getPosition();
 		this.move(this.targetArea);
 		
-		SimulationManager.logNodeState(this.getId(), "Moving To", "float", nextToVisit.distanceFromOrigin()+"");
+		//SimulationManager.logNodeState(this.getId(), "Moving To", "float", nextToVisit.distanceFromOrigin()+"");
 		
 		this.checkUntilReachDestination();
 	}
@@ -179,10 +185,10 @@ public class UAV extends GenericNode {
 
 	private void visitNextUncoveredArea() {
 		boolean isThereAreaToVisit = this.coveringPath.size() > 0;
-		if(isThereAreaToVisit){
-			CoverageInformation nextToVisit = this.coveringPath.iterator().next();
+		if(isThereAreaToVisit){			
+			CoverageInformation nextToVisit = this.coveringPath.get(0);
 			this.coveringPath.remove(nextToVisit);
-			
+						
 			this.visit(nextToVisit);
 		}else{
 			this.scheduleCoverage();
@@ -191,7 +197,8 @@ public class UAV extends GenericNode {
 	
 	/***************************************************************************************************/
 	/* Specific part for workaround */
-		private static int CHECK_EVENT_INTERVAL = 6000;
+		
+		private static int CHECK_EVENT_INTERVAL = 6000*2;
 		private Position eventPosition;
 		/*
 		 * This method is a kind of workaround for this problem.
@@ -207,8 +214,12 @@ public class UAV extends GenericNode {
 			
 			Node[] nodes = allNodes.values().toArray(new Node[0]);
 			Node nodeToVisit = nodes[nodeToVisitIndex];
+			CoverageInformation fakeCover = new CoverageInformation(nodeToVisit.getId(), nodeToVisit.getPosition(), 0,true);
 			
-			this.addNodeToCover(new CoverageInformation(nodeToVisit.getId(), nodeToVisit.getPosition(), 0,true));
+			this.coveringPath.add(0, fakeCover);
+			
+			WakeUpCall checkEventWuc = new CheckEventWakeUpCall(this.getSender(), CHECK_EVENT_INTERVAL);
+			this.sendEventSelf(checkEventWuc);
 		}
 	
 	/* End of workaround*/

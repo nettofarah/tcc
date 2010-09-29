@@ -222,10 +222,9 @@ public class RandomWalkColisionAvoidance extends MovementManager {
     		MoveToCommand param = (MoveToCommand) cmd;
     		//Move o nodo para posicao informada
     		currentGoals.put(param.getId(),param.getTarget());
-    		try {
+    		if(this.moveLists != null)
     			this.moveLists.get(param.getId().asInt() - 1).clear();
-			} catch (Exception e) {
-			}
+			
     		//SimulationManager.logMessage(param.getSender(), 0, "moveTo Called");
     	}
     }

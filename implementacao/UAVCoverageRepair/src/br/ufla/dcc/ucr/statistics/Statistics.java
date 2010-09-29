@@ -16,6 +16,7 @@ public class Statistics {
 	private static Map<NodeId, Double> problemStarted = new HashMap<NodeId, Double>();
 	private static Map<NodeId, Integer> nodesReached = new HashMap<NodeId, Integer>();
 	private static Map<NodeId, Double> firstTimeReached = new HashMap<NodeId, Double>();
+	private static Map<NodeId, Double> lastTimeReached = new HashMap<NodeId, Double>();
 	
 	private static Map<NodeId, Double> eventOcurred = new HashMap<NodeId, Double>();
 	
@@ -34,6 +35,7 @@ public class Statistics {
 			System.out.println("FirstCovered ("+id+") -> "+ getCurrentTime());
 		}
 		incrementTime(id);
+		lastTimeReached.put(id, getCurrentTime());
 	}
 
 	
@@ -49,7 +51,12 @@ public class Statistics {
 		Map<NodeId, Double> result = new HashMap<NodeId, Double>();
 		
 		for (NodeId id : problemStarted.keySet()){
-			result.put(id, firstTimeReached.get(id) - problemStarted.get(id));
+			Double timeReached = firstTimeReached.get(id);
+			double difference = Double.MAX_VALUE;
+			if (firstTimeReached.get(id)!=null)
+				difference = firstTimeReached.get(id) - problemStarted.get(id);
+				
+			result.put(id, difference);
 		}
 		
 		return result;
@@ -71,11 +78,16 @@ public class Statistics {
 	public static Map<NodeId, Double> getCoverageRate(){
 		Map<NodeId, Double> result = new HashMap<NodeId, Double>();
 		
-		for (NodeId id: firstTimeReached.keySet()){
-			double firstTimeNodeReached = firstTimeReached.get(id);
-			double finalTime = getCurrentTime();
+		for (NodeId id : problemStarted.keySet()){
 			
-			result.put(id, nodesReached.get(id) * UAV.BEACON_INTERVAL / (finalTime - firstTimeNodeReached));
+			Double firstTimeNodeReached = firstTimeReached.get(id);
+			double coverageRate = 0;
+			
+			if(firstTimeNodeReached != null){
+				double finalTime = getCurrentTime();
+				 coverageRate = nodesReached.get(id) * UAV.BEACON_INTERVAL / (finalTime - firstTimeNodeReached);				
+			}
+			result.put(id, coverageRate);
 		}
 		
 		return result;
