@@ -72,7 +72,7 @@ enviar uma mensagem de alarme para os \vants presentes na área. Esta mensagem
 deve encontrar o rastro de ferormônio formado em (a) e prosseguir até o \vant
 mais hábil para tratar o evento ocorrido.
 
-	\item[ (c) Reforço de Conectividade da Rede:]
+	\item[ (c) Reforço de Conectividade da Rede:] algoritmo utilizado para reforçar a conectividade da rede em casos de falhas em algum nó.
 
 %% Este aqui vai par os trabalhos futuros
 
@@ -140,23 +140,52 @@ maneira mais rápida e mais eficiente, bem como otimiza os caminhos para que uma
 Para a composição destes rastros é utilizada uma heurística inspirada em fenômenos biológicos, mais especificamete no comportamento de formigas quando buscam alimento.
 O princípio deste comportamento, de forma simplificada,  é que uma formiga libera seu rastro através de um caminho no momento em que começa sua viagem em busca de alimento. Este rastro é composto por feromônios que exalam um odor específico para marcar o caminho percorrido. Um ponto importante a se ressaltar é que este rastro se evapora com o passar do tempo, isto, por fim, resulta em um gradiente que decresce de acordo com o tempo. Consequentemente, este caminho possuirá duas extremidades, uma extremidade com baixo valor de feromônio (início do caminho) e uma extremidade com altíssima concentração de feromônio (posição atual da formiga). Este rastro possibilita que a formiga (detentora do rastro) possa ser alcançada por qualquer outro indivíduo (outras formigas) que possua capacidades de interpretar o odor do feromônio.
 
-A figura xxx ilustra o comportamento descrito.
+A figura \ref{fig:ants} demonstra o fenômeno descrito.
+
+ \begin{figure}[h!]
+ \centering
+ \includegraphics[width=12cm]{pictures/ants.png}
+ \caption{Fenômeno Biológico de Distribuição de Feromônio.}
+  \label{fig:ants}
+ \end{figure}
 
 Inspirado no comportamento anteriormente descrito, torna-se possível criar uma adaptação do mesmo para implementação no uso de redes de sensores sem fio em conjunto com veículos aéreos não tripulados. Para isso, basta que se considere um \vant como uma formiga capaz de produzir um rastro feromônio. Este rastro resultará em uma espécie de \emph{backbone} de feromônios que otimizará a entrega de mensagens destinadas ao \vant. A estratégia utilizada para que este comportamento fosse mapeado para uma rede de sensores pode ser dividida em duas responsabilidades:
 
 \subsection{Entrega de Feromônios pelos \vants}
 Cada \vant sobrevoando a área de interesse exala seus feromônios digitais periodicamente durante seu vôo. Utilizando recursos de comunicação sem fio, o \vant simplemeste mente enviará pacotes \emph{beacon} periodicamente em \emph{broadcast}. Este comportamente garante que os pacotes são enviados a todo momento para todos os nós sensores que se encontram no alcance do raio de comunicação do \vant. Um ponto interessante a se ressaltar é o \vant deve enviar, em cada pacote, um atributo que indique o "sabor" de feromônio que este \vant possui. Isto garante que no caso de vários \vants sobrevoando a área de interesse os rastros não se sobreponham, de modo que em um mesmo local possam ser armazenador rastros distintos.
 
-A figura xxx demonstra o item apresentado.
+A figura \ref{fig:broadcast} demonstra o item apresentado.
+
+ \begin{figure}[h!]
+ \centering
+ \includegraphics[width=10cm]{pictures/broadcast.png}
+ \caption{Envio de um pacote em broadcast. Cada cor nas setas representa um sabor de feromônio.}
+  \label{fig:broadcast}
+ \end{figure}
 
 \subsection{Armazenamento por parte dos Nós Sensores}
 Os nós sensores espalhados pela área são responsáveis por armazenar os feromônios distribuídos pelos \vants, de modo a reproduzirem os rastros. Cada nó, ao receber um pacote enviado por um \vant deverá armazenar o sabor de feromônio recebido. Esta ação, quando observada em nível macro (todas as micro-ações produzidas por cada nó), resultará em um comportamento global, construindo rastros de feromônios digitais que representam os caminho percorridos por cada \vant dentro da área de interesse. 
 
 Além de armazenar o valor de feromônio recebido, o nó sensor deve agendar uma tarefa interna para reduzir seu valor de feromônio de acordo com o tempo. Um exemplo de tarefa é reduzir a cada 300 segundos o valor de feromônio armazenado a uma taxa de 10\%, de modo a simular a evaporação do feromônio. Esta evaporação garante que o rastro mantenha-se em maior concentração de feromônio na extremidade onde se encontra o \vant, e, em menor concentração na extremidade onde o rastro se originou.
 
-Cada nó sensor armazenando os valores de feromônios representa o caminho por onde o \vant sobrevoou. Contudo, este rastro ainda pode conter certas ambiguidades. Observando-se o fato que diversos nós sensores recebem o mesmo valor de feromônio, verifica-se que em uma mesma região contida no raio de alcance do \vant (considerando-se que a propagação do sinal ocorre em formato circular) existem diversos nós sensores representando a mesma quantidade de feromônio, como demonstrado na figura xxxx. Ainda que os valores evaporem com o tempo, seguindo esta tendência, os nós sensores evaporarão com a mesma proporção, resultando em um rastro que somente encaminhará as mensagens a uma região (do mesmo tamanho do raio de propagação do \vant), não a um ponto específico na rede. Neste caso, encaminhar a mensagem a uma região pode não ser o ideal, visto que a mensagem não encontraria um sentido correto para ser encaminhada.
+Cada nó sensor armazenando os valores de feromônios representa o caminho por onde o \vant sobrevoou. Contudo, este rastro ainda pode conter certas ambiguidades. Observando-se o fato que diversos nós sensores recebem o mesmo valor de feromônio, verifica-se que em uma mesma região contida no raio de alcance do \vant (considerando-se que a propagação do sinal ocorre em formato circular) existem diversos nós sensores representando a mesma quantidade de feromônio, como demonstrado na figura \ref{fig:flat}. Ainda que os valores evaporem com o tempo, seguindo esta tendência, os nós sensores evaporarão com a mesma proporção, resultando em um rastro que somente encaminhará as mensagens a uma região (do mesmo tamanho do raio de propagação do \vant), não a um ponto específico na rede. Neste caso, encaminhar a mensagem a uma região pode não ser o ideal, visto que a mensagem não encontraria um sentido correto para ser encaminhada.
 
-Para sobrepor esse problema, pode-se adicionar uma restrição ao se armazenar um valor de feromônio em um dado nó sensor. Neste caso, em específico, utiliza-se a informação de intensidade com que o pacote foi recebido (RSSI) pelo nó sensor. A informação recebida garante que se armazene valores de feromônio proporcionais à distância entre os nós sensores e o emissor dos pacotes. Este armazenamento promoverá, em nível macro, um rastro em formato de gradiente, que será resultante da variação dos valores de feromônio em relação ao tempo em que o nó sensor recebeu o pacote e à distância entre o nó sensor e o \vant emissor do pacote. Este gradiente é demonstrado na figura yyy.
+ \begin{figure}[h!]
+ \centering
+ \includegraphics[width=10cm]{pictures/flat_pheromone.png}
+ \caption{Pheromônios esmaecendo em função do tempo.}
+  \label{fig:flat}
+ \end{figure}
+
+Para sobrepor esse problema, pode-se adicionar uma restrição ao se armazenar um valor de feromônio em um dado nó sensor. Neste caso, em específico, utiliza-se a informação de intensidade com que o pacote foi recebido (RSSI) pelo nó sensor. A informação recebida garante que se armazene valores de feromônio proporcionais à distância entre os nós sensores e o emissor dos pacotes. Este armazenamento promoverá, em nível macro, um rastro em formato de gradiente, que será resultante da variação dos valores de feromônio em relação ao tempo em que o nó sensor recebeu o pacote e à distância entre o nó sensor e o \vant emissor do pacote. Este gradiente é demonstrado na figura \ref{fig:gradient}.
+
+ \begin{figure}[h!]
+ \centering
+ \includegraphics[width=10cm]{pictures/gradient.png}
+ \caption{Pheromônios esmaecendo em função do tempo e da distância relativa ao \vant. Os toms de vermelho variam de acordo com a distância do nó sensor em relação ao \vant, bem como varia a transparência do nó em relação ao tempo.}
+  \label{fig:gradient}
+ \end{figure}
+
 
 \section{Propagação de Eventos}
 Uma vez detectado um evento de interesse, espera-se que o sistema seja capaz de reportá-lo ao \vant mais adequado para tratar o fenômeno com maior granularidade. Para o alcance de tal objetivo é utilizado um algoritmo de propagação de eventos. Este algoritmo integra os dois algoritmos anteriores, de modo que se torne possível a entrega dos eventos aos \vants.
@@ -209,9 +238,74 @@ Uma particularidade interessante deste algoritmo é que podem exister regiões n
   \label{fig:app}
  \end{figure}
 
-\section{Reforço de Conectividade da Rede}
 
 
+\section{Reforço da Conectividade da Rede}
+Esta seção aborda um último algoritmo deste trabalho. É válido salientar que este esta última técnica não influencia diretamente os resultados dos algoritmos apresentados anteriormente. Entretanto, as melhorias propostas nas seções anteriores propiciam o cenário para a implementação deste último algoritmo.
+
+O algoritmo de Reforço de Conectividade da Rede utiliza os \vants que sobrevoam a área de interesse como nós sensores móveis, de modo que os \vants possam complementar a conectividade da rede em caso de falhas em nós sensores. Basicamente, falhas em nós sensores pode, ser consideradas como indisponibilidade de energia, falha em sensores, falha na interface de comunicação, etc.
+
+Uma falha pode ser detectada pelo próprio nó, ou por seus vizinhos. Um exemplo de falha detectada pelo próprio nó é o mal funcionamento de um sensor, ou níveis muito baixos de energia. Falhas detectadas por vizinhos podem ser falência de um nó sensor ou ausência de interface de comunicação (não responde às mensagens de seus vizinhos), etc. A principal característica a se observar neste caso é que este problema pode ser mapeado em termos dos problemas anteriores; uma falha em um nó sensor pode ser considerada como um evento de interesse, e os rastros de feromônios podem ser utilizados para se carregar a mensagem de falha até o \vant mais próximo.
+
+Ao receber uma mensagem de falha de um nó sensor, o \vant deve se preocupar em cobrir a conectividade da rede naquela região, atuando como um nó sensor da rede. Contudo, o \vant ainda possui suas responsabilidades em relação ao sistema de monitoramento de eventos. Para que se torne possível que o \vant realize todas as suas tarefas, a estratégia empregada é que o \vant apenas visite a área de falha em um determinado intervalo de tempo, e depois prossiga com seu itinerário.
+
+Quando um \vant recebe mais de um alarme de falha de sensor, torna-se necessário que exista um escalonamento para que o \vant visite todas as regiões de falha. No desenvolvimento deste escalonamento, optou-se por uma implementação baseada em políticas. Neste caso, foi determinado um protocolo\footnote{Também pode ser considerado como uma Interface nos conceitos de Orientação a Objetos.} para a implementação de diferentes políticas. Isto permite que se desenvolva diferentes estratégias para o escalonamento das visitas às regiões de baixa cobertura da rede. Dentre estas políticas, podem ser destacadas:
+
+\begin{description}
+	\item[Agrupamento por Proximidade:] política para que o itinerário de visitas do \vant baseie-se em visitar sempre os nós mais próximos, de modo que a próxima região de visita seja a de menor distância do ponto atual.
+	\item[Agrupamento Crítico:] é uma política em que se preocupa, principalmente, no agrupamento dos nós de acordo com a criticidade da região de falha. Nesta estratégia, a primeira região a ser visitada é a que possui mais avarias.
+	\item[Agrupamento por Proximidade do \vant:] é uma especialização da primeira política. Todavia, mais complexa de se implementar, visto a necessidade de atualização da rota de acordo com a movimentação do \vant.
+\end{description}
+
+Uma característica interessante desta abordagem é a possibilidade de se alternar as políticas nos momentos mais adequados. Um \vant pode trabalhar com uma política A e ser reprogramado, ainda que em operação, para utilizar uma política B. Ainda mais, diversos \vants, no mesmo cenário, podem empregar diferentes políticas para o reforço de conectividade da rede. Ampliando, assim, o dinamismo do algoritmo abordado.
+
+O protocolo para implementação desta políticas, apesar de dinâmico, apresenta-se simples, o desenvolvedor deve apenas oferecer um procedimento que compare duas regiões de falha.
+
+Os blocos de código a seguir ilustram a implementação de uma política utilizada no trabalho.
+
+\begin{lstlisting}[caption=Procolo (Interface) para implementação de Políticas de Agrupamento.]
+package br.ufla.dcc.ucr.node.data;
+public interface CoverageInfoComparator {
+	int compare(CoverageInformation me, CoverageInformation other);
+}
+\end{lstlisting}
 
 
+\begin{lstlisting}[caption=Implementação de Agrupamento Crítico.]
+package br.ufla.dcc.ucr.node.data;
+/**
+*  Neste caso, coverage indica o grau de cobertura do no. Isto significa o quao danificado um no se encontra.
+*/
+public class SortByCoverage implements CoverageInfoComparator {
+	@Override
+	public int compare(CoverageInformation me, CoverageInformation other) {
+		if (me.getCoverage() == other.getCoverage())
+			return 0;
+		if(me.getCoverage() < other.getCoverage()){
+			return 1;
+		}else{
+			return -1;
+		}
+	}
+}
+\end{lstlisting}
 
+
+\begin{lstlisting}[caption=Escolha da Política]
+package br.ufla.dcc.ucr.node.data;
+...
+public class CoverageInformation implements Comparable<CoverageInformation> {
+	//Escolha da politica de Agrupamento Critico. Basta mudar esta linha para trocar a politica.
+	private CoverageInfoComparator compareStrategy = new SortByCoverage();
+	...
+	@Override
+	public int compareTo(CoverageInformation other) {
+		return this.compareStrategy.compare(this, other);
+	}
+	...
+}
+\end{lstlisting}
+
+Para este trabalho, foram desenvolvidas as políticas de Agrupamento por Proximidade e de Agrupamento Crítico. Contudo, o modelo proposto permite que diversas extensões sejam feitas ao algoritmo.
+
+O próximo capítulo demonstra os resultados dos experimentos realizados com os algoritmos apresentados neste capítulo.
