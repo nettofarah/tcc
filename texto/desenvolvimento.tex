@@ -51,14 +51,6 @@ temperatura, umidade, sons, etc.
 a presença de uma espécie incomum em uma determinada área.
 \end{description}
 
-% A figura \ref{fig:app} demonstra um exemplo do funcionamento básico do sistema de monitoramento.
-% 
-% \begin{figure}[h!]
-% \centering
-% \includegraphics[width=12cm]{pictures/application.png}
-% \caption{Funcionamento Básico da Aplicação}
-%  \label{fig:app}
-% \end{figure}
 
 
 Observados os problemas e exemplos expostos anteriormente, este trabalho apresenta algumas soluções para se aprimorar
@@ -74,17 +66,13 @@ comunicar com os nós sensores que se encontram abaixo do mesmo, estes nós
 armazenam um valor com a intensidade do sinal com que a mensagem foi recebida.
 Neste momento é formado um gradiente que corresponde a um rastro artificial da aeronave.
 
-	\item[ (b) Reforço dos Rastros de Ferormônio:] Em situações em que se utiliza mais de uma aeronave pode se 
-tornar interessante desenvolver uma política de reforço dos rastros de ferormônio construídos em (a) por cada \vant.
-Nesse caso, cada \vant pode reforçar o gradiente de todos os outros, desde que seus rastros se encontrem em algum ponto
-da área de interesse.
-	
-	\item[ (c) Detecção e Propagação do Evento:] quando um evento é
+	\item[ (b) Detecção e Propagação do Evento:] quando um evento é
 detectado, os nós sensores terrestres devem realizar uma negociação a fim de
 enviar uma mensagem de alarme para os \vants presentes na área. Esta mensagem
-deve encontrar o rastro de ferormônio formado em (a) e (b) e prosseguir até o \vant
+deve encontrar o rastro de ferormônio formado em (a) e prosseguir até o \vant
 mais hábil para tratar o evento ocorrido.
 
+	\item[ (c) Reforço de Conectividade da Rede:]
 
 %% Este aqui vai par os trabalhos futuros
 
@@ -99,6 +87,11 @@ mais hábil para tratar o evento ocorrido.
 % região onde onde houve a detecção devem alterar seu modo de trabalho, realizando
 % assim uma perseguição e rastreamento, marcando uma trilha de mobilidade do
 % evento, ao invés de soar os alarmes novamente.
+
+%\item[ (b) Reforço dos Rastros de Ferormônio:] Em situações em que se utiliza mais de uma aeronave pode se 
+%tornar interessante desenvolver uma política de reforço dos rastros de ferormônio construídos em (a) por cada \vant.
+%Nesse caso, cada \vant pode reforçar o gradiente de todos os outros, desde que seus rastros se encontrem em algum ponto
+%da área de interesse.
 
 \end{description}
 
@@ -163,50 +156,60 @@ Além de armazenar o valor de feromônio recebido, o nó sensor deve agendar uma
 
 Cada nó sensor armazenando os valores de feromônios representa o caminho por onde o \vant sobrevoou. Contudo, este rastro ainda pode conter certas ambiguidades. Observando-se o fato que diversos nós sensores recebem o mesmo valor de feromônio, verifica-se que em uma mesma região contida no raio de alcance do \vant (considerando-se que a propagação do sinal ocorre em formato circular) existem diversos nós sensores representando a mesma quantidade de feromônio, como demonstrado na figura xxxx. Ainda que os valores evaporem com o tempo, seguindo esta tendência, os nós sensores evaporarão com a mesma proporção, resultando em um rastro que somente encaminhará as mensagens a uma região (do mesmo tamanho do raio de propagação do \vant), não a um ponto específico na rede. Neste caso, encaminhar a mensagem a uma região pode não ser o ideal, visto que a mensagem não encontraria um sentido correto para ser encaminhada.
 
-Para sobrepor esse problema, pode-se adicionar uma restrição ao se armazenar um valor de feromônio em um dado nó sensor. Neste caso, em específico, utiliza-se a informação de intensidade com que o pacote foi recebido (RSSI) pelo nó sensor. Esta informação garante que se armazene valores de feromônio proporcionais à distância entre os nós sensores e o emissor dos pacotes. Este armazenamento promoverá, em nível macro, um rastro em formato de gradiente. Este gradiente será resultante da variação dos valores de feromônio em relação ao tempo em que o nó sensor recebeu o pacote e à distância entre o nó sensor e o \vant emissor do pacote. Este gradiente é demonstrado na figura yyy.
+Para sobrepor esse problema, pode-se adicionar uma restrição ao se armazenar um valor de feromônio em um dado nó sensor. Neste caso, em específico, utiliza-se a informação de intensidade com que o pacote foi recebido (RSSI) pelo nó sensor. A informação recebida garante que se armazene valores de feromônio proporcionais à distância entre os nós sensores e o emissor dos pacotes. Este armazenamento promoverá, em nível macro, um rastro em formato de gradiente, que será resultante da variação dos valores de feromônio em relação ao tempo em que o nó sensor recebeu o pacote e à distância entre o nó sensor e o \vant emissor do pacote. Este gradiente é demonstrado na figura yyy.
 
 \section{Propagação de Eventos}
+Uma vez detectado um evento de interesse, espera-se que o sistema seja capaz de reportá-lo ao \vant mais adequado para tratar o fenômeno com maior granularidade. Para o alcance de tal objetivo é utilizado um algoritmo de propagação de eventos. Este algoritmo integra os dois algoritmos anteriores, de modo que se torne possível a entrega dos eventos aos \vants.
 
-\section{Reforço dos Rastros de Ferormônio}
+O primeiro passo para o funcionamento deste algoritmo é a definição de alarme. Neste contexto um alarme é considerado como uma estrutura de dados responsável por carregar informações acerca do evento ocorrido. A estrutura de um alarme é formada por:
 
+\begin{description}
+	\item[\emph{Position}:]  Representa a posição em que o evento foi detectado.
+	\item[\emph{TimeStamp}:] Informa o momento em que o alarme foi disparado.
+	\item[\emph{PheromoneAmmount}:] Indica a quantidade atual de feromônio presente no alarme. Esta quantidade de feromônio é o principal atributo presente nesta estrutura de dados, pois será atualizada cada vez que o alarme for repassado.
+	\item[\emph{Flavor}:] Fornece o "sabor" de feromônio mais propício a tratar este evento. Por exemplo, no caso da detecção de um evento sonoro, o sabor do alarme seria "\emph{noise}", de modo que este alarme somente deve ser repassado para nós sensores que possuam feromônios do sabor \emph{noise}.
+\end{description}
 
+O funcionamento básico desta propagação de eventos baseia-se em repassar o alarme do ponto inicial (ponto de detecção do evento) ao ponto final (posição do \vant). Visto que neste ponto já existem diversos gradientes formados pelos rastros dos \vants, a tarefa do nó sensor detector do evento resume-se em determinar o "sabor"  que mais se adequa ao evento em questão e encaminhar o alarme, de modo que o mesmo alcance seu destino (\vant mais apropriado).
 
+Para a propagação do alarme criado, o nó sensor deve encaminhá-lo somento a outros nós sensores que estejam dentro do mesmo rastro de feromônio. Uma observação importante neste método é que o alarme só deve ser encaminhado para nós sensores que possuam concentração de feromônio superior ao do nó sensor criador do alarme. Para que essa premissa seja garantida,  torna-se imprescindível que a estrutura de Alarme carregue a informação da quantidade de feromônio presente no alarme. Seguindo-se esta idéia, o nó sensor detector deve encaminhar seu alarme em mensagens do tipo \emph{broadcast}, de modo que seus vizinhos recebem a informação de alarme. 
 
+Uma vez que um vizinho do nó sensor propagador receber o pacote contendo o alarme, deverá analisar o alarme recebido e decidir se encaminha a mensagem ou não.  Se a quantidade de feromônio armazenada no nó sensor receptor for menor que a quantidade do alarme, o nó receptor simplesmente deve descartar o alarme. Contudo, se a quantidade armazenada no nó receptor for superior à quantidade de feromônio recebida, o nó receptor deve atualizar atualizar o valor de feromônio do alarme com seu próprio valor e repassar a mensagem também em formato de \emph{broadcast}. 
 
+A execução das pequenas e locais ações anteriores acarretará em um comportamento global em toda a rede de sensores. Estas interações entre os nós sensores promoverão a entrega da mensagem contendo o alarme ao \vant que estiver sobrevoando a área de interesse no momento em que se detectou o evento.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+O algoritmo básico, em psedocódigo, para este fenômeno pode ser visualizado abaixo: \\
 
 
+\begin{algorithm}[H]
+	\SetAlgoLined
+	
+	\SetKwFunction{minhaQuantidadeDeFeromonio}{minhaQuantidadeDeFeromonio}
+	\SetKwFunction{encaminharAlarme}{encaminharAlarme}
+
+	\Entrada{Objeto Alarme}
+
+	\Se{ alarme.quantidadeDeFeromonio < \minhaQuantidadeDeFeromonio() }{
+			alarme.quantidadeDeFeromonio = \minhaQuantidadeDeFeromonio()\;
+			\encaminharAlarme(alarme);
+		}
+	
+\caption{Algoritmo para a propagação de eventos.}
+\end{algorithm}
 
 
+Uma particularidade interessante deste algoritmo é que podem exister regiões na área de interesse em que ainda não se existe a presença de rastros de feromônio. Contudo, esta questão apresenta-se discutível, pois poderia-se considerar que o sistema só entraria em funcionamento no momento em que toda área já estivesse coberta pelo \vant. Entretanto, esta premissa não pode ser garantida em todos os casos. Para que este problema seja contornado, pode ser proposta uma variação deste algoritmo em que quando um nó sensor detectar um evento e o mesmo não possuir rastro de feromônio, este nó deverá encaminhar a mensagem para um de seus vizinhos, na esperança de que este visinho possua rastros. Existem algumas medidas para que se escolha o vizinho mais adequado para receber a mensagem de alarme. Contudo, devido a extensibilidade da explicação, não serão abordadas neste trabalho. Porém, vale ressaltar que esta particularidade ocorre em poucos casos e será abordada novamente no capítulo de resultados.
 
+ A figura \ref{fig:app} demonstra um exemplo do funcionamento básico da propagação de eventos.
+ 
+ \begin{figure}[h!]
+ \centering
+ \includegraphics[width=12cm]{pictures/application.png}
+ \caption{Propagação de um evento de interesse.}
+  \label{fig:app}
+ \end{figure}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+\section{Reforço de Conectividade da Rede}
 
 
 
