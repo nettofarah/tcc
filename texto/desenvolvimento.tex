@@ -137,17 +137,19 @@ O algoritmo a seguir demonstra o algoritmo em formato simplificado. \\
 Este algoritmo tem como objetivo a construção de um rastro de feromônios sobre a rede de sensores. A construção deste rastro possibilita que cada \vant receba mensagens de
 maneira mais rápida e mais eficiente, bem como otimiza os caminhos para que uma mensagem alcance seu destino.
 
-Para a composição destes rastros é utilizada uma heurística inspirada em fenômenos biológicos, mais especificamete no comportamento de formigas quando buscam alimento.
-O princípio deste comportamento, de forma simplificada,  é que uma formiga libera seu rastro através de um caminho no momento em que começa sua viagem em busca de alimento. Este rastro é composto por feromônios que exalam um odor específico para marcar o caminho percorrido. Um ponto importante a se ressaltar é que este rastro se evapora com o passar do tempo, isto, por fim, resulta em um gradiente que decresce de acordo com o tempo. Consequentemente, este caminho possuirá duas extremidades, uma extremidade com baixo valor de feromônio (início do caminho) e uma extremidade com altíssima concentração de feromônio (posição atual da formiga). Este rastro possibilita que a formiga (detentora do rastro) possa ser alcançada por qualquer outro indivíduo (outras formigas) que possua capacidades de interpretar o odor do feromônio.
-
-A figura \ref{fig:ants} demonstra o fenômeno descrito.
-
- \begin{figure}[h!]
+ \begin{figure}
  \centering
  \includegraphics[width=12cm]{pictures/ants.png}
  \caption{Fenômeno Biológico de Distribuição de Feromônio.}
   \label{fig:ants}
  \end{figure}
+
+Para a composição destes rastros é utilizada uma heurística inspirada em fenômenos biológicos, mais especificamete no comportamento de formigas quando buscam alimento.
+O princípio deste comportamento, de forma simplificada,  é que uma formiga libera seu rastro através de um caminho no momento em que começa sua viagem em busca de alimento. Este rastro é composto por feromônios que exalam um odor específico para marcar o caminho percorrido. Um ponto importante a se ressaltar é que este rastro se evapora com o passar do tempo, isto, por fim, resulta em um gradiente que decresce de acordo com o tempo. Consequentemente, este caminho possuirá duas extremidades, uma extremidade com baixo valor de feromônio (início do caminho) e uma extremidade com altíssima concentração de feromônio (posição atual da formiga). Este rastro possibilita que a formiga (detentora do rastro) possa ser alcançada por qualquer outro indivíduo (outras formigas) que possua capacidades de interpretar o odor do feromônio.
+
+A figura \ref{fig:ants} demonstra o fenômeno descrito.
+
+
 
 Inspirado no comportamento anteriormente descrito, torna-se possível criar uma adaptação do mesmo para implementação no uso de redes de sensores sem fio em conjunto com veículos aéreos não tripulados. Para isso, basta que se considere um \vant como uma formiga capaz de produzir um rastro feromônio. Este rastro resultará em uma espécie de \emph{backbone} de feromônios que otimizará a entrega de mensagens destinadas ao \vant. A estratégia utilizada para que este comportamento fosse mapeado para uma rede de sensores pode ser dividida em duas responsabilidades:
 
@@ -166,16 +168,20 @@ A figura \ref{fig:broadcast} demonstra o item apresentado.
 \subsection{Armazenamento por parte dos Nós Sensores}
 Os nós sensores espalhados pela área são responsáveis por armazenar os feromônios distribuídos pelos \vants, de modo a reproduzirem os rastros. Cada nó, ao receber um pacote enviado por um \vant deverá armazenar o sabor de feromônio recebido. Esta ação, quando observada em nível macro (todas as micro-ações produzidas por cada nó), resultará em um comportamento global, construindo rastros de feromônios digitais que representam os caminho percorridos por cada \vant dentro da área de interesse. 
 
-Além de armazenar o valor de feromônio recebido, o nó sensor deve agendar uma tarefa interna para reduzir seu valor de feromônio de acordo com o tempo. Um exemplo de tarefa é reduzir a cada 300 segundos o valor de feromônio armazenado a uma taxa de 10\%, de modo a simular a evaporação do feromônio. Esta evaporação garante que o rastro mantenha-se em maior concentração de feromônio na extremidade onde se encontra o \vant, e, em menor concentração na extremidade onde o rastro se originou.
-
-Cada nó sensor armazenando os valores de feromônios representa o caminho por onde o \vant sobrevoou. Contudo, este rastro ainda pode conter certas ambiguidades. Observando-se o fato que diversos nós sensores recebem o mesmo valor de feromônio, verifica-se que em uma mesma região contida no raio de alcance do \vant (considerando-se que a propagação do sinal ocorre em formato circular) existem diversos nós sensores representando a mesma quantidade de feromônio, como demonstrado na figura \ref{fig:flat}. Ainda que os valores evaporem com o tempo, seguindo esta tendência, os nós sensores evaporarão com a mesma proporção, resultando em um rastro que somente encaminhará as mensagens a uma região (do mesmo tamanho do raio de propagação do \vant), não a um ponto específico na rede. Neste caso, encaminhar a mensagem a uma região pode não ser o ideal, visto que a mensagem não encontraria um sentido correto para ser encaminhada.
-
  \begin{figure}[h!]
  \centering
  \includegraphics[width=10cm]{pictures/flat_pheromone.png}
  \caption{Pheromônios esmaecendo em função do tempo.}
   \label{fig:flat}
  \end{figure}
+
+Além de armazenar o valor de feromônio recebido, o nó sensor deve agendar uma tarefa interna para reduzir seu valor de feromônio de acordo com o tempo. Um exemplo de tarefa é reduzir a cada 300 segundos o valor de feromônio armazenado a uma taxa de 10\%, de modo a simular a evaporação do feromônio. Esta evaporação garante que o rastro mantenha-se em maior concentração de feromônio na extremidade onde se encontra o \vant, e, em menor concentração na extremidade onde o rastro se originou.
+
+
+
+Cada nó sensor armazenando os valores de feromônios representa o caminho por onde o \vant sobrevoou. Contudo, este rastro ainda pode conter certas ambiguidades. Observando-se o fato que diversos nós sensores recebem o mesmo valor de feromônio, verifica-se que em uma mesma região contida no raio de alcance do \vant (considerando-se que a propagação do sinal ocorre em formato circular) existem diversos nós sensores representando a mesma quantidade de feromônio, como demonstrado na figura \ref{fig:flat}. Ainda que os valores evaporem com o tempo, seguindo esta tendência, os nós sensores evaporarão com a mesma proporção, resultando em um rastro que somente encaminhará as mensagens a uma região (do mesmo tamanho do raio de propagação do \vant), não a um ponto específico na rede. Neste caso, encaminhar a mensagem a uma região pode não ser o ideal, visto que a mensagem não encontraria um sentido correto para ser encaminhada.
+
+
 
 Para sobrepor esse problema, pode-se adicionar uma restrição ao se armazenar um valor de feromônio em um dado nó sensor. Neste caso, em específico, utiliza-se a informação de intensidade com que o pacote foi recebido (RSSI) pelo nó sensor. A informação recebida garante que se armazene valores de feromônio proporcionais à distância entre os nós sensores e o emissor dos pacotes. Este armazenamento promoverá, em nível macro, um rastro em formato de gradiente, que será resultante da variação dos valores de feromônio em relação ao tempo em que o nó sensor recebeu o pacote e à distância entre o nó sensor e o \vant emissor do pacote. Este gradiente é demonstrado na figura \ref{fig:gradient}.
 
