@@ -1,0 +1,302 @@
+## ShoX logfile, created Thu Sep 30 15:47:38 BRT 2010
+cf %3Cconfiguration%3E%3Cfield%3E%3Cx%3E200.0%3C%2Fx%3E%3Cy%3E185.0%3C%2Fy%3E%3C%2Ffield%3E%3Csimulationtime+stepspersecond%3D%22100%22+base%3D%22steps%22%3E60000%3C%2Fsimulationtime%3E%3Cphysicalmodel%3Ebr.ufla.dcc.grubix.simulator.physical.UnitDisc%3C%2Fphysicalmodel%3E%3Cmovementmanager%3Ebr.ufla.dcc.ut.movement.ComposedMovement%3C%2Fmovementmanager%3E%3Cnodes%3E%3Ccount%3E142%3C%2Fcount%3E%3Clayers%3E%3Cphysical%3Ebr.ufla.dcc.grubix.simulator.node.user.PHY_802_11bg%3C%2Fphysical%3E%3Cmac%3Ebr.ufla.dcc.grubix.simulator.node.user.MAC_IEEE802_11bg_DCF%3C%2Fmac%3E%3Cloglink%3Ebr.ufla.dcc.grubix.simulator.node.user.LogLinkDebug%3C%2Floglink%3E%3Cnetwork%3Ebr.ufla.dcc.grubix.simulator.node.user.OptimalSourceRouting%3C%2Fnetwork%3E%3Capplication%3Ebr.ufla.dcc.ut.intruder.Intruder%3C%2Fapplication%3E%3C%2Flayers%3E%3C%2Fnodes%3E%3Cpositions%3E%3Cposition%3E%3Cid%3E1%3C%2Fid%3E%3Cx%3E175.5%3C%2Fx%3E%3Cy%3E62.67%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E2%3C%2Fid%3E%3Cx%3E12.03%3C%2Fx%3E%3Cy%3E108.98%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E3%3C%2Fid%3E%3Cx%3E107.91%3C%2Fx%3E%3Cy%3E182.6%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E4%3C%2Fid%3E%3Cx%3E195.89%3C%2Fx%3E%3Cy%3E121.73%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E5%3C%2Fid%3E%3Cx%3E30.72%3C%2Fx%3E%3Cy%3E27.33%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E6%3C%2Fid%3E%3Cx%3E121.07%3C%2Fx%3E%3Cy%3E52.25%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E7%3C%2Fid%3E%3Cx%3E92.69%3C%2Fx%3E%3Cy%3E52.16%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E8%3C%2Fid%3E%3Cx%3E41.37%3C%2Fx%3E%3Cy%3E181.21%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E9%3C%2Fid%3E%3Cx%3E199.99%3C%2Fx%3E%3Cy%3E61.97%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E10%3C%2Fid%3E%3Cx%3E82.04%3C%2Fx%3E%3Cy%3E121.14%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E11%3C%2Fid%3E%3Cx%3E20.72%3C%2Fx%3E%3Cy%3E49.98%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E12%3C%2Fid%3E%3Cx%3E48.99%3C%2Fx%3E%3Cy%3E41.09%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E13%3C%2Fid%3E%3Cx%3E64.06%3C%2Fx%3E%3Cy%3E93.83%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E14%3C%2Fid%3E%3Cx%3E97.78%3C%2Fx%3E%3Cy%3E4.87%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E15%3C%2Fid%3E%3Cx%3E29.56%3C%2Fx%3E%3Cy%3E154.89%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E16%3C%2Fid%3E%3Cx%3E96.38%3C%2Fx%3E%3Cy%3E7.38%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E17%3C%2Fid%3E%3Cx%3E87.81%3C%2Fx%3E%3Cy%3E81.9%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E18%3C%2Fid%3E%3Cx%3E184.41%3C%2Fx%3E%3Cy%3E92.76%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E19%3C%2Fid%3E%3Cx%3E75.95%3C%2Fx%3E%3Cy%3E43.74%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E20%3C%2Fid%3E%3Cx%3E56.86%3C%2Fx%3E%3Cy%3E72.13%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E21%3C%2Fid%3E%3Cx%3E169.57%3C%2Fx%3E%3Cy%3E157.93%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E22%3C%2Fid%3E%3Cx%3E81.77%3C%2Fx%3E%3Cy%3E164.69%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E23%3C%2Fid%3E%3Cx%3E27.33%3C%2Fx%3E%3Cy%3E51.61%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E24%3C%2Fid%3E%3Cx%3E98.93%3C%2Fx%3E%3Cy%3E146.61%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E25%3C%2Fid%3E%3Cx%3E95.31%3C%2Fx%3E%3Cy%3E50.2%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E26%3C%2Fid%3E%3Cx%3E40.67%3C%2Fx%3E%3Cy%3E109.26%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E27%3C%2Fid%3E%3Cx%3E105.31%3C%2Fx%3E%3Cy%3E85.58%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E28%3C%2Fid%3E%3Cx%3E166.09%3C%2Fx%3E%3Cy%3E166.19%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E29%3C%2Fid%3E%3Cx%3E4.42%3C%2Fx%3E%3Cy%3E45.66%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E30%3C%2Fid%3E%3Cx%3E106.37%3C%2Fx%3E%3Cy%3E126.55%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E31%3C%2Fid%3E%3Cx%3E13.08%3C%2Fx%3E%3Cy%3E65.57%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E32%3C%2Fid%3E%3Cx%3E81.52%3C%2Fx%3E%3Cy%3E136.92%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E33%3C%2Fid%3E%3Cx%3E24.28%3C%2Fx%3E%3Cy%3E56.95%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E34%3C%2Fid%3E%3Cx%3E168.04%3C%2Fx%3E%3Cy%3E138.91%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E35%3C%2Fid%3E%3Cx%3E128.95%3C%2Fx%3E%3Cy%3E147.07%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E36%3C%2Fid%3E%3Cx%3E172.0%3C%2Fx%3E%3Cy%3E55.2%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E37%3C%2Fid%3E%3Cx%3E80.72%3C%2Fx%3E%3Cy%3E67.26%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E38%3C%2Fid%3E%3Cx%3E93.41%3C%2Fx%3E%3Cy%3E28.94%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E39%3C%2Fid%3E%3Cx%3E197.87%3C%2Fx%3E%3Cy%3E136.7%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E40%3C%2Fid%3E%3Cx%3E155.8%3C%2Fx%3E%3Cy%3E48.17%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E41%3C%2Fid%3E%3Cx%3E141.16%3C%2Fx%3E%3Cy%3E92.25%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E42%3C%2Fid%3E%3Cx%3E118.41%3C%2Fx%3E%3Cy%3E150.72%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E43%3C%2Fid%3E%3Cx%3E3.07%3C%2Fx%3E%3Cy%3E147.99%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E44%3C%2Fid%3E%3Cx%3E88.97%3C%2Fx%3E%3Cy%3E18.63%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E45%3C%2Fid%3E%3Cx%3E197.72%3C%2Fx%3E%3Cy%3E64.32%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E46%3C%2Fid%3E%3Cx%3E111.28%3C%2Fx%3E%3Cy%3E125.96%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E47%3C%2Fid%3E%3Cx%3E149.8%3C%2Fx%3E%3Cy%3E150.92%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E48%3C%2Fid%3E%3Cx%3E14.54%3C%2Fx%3E%3Cy%3E159.59%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E49%3C%2Fid%3E%3Cx%3E147.16%3C%2Fx%3E%3Cy%3E91.01%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E50%3C%2Fid%3E%3Cx%3E180.48%3C%2Fx%3E%3Cy%3E88.54%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E51%3C%2Fid%3E%3Cx%3E143.28%3C%2Fx%3E%3Cy%3E184.84%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E52%3C%2Fid%3E%3Cx%3E9.18%3C%2Fx%3E%3Cy%3E49.85%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E53%3C%2Fid%3E%3Cx%3E174.75%3C%2Fx%3E%3Cy%3E105.36%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E54%3C%2Fid%3E%3Cx%3E146.3%3C%2Fx%3E%3Cy%3E76.69%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E55%3C%2Fid%3E%3Cx%3E192.76%3C%2Fx%3E%3Cy%3E91.06%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E56%3C%2Fid%3E%3Cx%3E171.94%3C%2Fx%3E%3Cy%3E8.04%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E57%3C%2Fid%3E%3Cx%3E99.11%3C%2Fx%3E%3Cy%3E7.42%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E58%3C%2Fid%3E%3Cx%3E45.28%3C%2Fx%3E%3Cy%3E163.79%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E59%3C%2Fid%3E%3Cx%3E23.83%3C%2Fx%3E%3Cy%3E72.16%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E60%3C%2Fid%3E%3Cx%3E149.44%3C%2Fx%3E%3Cy%3E104.28%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E61%3C%2Fid%3E%3Cx%3E184.99%3C%2Fx%3E%3Cy%3E147.31%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E62%3C%2Fid%3E%3Cx%3E87.35%3C%2Fx%3E%3Cy%3E79.46%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E63%3C%2Fid%3E%3Cx%3E30.99%3C%2Fx%3E%3Cy%3E101.69%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E64%3C%2Fid%3E%3Cx%3E42.19%3C%2Fx%3E%3Cy%3E44.19%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E65%3C%2Fid%3E%3Cx%3E181.11%3C%2Fx%3E%3Cy%3E11.5%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E66%3C%2Fid%3E%3Cx%3E134.93%3C%2Fx%3E%3Cy%3E79.46%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E67%3C%2Fid%3E%3Cx%3E152.5%3C%2Fx%3E%3Cy%3E139.05%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E68%3C%2Fid%3E%3Cx%3E186.47%3C%2Fx%3E%3Cy%3E41.87%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E69%3C%2Fid%3E%3Cx%3E189.98%3C%2Fx%3E%3Cy%3E50.25%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E70%3C%2Fid%3E%3Cx%3E23.73%3C%2Fx%3E%3Cy%3E58.62%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E71%3C%2Fid%3E%3Cx%3E99.47%3C%2Fx%3E%3Cy%3E5.47%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E72%3C%2Fid%3E%3Cx%3E156.34%3C%2Fx%3E%3Cy%3E69.36%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E73%3C%2Fid%3E%3Cx%3E26.9%3C%2Fx%3E%3Cy%3E160.29%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E74%3C%2Fid%3E%3Cx%3E94.67%3C%2Fx%3E%3Cy%3E52.74%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E75%3C%2Fid%3E%3Cx%3E21.4%3C%2Fx%3E%3Cy%3E43.52%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E76%3C%2Fid%3E%3Cx%3E180.35%3C%2Fx%3E%3Cy%3E96.34%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E77%3C%2Fid%3E%3Cx%3E174.93%3C%2Fx%3E%3Cy%3E38.2%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E78%3C%2Fid%3E%3Cx%3E156.42%3C%2Fx%3E%3Cy%3E141.23%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E79%3C%2Fid%3E%3Cx%3E140.0%3C%2Fx%3E%3Cy%3E28.57%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E80%3C%2Fid%3E%3Cx%3E17.4%3C%2Fx%3E%3Cy%3E95.38%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E81%3C%2Fid%3E%3Cx%3E93.12%3C%2Fx%3E%3Cy%3E6.2%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E82%3C%2Fid%3E%3Cx%3E148.24%3C%2Fx%3E%3Cy%3E28.9%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E83%3C%2Fid%3E%3Cx%3E133.47%3C%2Fx%3E%3Cy%3E137.04%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E84%3C%2Fid%3E%3Cx%3E186.34%3C%2Fx%3E%3Cy%3E113.8%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E85%3C%2Fid%3E%3Cx%3E84.82%3C%2Fx%3E%3Cy%3E33.12%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E86%3C%2Fid%3E%3Cx%3E22.47%3C%2Fx%3E%3Cy%3E111.19%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E87%3C%2Fid%3E%3Cx%3E103.15%3C%2Fx%3E%3Cy%3E52.51%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E88%3C%2Fid%3E%3Cx%3E93.8%3C%2Fx%3E%3Cy%3E20.05%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E89%3C%2Fid%3E%3Cx%3E183.25%3C%2Fx%3E%3Cy%3E84.93%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E90%3C%2Fid%3E%3Cx%3E16.41%3C%2Fx%3E%3Cy%3E138.78%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E91%3C%2Fid%3E%3Cx%3E4.75%3C%2Fx%3E%3Cy%3E106.85%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E92%3C%2Fid%3E%3Cx%3E54.88%3C%2Fx%3E%3Cy%3E58.17%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E93%3C%2Fid%3E%3Cx%3E161.26%3C%2Fx%3E%3Cy%3E174.93%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E94%3C%2Fid%3E%3Cx%3E132.82%3C%2Fx%3E%3Cy%3E153.29%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E95%3C%2Fid%3E%3Cx%3E75.93%3C%2Fx%3E%3Cy%3E75.05%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E96%3C%2Fid%3E%3Cx%3E51.04%3C%2Fx%3E%3Cy%3E60.65%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E97%3C%2Fid%3E%3Cx%3E22.39%3C%2Fx%3E%3Cy%3E10.6%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E98%3C%2Fid%3E%3Cx%3E98.95%3C%2Fx%3E%3Cy%3E87.55%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E99%3C%2Fid%3E%3Cx%3E42.52%3C%2Fx%3E%3Cy%3E168.49%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E100%3C%2Fid%3E%3Cx%3E119.97%3C%2Fx%3E%3Cy%3E25.9%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E101%3C%2Fid%3E%3Cx%3E180.17%3C%2Fx%3E%3Cy%3E29.77%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E102%3C%2Fid%3E%3Cx%3E123.28%3C%2Fx%3E%3Cy%3E19.73%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E103%3C%2Fid%3E%3Cx%3E135.25%3C%2Fx%3E%3Cy%3E122.58%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E104%3C%2Fid%3E%3Cx%3E121.7%3C%2Fx%3E%3Cy%3E2.99%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E105%3C%2Fid%3E%3Cx%3E182.8%3C%2Fx%3E%3Cy%3E115.41%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E106%3C%2Fid%3E%3Cx%3E19.74%3C%2Fx%3E%3Cy%3E157.14%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E107%3C%2Fid%3E%3Cx%3E199.1%3C%2Fx%3E%3Cy%3E91.22%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E108%3C%2Fid%3E%3Cx%3E75.76%3C%2Fx%3E%3Cy%3E47.5%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E109%3C%2Fid%3E%3Cx%3E90.16%3C%2Fx%3E%3Cy%3E94.32%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E110%3C%2Fid%3E%3Cx%3E118.86%3C%2Fx%3E%3Cy%3E41.61%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E111%3C%2Fid%3E%3Cx%3E27.23%3C%2Fx%3E%3Cy%3E76.5%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E112%3C%2Fid%3E%3Cx%3E113.67%3C%2Fx%3E%3Cy%3E133.57%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E113%3C%2Fid%3E%3Cx%3E60.21%3C%2Fx%3E%3Cy%3E66.54%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E114%3C%2Fid%3E%3Cx%3E35.27%3C%2Fx%3E%3Cy%3E29.81%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E115%3C%2Fid%3E%3Cx%3E101.57%3C%2Fx%3E%3Cy%3E33.48%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E116%3C%2Fid%3E%3Cx%3E141.47%3C%2Fx%3E%3Cy%3E138.46%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E117%3C%2Fid%3E%3Cx%3E151.8%3C%2Fx%3E%3Cy%3E138.28%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E118%3C%2Fid%3E%3Cx%3E11.38%3C%2Fx%3E%3Cy%3E7.76%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E119%3C%2Fid%3E%3Cx%3E172.16%3C%2Fx%3E%3Cy%3E61.09%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E120%3C%2Fid%3E%3Cx%3E156.72%3C%2Fx%3E%3Cy%3E62.3%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E121%3C%2Fid%3E%3Cx%3E0.96%3C%2Fx%3E%3Cy%3E102.55%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E122%3C%2Fid%3E%3Cx%3E6.35%3C%2Fx%3E%3Cy%3E150.49%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E123%3C%2Fid%3E%3Cx%3E157.11%3C%2Fx%3E%3Cy%3E136.33%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E124%3C%2Fid%3E%3Cx%3E14.56%3C%2Fx%3E%3Cy%3E136.84%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E125%3C%2Fid%3E%3Cx%3E77.6%3C%2Fx%3E%3Cy%3E27.93%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E126%3C%2Fid%3E%3Cx%3E150.33%3C%2Fx%3E%3Cy%3E73.63%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E127%3C%2Fid%3E%3Cx%3E95.37%3C%2Fx%3E%3Cy%3E5.46%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E128%3C%2Fid%3E%3Cx%3E87.3%3C%2Fx%3E%3Cy%3E153.25%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E129%3C%2Fid%3E%3Cx%3E79.84%3C%2Fx%3E%3Cy%3E172.06%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E130%3C%2Fid%3E%3Cx%3E33.11%3C%2Fx%3E%3Cy%3E170.27%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E131%3C%2Fid%3E%3Cx%3E134.27%3C%2Fx%3E%3Cy%3E76.93%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E132%3C%2Fid%3E%3Cx%3E112.17%3C%2Fx%3E%3Cy%3E160.36%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E133%3C%2Fid%3E%3Cx%3E72.75%3C%2Fx%3E%3Cy%3E162.92%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E134%3C%2Fid%3E%3Cx%3E147.02%3C%2Fx%3E%3Cy%3E92.54%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E135%3C%2Fid%3E%3Cx%3E183.82%3C%2Fx%3E%3Cy%3E136.91%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E136%3C%2Fid%3E%3Cx%3E171.64%3C%2Fx%3E%3Cy%3E106.0%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E137%3C%2Fid%3E%3Cx%3E28.8%3C%2Fx%3E%3Cy%3E26.9%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E138%3C%2Fid%3E%3Cx%3E53.35%3C%2Fx%3E%3Cy%3E113.57%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E139%3C%2Fid%3E%3Cx%3E119.94%3C%2Fx%3E%3Cy%3E154.98%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E140%3C%2Fid%3E%3Cx%3E0.91%3C%2Fx%3E%3Cy%3E110.14%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E141%3C%2Fid%3E%3Cx%3E76.75%3C%2Fx%3E%3Cy%3E139.07%3C%2Fy%3E%3C%2Fposition%3E%3Cposition%3E%3Cid%3E142%3C%2Fid%3E%3Cx%3E92.05%3C%2Fx%3E%3Cy%3E51.9%3C%2Fy%3E%3C%2Fposition%3E%3C%2Fpositions%3E%3C%2Fconfiguration%3E
+ns id1 nTypeOfNode tp1 v5
+ns id2 nTypeOfNode tp1 v2
+ns id3 nTypeOfNode tp1 v2
+ns id4 nTypeOfNode tp1 v2
+ns id5 nTypeOfNode tp1 v2
+ns id6 nTypeOfNode tp1 v2
+ns id7 nTypeOfNode tp1 v2
+ns id8 nTypeOfNode tp1 v2
+ns id9 nTypeOfNode tp1 v2
+ns id10 nTypeOfNode tp1 v2
+ns id11 nTypeOfNode tp1 v2
+ns id12 nTypeOfNode tp1 v2
+ns id13 nTypeOfNode tp1 v2
+ns id14 nTypeOfNode tp1 v2
+ns id15 nTypeOfNode tp1 v2
+ns id16 nTypeOfNode tp1 v2
+ns id17 nTypeOfNode tp1 v2
+ns id18 nTypeOfNode tp1 v2
+ns id19 nTypeOfNode tp1 v2
+ns id20 nTypeOfNode tp1 v2
+ns id21 nTypeOfNode tp1 v2
+ns id22 nTypeOfNode tp1 v2
+ns id23 nTypeOfNode tp1 v2
+ns id24 nTypeOfNode tp1 v2
+ns id25 nTypeOfNode tp1 v2
+ns id26 nTypeOfNode tp1 v2
+ns id27 nTypeOfNode tp1 v2
+ns id28 nTypeOfNode tp1 v2
+ns id29 nTypeOfNode tp1 v2
+ns id30 nTypeOfNode tp1 v2
+ns id31 nTypeOfNode tp1 v2
+ns id32 nTypeOfNode tp1 v2
+ns id33 nTypeOfNode tp1 v2
+ns id34 nTypeOfNode tp1 v2
+ns id35 nTypeOfNode tp1 v2
+ns id36 nTypeOfNode tp1 v2
+ns id37 nTypeOfNode tp1 v2
+ns id38 nTypeOfNode tp1 v2
+ns id39 nTypeOfNode tp1 v2
+ns id40 nTypeOfNode tp1 v2
+ns id41 nTypeOfNode tp1 v2
+ns id42 nTypeOfNode tp1 v2
+ns id43 nTypeOfNode tp1 v2
+ns id44 nTypeOfNode tp1 v2
+ns id45 nTypeOfNode tp1 v2
+ns id46 nTypeOfNode tp1 v2
+ns id47 nTypeOfNode tp1 v2
+ns id48 nTypeOfNode tp1 v2
+ns id49 nTypeOfNode tp1 v2
+ns id50 nTypeOfNode tp1 v2
+ns id51 nTypeOfNode tp1 v2
+ns id52 nTypeOfNode tp1 v2
+ns id53 nTypeOfNode tp1 v2
+ns id54 nTypeOfNode tp1 v2
+ns id55 nTypeOfNode tp1 v2
+ns id56 nTypeOfNode tp1 v2
+ns id57 nTypeOfNode tp1 v2
+ns id58 nTypeOfNode tp1 v2
+ns id59 nTypeOfNode tp1 v2
+ns id60 nTypeOfNode tp1 v2
+ns id61 nTypeOfNode tp1 v2
+ns id62 nTypeOfNode tp1 v2
+ns id63 nTypeOfNode tp1 v2
+ns id64 nTypeOfNode tp1 v2
+ns id65 nTypeOfNode tp1 v2
+ns id66 nTypeOfNode tp1 v2
+ns id67 nTypeOfNode tp1 v2
+ns id68 nTypeOfNode tp1 v2
+ns id69 nTypeOfNode tp1 v2
+ns id70 nTypeOfNode tp1 v2
+ns id71 nTypeOfNode tp1 v2
+ns id72 nTypeOfNode tp1 v2
+ns id73 nTypeOfNode tp1 v2
+ns id74 nTypeOfNode tp1 v2
+ns id75 nTypeOfNode tp1 v2
+ns id76 nTypeOfNode tp1 v2
+ns id77 nTypeOfNode tp1 v2
+ns id78 nTypeOfNode tp1 v2
+ns id79 nTypeOfNode tp1 v2
+ns id80 nTypeOfNode tp1 v2
+ns id81 nTypeOfNode tp1 v2
+ns id82 nTypeOfNode tp1 v2
+ns id83 nTypeOfNode tp1 v2
+ns id84 nTypeOfNode tp1 v2
+ns id85 nTypeOfNode tp1 v2
+ns id86 nTypeOfNode tp1 v2
+ns id87 nTypeOfNode tp1 v2
+ns id88 nTypeOfNode tp1 v2
+ns id89 nTypeOfNode tp1 v2
+ns id90 nTypeOfNode tp1 v2
+ns id91 nTypeOfNode tp1 v2
+ns id92 nTypeOfNode tp1 v2
+ns id93 nTypeOfNode tp1 v2
+ns id94 nTypeOfNode tp1 v2
+ns id95 nTypeOfNode tp1 v2
+ns id96 nTypeOfNode tp1 v2
+ns id97 nTypeOfNode tp1 v2
+ns id98 nTypeOfNode tp1 v2
+ns id99 nTypeOfNode tp1 v2
+ns id100 nTypeOfNode tp1 v2
+ns id101 nTypeOfNode tp1 v2
+ns id102 nTypeOfNode tp1 v2
+ns id103 nTypeOfNode tp1 v2
+ns id104 nTypeOfNode tp1 v2
+ns id105 nTypeOfNode tp1 v2
+ns id106 nTypeOfNode tp1 v2
+ns id107 nTypeOfNode tp1 v2
+ns id108 nTypeOfNode tp1 v2
+ns id109 nTypeOfNode tp1 v2
+ns id110 nTypeOfNode tp1 v2
+ns id111 nTypeOfNode tp1 v2
+ns id112 nTypeOfNode tp1 v2
+ns id113 nTypeOfNode tp1 v2
+ns id114 nTypeOfNode tp1 v2
+ns id115 nTypeOfNode tp1 v2
+ns id116 nTypeOfNode tp1 v2
+ns id117 nTypeOfNode tp1 v2
+ns id118 nTypeOfNode tp1 v2
+ns id119 nTypeOfNode tp1 v2
+ns id120 nTypeOfNode tp1 v2
+ns id121 nTypeOfNode tp1 v2
+ns id122 nTypeOfNode tp1 v2
+ns id123 nTypeOfNode tp1 v2
+ns id124 nTypeOfNode tp1 v2
+ns id125 nTypeOfNode tp1 v2
+ns id126 nTypeOfNode tp1 v2
+ns id127 nTypeOfNode tp1 v2
+ns id128 nTypeOfNode tp1 v2
+ns id129 nTypeOfNode tp1 v2
+ns id130 nTypeOfNode tp1 v2
+ns id131 nTypeOfNode tp1 v2
+ns id132 nTypeOfNode tp1 v2
+ns id133 nTypeOfNode tp1 v2
+ns id134 nTypeOfNode tp1 v2
+ns id135 nTypeOfNode tp1 v2
+ns id136 nTypeOfNode tp1 v2
+ns id137 nTypeOfNode tp1 v2
+ns id138 nTypeOfNode tp1 v2
+ns id139 nTypeOfNode tp1 v2
+ns id140 nTypeOfNode tp1 v2
+ns id141 nTypeOfNode tp1 v2
+ns id142 nTypeOfNode tp1 v1
+mv id1 x175.27924647409603 y62.66379529830489 pr0 t2.0
+mv id142 x92.28045539658332 y50.84182047732384 pr0 t2.0
+dq t2.0 id1282
+dq t2.0 id1437
+mv id1 x175.05849294819205 y62.65759059660978 pr0 t202.0
+mv id142 x92.51091079316664 y49.78364095464769 pr0 t202.0
+dq t202.0 id1283
+dq t202.0 id1438
+mv id1 x174.83773942228808 y62.65138589491467 pr0 t402.0
+mv id142 x92.74136618974997 y48.72546143197153 pr0 t402.0
+dq t402.0 id1284
+dq t402.0 id1439
+mv id1 x174.6169858963841 y62.64518119321956 pr0 t602.0
+mv id142 x92.97182158633329 y47.667281909295376 pr0 t602.0
+dq t602.0 id1285
+dq t602.0 id1440
+mv id1 x174.39623237048013 y62.638976491524446 pr0 t802.0
+mv id142 x93.20227698291662 y46.60910238661922 pr0 t802.0
+dq t802.0 id1286
+dq t802.0 id1441
+mv id1 x174.17547884457616 y62.632771789829334 pr0 t1002.0
+mv id142 x93.43273237949994 y45.550922863943065 pr0 t1002.0
+dq t1002.0 id1287
+dq t1002.0 id1442
+mv id1 x173.9547253186722 y62.62656708813422 pr0 t1202.0
+mv id142 x93.66318777608326 y44.49274334126691 pr0 t1202.0
+dq t1202.0 id1288
+dq t1202.0 id1443
+mv id1 x173.73397179276822 y62.62036238643911 pr0 t1402.0
+mv id142 x93.89364317266659 y43.43456381859075 pr0 t1402.0
+dq t1402.0 id1289
+dq t1402.0 id1444
+mv id1 x173.51321826686424 y62.614157684744 pr0 t1602.0
+mv id142 x94.12409856924991 y42.3763842959146 pr0 t1602.0
+dq t1602.0 id1290
+dq t1602.0 id1445
+mv id1 x173.29246474096027 y62.60795298304889 pr0 t1802.0
+mv id142 x94.35455396583323 y41.31820477323844 pr0 t1802.0
+dq t1802.0 id1291
+dq t1802.0 id1446
+mv id1 x173.0717112150563 y62.60174828135378 pr0 t2002.0
+mv id142 x94.58500936241656 y40.260025250562286 pr0 t2002.0
+dq t2002.0 id1292
+dq t2002.0 id1447
+mv id1 x172.85095768915232 y62.59554357965867 pr0 t2202.0
+mv id142 x94.81546475899988 y39.20184572788613 pr0 t2202.0
+dq t2202.0 id1293
+dq t2202.0 id1448
+mv id1 x172.63020416324835 y62.589338877963556 pr0 t2402.0
+mv id142 x95.0459201555832 y38.143666205209975 pr0 t2402.0
+dq t2402.0 id1294
+dq t2402.0 id1449
+mv id1 x172.40945063734438 y62.583134176268445 pr0 t2602.0
+mv id142 x95.27637555216653 y37.08548668253382 pr0 t2602.0
+dq t2602.0 id1295
+dq t2602.0 id1450
+mv id1 x172.1886971114404 y62.57692947457333 pr0 t2802.0
+mv id142 x95.50683094874985 y36.02730715985766 pr0 t2802.0
+dq t2802.0 id1296
+dq t2802.0 id1451
+mv id1 x171.96794358553643 y62.57072477287822 pr0 t3002.0
+mv id142 x95.73728634533317 y34.96912763718151 pr0 t3002.0
+dq t3002.0 id1297
+dq t3002.0 id1452
+mv id1 x171.74719005963246 y62.56452007118311 pr0 t3202.0
+mv id142 x95.9677417419165 y33.91094811450535 pr0 t3202.0
+dq t3202.0 id1298
+dq t3202.0 id1453
+mv id1 x171.52643653372849 y62.558315369488 pr0 t3402.0
+mv id142 x96.19819713849982 y32.8527685918292 pr0 t3402.0
+dq t3402.0 id1299
+dq t3402.0 id1454
+mv id1 x171.3056830078245 y62.55211066779289 pr0 t3602.0
+mv id142 x96.42865253508315 y31.794589069153037 pr0 t3602.0
+dq t3602.0 id1300
+dq t3602.0 id1455
+mv id1 x171.08492948192054 y62.54590596609778 pr0 t3802.0
+mv id142 x96.65910793166647 y30.736409546476878 pr0 t3802.0
+dq t3802.0 id1301
+dq t3802.0 id1456
+mv id1 x170.86417595601657 y62.539701264402666 pr0 t4002.0
+mv id142 x96.88956332824979 y29.67823002380072 pr0 t4002.0
+dq t4002.0 id1302
+dq t4002.0 id1457
+mv id1 x170.6434224301126 y62.533496562707555 pr0 t4202.0
+mv id142 x97.12001872483312 y28.62005050112456 pr0 t4202.0
+dq t4202.0 id1303
+dq t4202.0 id1458
+mv id1 x170.42266890420862 y62.52729186101244 pr0 t4402.0
+mv id142 x97.35047412141644 y27.5618709784484 pr0 t4402.0
+dq t4402.0 id1304
+dq t4402.0 id1459
+mv id1 x170.20191537830465 y62.52108715931733 pr0 t4602.0
+mv id142 x97.58092951799976 y26.50369145577224 pr0 t4602.0
+dq t4602.0 id1305
+dq t4602.0 id1460
+mv id1 x169.98116185240067 y62.51488245762222 pr0 t4802.0
+mv id142 x97.81138491458309 y25.445511933096082 pr0 t4802.0
+dq t4802.0 id1306
+dq t4802.0 id1461
+mv id1 x169.7604083264967 y62.50867775592711 pr0 t5002.0
+mv id142 x98.04184031116641 y24.387332410419923 pr0 t5002.0
+dq t5002.0 id1307
+dq t5002.0 id1462
+mv id1 x169.53965480059273 y62.502473054232 pr0 t5202.0
+mv id142 x98.27229570774973 y23.329152887743764 pr0 t5202.0
+dq t5202.0 id1308
+dq t5202.0 id1463
+mv id1 x169.31890127468876 y62.49626835253689 pr0 t5402.0
+mv id142 x98.50275110433306 y22.270973365067604 pr0 t5402.0
+dq t5402.0 id1309
+dq t5402.0 id1464
+mv id1 x169.09814774878478 y62.490063650841776 pr0 t5602.0
+mv id142 x98.73320650091638 y21.212793842391445 pr0 t5602.0
+dq t5602.0 id1310
+dq t5602.0 id1465
+mv id1 x168.8773942228808 y62.483858949146665 pr0 t5802.0
+mv id142 x98.9636618974997 y20.154614319715286 pr0 t5802.0
+dq t5802.0 id1311
+dq t5802.0 id1466
+mv id1 x168.65664069697684 y62.477654247451554 pr0 t6002.0
+mv id142 x99.19411729408303 y19.096434797039127 pr0 t6002.0
+dq t6002.0 id1312
+dq t6002.0 id1467
+mv id1 x168.43588717107286 y62.47144954575644 pr0 t6202.0
+mv id142 x100.18500571664573 y18.83945426797598 pr0 t6202.0
+dq t6202.0 id1313
+dq t6202.0 id2126
+mv id1 x168.2151336451689 y62.46524484406133 pr0 t6402.0
+mv id142 x101.17589413920844 y18.582473738912835 pr0 t6402.0
+dq t6402.0 id1314
+dq t6402.0 id2127
+mv id1 x167.99438011926492 y62.45904014236622 pr0 t6602.0
+mv id142 x102.16678256177114 y18.32549320984969 pr0 t6602.0
+dq t6602.0 id1315
+dq t6602.0 id2128
+mv id1 x167.77362659336094 y62.45283544067111 pr0 t6802.0
+mv id142 x103.15767098433385 y18.068512680786544 pr0 t6802.0
+dq t6802.0 id1316
+dq t6802.0 id2129
+mv id1 x167.55287306745697 y62.446630738976 pr0 t7002.0
+mv id142 x104.14855940689655 y17.811532151723398 pr0 t7002.0
+dq t7002.0 id1317
+dq t7002.0 id2130
+mv id1 x167.332119541553 y62.440426037280886 pr0 t7202.0
+mv id142 x105.13944782945926 y17.554551622660252 pr0 t7202.0
+dq t7202.0 id1318
+dq t7202.0 id2131
+mv id1 x167.11136601564903 y62.434221335585775 pr0 t7402.0
+mv id142 x106.13033625202196 y17.297571093597107 pr0 t7402.0
+dq t7402.0 id1319
+dq t7402.0 id2132
+mv id1 x166.89061248974505 y62.428016633890664 pr0 t7602.0
+mv id142 x107.12122467458467 y17.04059056453396 pr0 t7602.0
+dq t7602.0 id1320
+dq t7602.0 id2133
+mv id1 x166.66985896384108 y62.42181193219555 pr0 t7802.0
+mv id142 x

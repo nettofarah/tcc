@@ -1,9 +1,5 @@
 package br.ufla.dcc.ut.node;
 
-import java.io.BufferedOutputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -13,10 +9,10 @@ import java.util.Set;
 
 import br.ufla.dcc.grubix.simulator.NodeId;
 import br.ufla.dcc.grubix.simulator.Position;
-import br.ufla.dcc.grubix.simulator.event.Finalize;
 import br.ufla.dcc.grubix.simulator.event.StartSimulation;
 import br.ufla.dcc.grubix.simulator.kernel.SimulationManager;
 import br.ufla.dcc.grubix.simulator.node.Node;
+import br.ufla.dcc.ut.node.event.Alarm;
 import br.ufla.dcc.ut.node.event.EnemyAlarm;
 import br.ufla.dcc.ut.node.packet.AlarmPacket;
 import br.ufla.dcc.ut.node.packet.DisseminationAgentPacket;
@@ -59,7 +55,7 @@ public class RegularNode extends GenericApplicationLayer {
 		PheromoneDecreaseWakeUp wuc = new PheromoneDecreaseWakeUp(this.getSender(),100 * Math.random());
 		this.sendEventSelf(wuc);
 		
-		TransponderWakeUpCall twuc = new TransponderWakeUpCall(this.getSender(), 100* Math.random());
+		TransponderWakeUpCall twuc = new TransponderWakeUpCall(this.getSender(), 1000* Math.random());
 		this.sendEventSelf(twuc);
 	}
 	
@@ -68,6 +64,8 @@ public class RegularNode extends GenericApplicationLayer {
 		this.transponder.setMe(this.getNode());
 		this.transponder.setAllNodes(SimulationManager.getAllNodes().values());
 	}
+	
+	
 	
 	public void alertNeighbors(){
 		SimulationManager.logNodeState(this.getNode().getId(), "Sensed", "int", "1");

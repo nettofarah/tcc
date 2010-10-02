@@ -37,6 +37,8 @@ public class Statistics {
 		         numberOfMessagesFile.append(Integer.toString(numberOfMessagesSent)+"\n");
 		         envolvedNumberOfNodesFile.append(Integer.toString(envolvedNodes.size())+"\n");
 		         executionNumber++;
+		         
+		         System.out.println("hops > "+numberOfHopsToFindUAV);
 		       }
 		       
 		       numberOfHopsFile.close();

@@ -1,6 +1,4 @@
 import br.ufla.dcc.grubix.simulator.kernel.Simulator;
-import br.ufla.dcc.ut.statistics.Statistics;
-import br.ufla.dcc.ut.uav.UAV;
 
 public class Main {
 
@@ -10,5 +8,4 @@ public class Main {
 		args[0] = path;
 		Simulator.main(args);
 	}
-	
 }

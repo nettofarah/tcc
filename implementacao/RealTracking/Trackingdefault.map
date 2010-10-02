@@ -1,0 +1,8 @@
+## simulator default
+## created Fri Oct 01 13:40:30 BRT 2010
+br.ufla.dcc.grubix.simulator.event.TransmissionBeginIncoming;2
+int;1
+br.ufla.dcc.grubix.simulator.event.PhysicalPacket;5
+float;6
+br.ufla.dcc.grubix.simulator.event.TransmissionEndIncoming;4
+br.ufla.dcc.grubix.simulator.event.TransmissionEndOutgoing;3
