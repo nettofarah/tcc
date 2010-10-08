@@ -40,7 +40,7 @@
    	     filecolor=rltgreen,     % \href{...} local file
       	  linkcolor=rltred,       % \ref{...} and \pageref{...}
      		  citecolor=rltgreen,
-    		  pdftitle={PO I - Ivayr Farah Netto},
+    		  pdftitle={PO II - Ivayr Farah Netto},
 			  pdfauthor={Ivayr Farah Netto},
            pdfsubject={Pré-projeto de Monografia.},
            pdfkeywords={PO I. 2. Monografia . 3. Redes de Sensores Sem Fio. 
@@ -70,32 +70,12 @@
 
 
 % redefinindo formatação de títulos de tabelas e figuras
-\renewcommand{\captionfont}{\footnotesize}
-\renewcommand{\captionlabelfont}{\footnotesize \bfseries}
-
-
+\renewcommand{\captionfont}{\normalsize}
+\renewcommand{\captionlabelfont}{\normalsize}
 
 %numerando subsubsections e adicionando ao tableofcontents
 \setcounter{secnumdepth}{3}
-\setcounter{tocdepth}{2}
-
-\makeatletter
-\renewcommand\paragraph{%
-   \@startsection{paragraph}{4}{0mm}%
-      {-\baselineskip}%
-      {.5\baselineskip}%
-      {\normalfont\normalsize\bfseries}}
-\makeatother
-
-\makeatletter
-\renewcommand\subparagraph{%
-   \@startsection{subparagraph}{5}{0mm}%
-      {-\baselineskip}%
-      {.5\baselineskip}%
-      {\normalfont\normalsize\bfseries}}
-\makeatother
-
-
+\setcounter{tocdepth}{3}
 
 %==============================================================================
 % para os fãs do Word, descomente as linhas abaixo
@@ -133,28 +113,31 @@ FAE-PE Recovery TelEduc Williams Lyn-ch}
 \orientador{Prof. Tales Heimfarth}
 \coorientador{Prof. Luiz Henrique Andrade Correia} % comente se não tiver coorientador
 %\coorientadordois{Prof. Tiagão Meganha} % comente se não tiver coorientador
-\bancaum{Prof. Juliana Galvani Gregh}
-\bancadois{Prof. Marluce Rodrigues Pereira} % comente se sua banca tiver só um professor
+\bancaum{Prof. Dr. João Carlos Giacomin}
+\bancadois{Msc. Samuel R. Salles Campos} % comente se sua banca tiver só um professor
 %\bancatres{Fulanim de Sicrano}% comente se sua banca tiver só um professor
-\defesa{26 de Junho de 2010}
+\defesa{26 de Novembro de 2010}
 \palchaves{Redes de Sensores Sem Fio; Veículos Aéreos Não Tripulados; Auto-Organização; RSSF, UAV.}
 \keywords{Wireless Sensor Networks; Umanned Aerial Vehicles, Self-Organization, WSN, UAV.}
 %==============================================================================
 %
 %%% dados para ficha catalográfica
 %% primeiro autor
-%\fcautor{Netto, Ivayr Dieb Farah}
-%% autores, separados por vírgula
-%\fcautores{Netto, Ivayr Dieb Farah}
-%% dados para ficha catalográfica conforme modelo da BC-UFLA 
-%\fccatalogacao{1. Redes de Sensores Sem Fio. 2. Veículos Aéreos Não Tripulados. 3. Auto-Organização. 4. RSSF.
-%  5. UAV  I. Netto, I. D. F.
-%  II. Universidade Federal de Lavras.
-%  III. Fundação de Apoio ao Ensino, Pesquisa e Extensão. 
-%  IV. Título.}
-%% classificação de acordo com a CDD, comente se não tiver isso.
-%\fcclasi{003.5}
-%\fcclasii{005.43}
+%% dados para ficha catalográfica
+% primeiro autor
+\fcautor{Ivayr Dieb Farah Netto}
+% autores, separados por vírgula
+\fcautores{Ivayr Dieb Farah Netto}
+% dados para ficha catalográfica conforme modelo da BC-UFLA 
+\fccatalogacao{1. Redes de Sensores Sem Fio. 2. Veículos Aéreos Não Tripulados. 
+   I. Netto, I. D. F.
+  II. Universidade Federal de Lavras.
+  III. Departamento de Ciência da Computação
+  V. Ainda não definido.}
+% classificação de acordo com a CDD, comente se não tiver isso.
+\fcclasi{003.5}
+\fcclasii{005.43}
+
 
 
 
@@ -164,59 +147,33 @@ FAE-PE Recovery TelEduc Williams Lyn-ch}
 
 % Aqui começa o documento propriamente dito
 \begin{document}
-
-
-
-
-%\dedic{Dedico esta monografia à minha unha encravada...}     % Dedicatórias
-%\thanks{Agradeço aos pingos da torneira da pia, que não me deixaram dormir enquanto escrevia
-%	o TCC!}         % Agradecimentos
-
+\hidepagenumber
 \maketitle
 
+%\dedic{Dedico esta monografia a alguem!\\
+%Ou a varias pessoas, depende.}
+%\thanks{Agradecimentos da monografia.}
+
+\resumo{Este trabalho apresenta uma investigação de estratégias para coordenar um conjunto de nós sensores terrestres estáticos (posicionados no solo) e de Veículos Aéreos Não Tripulados (UAVs) que carregam uma variedade de sensores. Esta coordenação tem como objetivo prover monitoramento e detecção eficientes de intrusos em uma determinada área de interesse. Para o desenvolvimento desta coordenação tem-se o uso de técnicas de Auto-Organização Emergente. Estas técnicas não utilizam controles externos ou centralizados, contudo, é gerado um comportamento global emergente a partir das pequenas e simples interações locais entre os indivíduos do sistema. Os nós sensores terrestres são configurados para acionar alarmes na ocorrência de entrada de um intruso na área, enquanto os UAVs recebem os alarmes e têm que decidir qual UAV é o mais hábil a tratar o alarme acionado.
+}
+\resumoingles{This work presents an investigation of strategies to coordinate a set of static ground sensor nodes (deployed on the ground) and Unmanned Aerial Vehicles (UAVs) carrying a variety of sensors. This coordination aims to provide efficient surveillance and intrusion detection in a given area of interest. To develop this coordination has been used techniques of Emergent Self-Organization. These techniques do not use external or centralized controls, however, generate an emerging global behavior from the small and simple local interactions ammong the individuals of the system. The ground nodes are setup to trigger alarms in the event of an intruder entrance in the area, while the UAVs receive the alarms and must decide which one is the most skilled to handle the received alarm.}
+
+\listoffigures
+\listoftables
+\tableofcontents
+
 \pagestyle{ufla}
-\pagenumbering{roman}
 
-                          % Sumário}
-\listoffigures                             % Lista de Figuras
-\listoftables                              % Lista de Tabelas
-
-\tableofcontents 
-
-%\abstract{O resumo deve ser a apresentação concisa dos pontos relevantes do conteúdo e das conclusões do trabalho. Deve ser redigido na terceira pessoa do singular, com o verbo na voz ativa, compondo-se de uma seqüência corrente de frases e não de enumeração de tópicos, não ultrapassando 
-%250 palavras (e/ou 25 linhas). Deve-se evitar o uso de parágrafos no meio do resumo, citações bibliográficas; bem como de fórmulas, equações, diagramas e símbolos, optando-se, 
-%quando necessário, pela transcrição na forma extensa. Além disso, deve incluir as palavras-chave do tabalho para facilitar a pesquisa em sistemas de buscas. Em geral, utilizam-se de três a seis 
-%palavras-chave.} {This Text is in English.}                         % Resumo (digite aqui o resumo)
-
-\clearpage
-
-%\pagestyle{ufla}
-\pagenumbering{arabic}
-
-%==============================================================================
-% incluindo os capitulos
-%\include{intro}
-%\include{elementos}
-%\include{conclusao}
-
-
-\input{abstract}
+\showpagenumber
 
 \input{intro}
-
 \input{bib_review}
-
 \input{metodologia}
-
 \input{desenvolvimento}
-
 \input{resultados}
+\input{conclusao}
 
-% \input{resultados_esperados}
-% 
-% \input{cronograma}
-
-
+\newpage
 %==============================================================================
 % Incluindo bibliografia
 %\bibliographystyle{plain}             % estilo para labels em numeros
@@ -227,38 +184,4 @@ FAE-PE Recovery TelEduc Williams Lyn-ch}
 \bibliography{bib_tcc}
 
 
-%==============================================================================
-% Incluindo anexos numerados com letras maiusculas.
-%\appendix
-%\include{apendice}
-
-%==============================================================================
-% Fim do texto
 \end{document}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-%\title{Aplicação de Técnicas Auto-Organizáveis para Monitoramento e Detecção de Intrusos em Redes de Sensores sem Fio}
-%\author{Ivayr Dieb Farah Netto}

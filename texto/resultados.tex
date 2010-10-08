@@ -1,7 +1,7 @@
-\chapter{Resultados e Discussão}
+\section{Resultados e Discussão}
 Este capítulo apresenta discussões acerca dos resultados obtidos nos experimentos dos algoritmos. O conteúdo divide-se em duas seções. A primeira sessão aborda os resultados das simulações envolvendo o processo de construção dos rastros de feromônio e detecção e propagação dos eventos. A segunda demonstra os resultados das simulações ao se adicionar o comportamento de reforço da conectividade da rede, onde são apresentados os resultados da combinação das estratégias, bem como os resultados da utilização independe do último algoritmo.
 
-\section{Construção dos Rastros de Feromônio e Propagação de Eventos}
+\subsection{Construção dos Rastros de Feromônio e Propagação de Eventos}
 Os experimentos realizados para avaliar o desempenho da técnica desenvolvida no trabalho foram baseados na comparação desta técnica com uma abordagem tradicional: o envio de mensagens por \emph{flooding}. No caso da propagação de mensagens por \emph{flooding}, quando um evento é detectado, o nó sensor detector envia o alarme em \emph{broadcast} e todos os seus vizinhos repetem este alarme (também em \emph{broadcast}), de modo que todos os nós do sistema repitam o alarme, até que, em algum momento, a mensagem chegue ao \vant de destino.
 
 As métricas avaliadas nesta comparação foram:
@@ -39,7 +39,7 @@ A tabela \ref{tbl:setup} resume os parâmetros das simulações.
 \end{table}
 
 
-\subsection{Resultados}
+\subsubsection{Resultados}
 
  A figura \ref{fig:hops} demonstra os resultados da simulação em relação ao número de saltos ocorridos até que o \vant recebesse o alarme. O eixo x representa o número da simulação e o eixo y representa o número de saltos necessário para que o alarme alcançasse o destino. Pode-se notar uma proximidade nestes resultados em relação aos valores, isto deve-se ao fato de que esta métrica avalia o caminho percorrido pelo alarme em um mesmo cenário para ambas as simulações. É importante verificar que no algoritmo baseado em feromônios, a mensagem percorre um único caminho até alcançar seu receptor. Em contrapartida, na estratégia baseada em \emph{flooding}, são percorridos todos os possíveis caminhos contidos no grafo formado pelos nós sensores. Isto implica que em um determinado momento, dentre todos os caminhos, um deles encontrará o \vant. Neste caso, o número de saltos com valores próximos é justificado pelo fato de que um dos caminhos encontrados na estratégia de \emph{flooding} (exatamente o caminho que foi contabilizado no experimento) é um caminho muito parecido com o utilizado pelo algoritmo de feromônio. A figura \ref{fig:hops_mean} apresenta a média dos resultados para este experimento.
 

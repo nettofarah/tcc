@@ -1,10 +1,10 @@
-\chapter{Desenvolvimento}
+\newpage\section{Desenvolvimento}
 
 Este capítulo discute o funcionamento dos algoritmos desenvolvidos para a coordenação da \rssf em conjunto com 
 \vants. As próximas seções descrevem o problema tratado e apresentam soluções para a resolução destes problemas.
 
 
-\section{Descrição do Problema}
+\subsection{Descrição do Problema}
 
 Este trabalho preocupa-se em pesquisar e desenvolver estratégias para a
 coordenação de uma rede de sensores heterogênea. A rede em questão deve ser
@@ -100,7 +100,7 @@ soluções. Os algoritmos são introduzidos em uma sequência lógica para que s
 ressaltar que esta ordem foi escolhida para um melhor entendimento do problema, visto que cada seção apresenta dependência em relação aos conceitos
 apresentados nas seções anteriores. 
 
-\section{Detecção de Eventos}
+\subsection{Detecção de Eventos}
 Para que um sistema de monitoramento realize seu papel de forma eficaz, espera-se, no mínimo, que este seja capaz de detectar eventos. Todo o funcionamento
 de um sistema deste tipo depende da detecção dos eventos de interesse. Contudo, o foco deste trabalho não está no desenvolvimento de algoritmos para 
 detecção de eventos. Portanto, adotou-se uma abordagem básica para a detecção de eventos pela \rssf, visto que a preocupação principal deste trabalho não se concentra neste problema.
@@ -133,7 +133,7 @@ O algoritmo a seguir demonstra o algoritmo em formato simplificado. \\
 \end{algorithm}
 
 
-\section{Distribuição de Feromônio}
+\subsection{Distribuição de Feromônio}
 Este algoritmo tem como objetivo a construção de um rastro de feromônios sobre a rede de sensores. A construção deste rastro possibilita que cada \vant receba mensagens de
 maneira mais rápida e mais eficiente, bem como otimiza os caminhos para que uma mensagem alcance seu destino.
 
@@ -193,7 +193,7 @@ Para sobrepor esse problema, pode-se adicionar uma restrição ao se armazenar u
  \end{figure}
 
 
-\section{Propagação de Eventos}
+\subsection{Propagação de Eventos}
 Uma vez detectado um evento de interesse, espera-se que o sistema seja capaz de reportá-lo ao \vant mais adequado para tratar o fenômeno com maior granularidade. Para o alcance de tal objetivo é utilizado um algoritmo de propagação de eventos. Este algoritmo integra os dois algoritmos anteriores, de modo que se torne possível a entrega dos eventos aos \vants.
 
 O primeiro passo para o funcionamento deste algoritmo é a definição de alarme. Neste contexto um alarme é considerado como uma estrutura de dados responsável por carregar informações acerca do evento ocorrido. A estrutura de um alarme é formada por:
@@ -246,7 +246,7 @@ Uma particularidade interessante deste algoritmo é que podem exister regiões n
  \end{figure}
 
 
-\section{Reforço da Conectividade da Rede}
+\subsection{Reforço da Conectividade da Rede}
 Esta seção aborda um último algoritmo deste trabalho. É válido salientar que este esta última técnica não influencia diretamente os resultados dos algoritmos apresentados anteriormente. Entretanto, as melhorias propostas nas seções anteriores propiciam o cenário para a implementação deste último algoritmo.
 
 O algoritmo de Reforço de Conectividade da Rede utiliza os \vants que sobrevoam a área de interesse como nós sensores móveis, de modo que os \vants possam complementar a conectividade da rede em caso de falhas em nós sensores. Basicamente, falhas em nós sensores pode, ser consideradas como indisponibilidade de energia, falha em sensores, falha na interface de comunicação, etc.

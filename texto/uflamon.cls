@@ -29,11 +29,14 @@
 % -> migração para utf8 e inclusão de palavras-chave
 % Alterada em 07/03/2008 por Joaquim Q. Uchôa:
 % -> adequação da classe para novas normas da graduação
+% Alterada em 14/06/2010 por Renato R. R. Oliveira:
+% -> Modificacoes para atender as novas normas da UFLA.
+% -> Codificado em latin1, porque utf-8 � porcaria =D
 
 
 % identificacao
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{uflamon}[2007/09/11]
+\ProvidesClass{uflamon}[2010/06/14]
 
 % Compilacao preferencial em pdfLaTeX
 \ifx\pdfoutput\undefined
@@ -60,10 +63,13 @@
 \fi
 
 % código inicial e carregamento de pacotes
-\LoadClass[11pt,letter,oneside]{book} % classe base para a monografia
+\LoadClass[11pt,letterpaper,oneside]{article} % classe base para a monografia
 \RequirePackage{ifthen} % para testes
-\RequirePackage{calc} % para cí¡lculos (margens, etc.) 
+\RequirePackage{calc} % para cí¡lculos (margens, etc.)
 \RequirePackage{lastpage} % para ficha catalográfica
+\RequirePackage{graphicx} % Logo da UFLA na capa.
+\RequirePackage{setspace} % Pacote para espacamento de linhas.
+\RequirePackage{indentfirst}
 
 % Definção de margens
 \setlength{\hoffset}{-1in} % remove padrão do LaTeX 
@@ -73,9 +79,9 @@
 \setlength{\topmargin}{4.5cm}    % margem superior
 \newlength{\bottommargin}        % margem inferior é deduzida em LaTeX
 \setlength{\bottommargin}{4.5cm} % margem inferior
-\setlength{\headheight}{0pt} % altura do cabeçalho
+\setlength{\headheight}{0cm} % altura do cabeçalho
 \setlength{\headsep}{0pt}    % espaço entre cabeçalho e texto
-\setlength{\footskip}{12mm}  % espaço entre rodapé e texto
+\setlength{\footskip}{0cm}  % espaço entre rodapé e texto
 \setlength\textheight{ % altura disponí­vel para texto
  \paperheight-\topmargin-\bottommargin-\headheight-\headsep-\footskip
 } 
@@ -83,7 +89,7 @@
  \paperwidth-\oddsidemargin-\evensidemargin
 }
 
- \renewcommand{\baselinestretch}{1.5}\normalsize %espaçamento
+\renewcommand{\baselinestretch}{1.5}\normalsize %espaçamento
 
 % cabeçalho e rodapé
 \RequirePackage{fancyhdr}
@@ -102,9 +108,10 @@
 
 \fancypagestyle{ufla}{
 \fancyhf{}
-\fancyfoot[C]{\thepage}
+\fancyhead[RO,RE]{\thepage}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
+\setlength{\headsep}{1.5cm}
 }
 
 
@@ -125,7 +132,7 @@
 \renewcommand{\thanks}[1]{
                           \cleardoublepage
                           \null\vfill
-                          \begin{center}\Large{\textbf{Agradecimentos}}\end{center}
+                          \begin{center}\textbf{AGRADECIMENTOS}\end{center}
                           \begin{quote}#1\end{quote}
                           \vspace*{1cm}
                           \vfill\null
@@ -137,91 +144,37 @@
 \def\keywords#1{\gdef\@keywords{\nh{#1}}} % palavras-chave da monografia (em inglês)
 \keywords{} %inicialmente vazio
 
-\newcommand{\abstract}[2]{
-                          \clearpage
-                          \null\vfill
-                          \begin{center}\Large{\textbf{Resumo}}\end{center}
-                          \begin{quote}#1\end{quote}
-						  \ifthenelse{\equal{\@palchaves}{\nh{}}}{}{
-                               \begin{quote}{\bfseries Palavras-Chave:} \@palchaves \end{quote}   
-                          }                       
+\newcommand{\resumo}[1]{
+\begin{center}\textbf{RESUMO}\end{center}
+\begin{singlespace}
 
-                          \vspace*{3.5cm}
+#1\vspace{22pt}\\
+Palavras-chave: \@palchaves
+\end{singlespace}
+\newpage
+}
 
-                          \begin{center}\Large{\textbf{Abstract}}\end{center}
-                          \begin{quote}#2\end{quote}
-						  \ifthenelse{\equal{\@keywords}{\nh{}}}{}{
-                               \begin{quote}{\bfseries Keywords:} \@keywords \end{quote}   
-                          }                       
-						  \vfill\null
-                          \clearpage
-                         }
+\newcommand{\resumoingles}[1]{
+\begin{center}\textbf{ABSTRACT}\end{center}
+\begin{singlespace}
 
+#1\vspace{22pt}\\
+Keywords: \@keywords
+\end{singlespace}
+\newpage
+}
 \newcommand{\dedic}[1]{
                           \clearpage
                           \null\vfill
                           \begin{flushright}{\textit{#1}}\end{flushright}
                           \vspace*{1cm}
                           \clearpage
-                         }
-
-% definindo comando para aparecer numeração romana, apenas criei novo comando
-% chapterExt com estilo de página normal e redefini os comandos de listas
-%  para utilizarem esses comandos ao invés do chapter normal.
-\newcommand\chapterExt{\if@openright\cleardoublepage\else\clearpage\fi
-                    \thispagestyle{ufla}%
-                    \global\@topnum\z@
-                    \@afterindentfalse
-                    \secdef\@chapter\@schapter}
- 
-
-\renewcommand\listoftables{%
-    \if@twocolumn
-      \@restonecoltrue\onecolumn
-    \else
-      \@restonecolfalse
-    \fi
-    \chapterExt*{\listtablename}%
-      \@mkboth{%
-          \MakeUppercase\listtablename}%
-         {\MakeUppercase\listtablename}%
-    \@starttoc{lot}%
-    \if@restonecol\twocolumn\fi
-    }
-
-
-\renewcommand\listoffigures{%
-    \if@twocolumn
-      \@restonecoltrue\onecolumn
-    \else
-      \@restonecolfalse
-    \fi
-    \chapterExt*{\listfigurename}%
-      \@mkboth{\MakeUppercase\listfigurename}%
-              {\MakeUppercase\listfigurename}%
-    \@starttoc{lof}%
-    \if@restonecol\twocolumn\fi
-    }
-
-\renewcommand\tableofcontents{%
-    \if@twocolumn
-      \@restonecoltrue\onecolumn
-    \else
-      \@restonecolfalse
-    \fi
-    \chapterExt*{\contentsname
-        \@mkboth{%
-           \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}%
-    \@starttoc{toc}%
-    \if@restonecol\twocolumn\fi
-    }
-
-
+}
 % código da monografia
 
-\def\tipo#1{\gdef\@tipo{\nh{#1}}} % tipo da monografia
+\def\tipo#1{\gdef\@tipo{#1}} % tipo da monografia
 \def\local#1{\gdef\@local{#1}} % local
-\local{LAVRAS \\ MINAS GERAIS -- BRASIL}
+\local{LAVRAS - MG}
 \def\areaconcentracao#1{\gdef\@areaconcentracao{#1}} % área de concentracao
 \def\orientador#1{\gdef\@orientador{#1}} % orientador
 \def\coorientador#1{\gdef\@coorientador{#1}} % co-orientador
@@ -261,36 +214,10 @@
 
 \newcommand{\tab}{\hspace*{0.7cm}}
 
-%\fichacat{% texto da ficha catalográfica
-% \renewcommand{\baselinestretch}{1}\normalsize %espaçamento
-%  \@fcautor \\ \\
-%  \tab \@title / \@fcautores. 
-%  \ifthenelse{\equal{\@edicao}{\@empty}}{}{\@edicao.ed.} 
-%  Lavras -- Minas Gerais, 2004. \pageref{LastPage} p. : il. \\ 
-%  \\
-%  \tab Monografia de Gradua\c{c}\~ao -- Universidade Federal de Lavras. Departamento de Ci\^encia da 
-%Computa\c{c}\~ao.\\
-%  \\
-%  \tab \@fccatalogacao\\
-%  \ifthenelse{\equal{\@fcclasii}{\@empty}}{}{
-%  \\
-%  \tab \hfill 
-%  \begin{tabular}{r@{-}l} 
-%	CDD & \@fcclasi 
-%  \ifthenelse{\equal{\@fcclasii}{\@empty}}{}{
-%  \\ & \@fcclasii 
-%  }
-%  \ifthenelse{\equal{\@fcclasiii}{\@empty}}{}{
-%  \\ & \@fcclasiii 
-%  }
-%  \end{tabular}
-%  \tab
-%  }
-%}
-
-
 %\newcommand{\entrylabel}[1]{\parbox[b]{\labelwidth}{\makebox[0pt][l]{\bfseries\uppercase{#1}}\\}}
 
+\newcommand{\hidepagenumber}{\pagestyle{empty}}
+\newcommand{\showpagenumber}{\pagestyle{ufla}}
 
 % no iní­cio, redefinimos o comando de fazer tí­tulos
 % e margens
@@ -298,38 +225,34 @@
 
 \AtBeginDocument{
 \def\maketitle{    %\maketitle
-
-\begin{titlepage}
 %=============
 % capa
 %=============
+\begin{titlepage}
 \pagestyle{empty}
-\pagenumbering{roman}
 \centering
 
 % medidas com stretch são flexí­veis (redimensionam-se para ocupar
 % o espaço que sobra da página
 
 %\vspace*{2cm}
-\vspace*{\stretch{2}}
+\includegraphics[width=0.3\textwidth]{ufla}
+\vspace*{11pt}
 
-\textbf{\MakeUppercase\@author} % autor da monografia
+\textbf{\large\MakeUppercase\@author} % autor da monografia
 
 %\vspace{8cm}
 \vspace{\stretch{8}}
 
-\textbf{\MakeUppercase\@title} % tí­tulo da monografia
+\textbf{\Large\MakeUppercase\@title} % tí­tulo da monografia
 
 %\vspace{3cm}
-\vspace{\stretch{3}}
+\vspace{\stretch{8}}
 
-\hfill\begin{minipage}{9.5cm}{\@tipo}\end{minipage} % tipo da monografia
+\textbf{\large\@local\\ 
+\@date}
 
-%\vspace{3cm}
-\vspace{\stretch{3}}
-
-\@local\\ 
-\@date
+\end{titlepage}
 
 \newpage % terminou capa
 
@@ -337,77 +260,53 @@
 % folha de rosto
 %=============
 
+\begin{center}
 \pagestyle{empty}
+% Reseta Contagem de paginas
+\pagenumbering{arabic}
 \centering
 
 %\vspace*{2cm}
-\vspace*{\stretch{2}}
 
 \textbf{\MakeUppercase\@author} % autor da monografia
 
 %\vspace{8cm}
-\vspace{\stretch{3.5}}
+\vspace{\stretch{1}}
 
 \textbf{\MakeUppercase\@title} % tí­tulo da monografia
 
 %\vspace{3cm}
-\vspace{\stretch{3.5}}
+\vspace{\stretch{1}}
 
-\hfill\begin{minipage}{9.5cm}{\@tipo}\end{minipage} % tipo da monografia
+\hfill\begin{minipage}{0.5\textwidth}
+\begin{singlespace}
+\@tipo
+\end{singlespace}
+\end{minipage} % tipo da monografia
 
 %\vspace{3cm}
-\vspace{\stretch{2}}
+\vspace{\stretch{1}}
 
-\hfill\begin{minipage}{9.5cm}% área e orientador
-\'Area de Concentra\c{c}\~ao: \\
-\@areaconcentracao\\
-
-Orientador:\\
+%Orientador Centralizado
+Orientador\\
 \@orientador
-\end{minipage} 
 
-\vspace{\stretch{2}}
+\ifthenelse{\equal{\@coorientador}{}}{}{
+Co-Orientador\\
+\@coorientador
+}
 
-\@local\\ 
-\@date
+\vspace{\stretch{1}}
+
+\textbf{\@local\\ 
+\@date}
 
 \newpage % terminou folha de rosto
 
 %=============
 % ficha catalográfica
 %=============
-
-%
-%\vspace*{\stretch{12}}
-%
-%\begin{center}
-%      \bfseries
-%      Ficha Catalogr\'afica preparada pela Divis\~ao de Processos T\'ecnicos \\
-%      da Biblioteca Central da UFLA
-%\end{center}
-%
-%\vspace{-0.3cm}
-
-\newlength{\mylen}
-\addtolength{\mylen}{\textwidth}
-\addtolength{\mylen}{-0.8cm}
-\newlength{\mylenn}
-\addtolength{\mylenn}{\textwidth}
-\addtolength{\mylenn}{-1.2cm}
-
-%\noindent \hfill  \fbox{\parbox[c]{\mylen}{
-%        \vspace{0.2cm}
-%        \hfill \parbox[c]{\mylenn}{
-%         % \@fichacat
-%          } \hfill
-%        \vspace{0.1cm}
-%        }
-%} \hfill
-
-%\vspace{\stretch{2}}
-%
-%\newpage
-
+% Ainda ser� desenvolvida.
 
 %=============
 % folha de avaliação
@@ -415,74 +314,120 @@ Orientador:\\
 
 \textbf{\MakeUppercase\@author}
 
-\vspace{\stretch{2.5}}
+\vspace{\stretch{1}}
 
 \textbf{\MakeUppercase\@title}
 
-\vspace{\stretch{2.5}}
+\vspace{\stretch{1}}
 
-\hfill\begin{minipage}{9.5cm}{%
-\@tipo}%
+\hfill\begin{minipage}{0.5\textwidth}
+\begin{singlespace}
+\@tipo
+\end{singlespace}
 \end{minipage}
 
-\vspace{\stretch{2}}
+\vspace{\stretch{1}}
 
-Aprovada em \textsl{\@defesa} \\
+\begin{flushleft}
+Aprovada em \textsl{\@defesa}\hfill \\
 
-\vspace{\stretch{2}}
+\vspace{\stretch{1}}
 
 % primeira banca
-\setlength{\mylen}{8cm}
-\rule{\mylen}{1pt}\\
- \@bancaum\\
+\@bancaum\hfill \\
 
 % segunda banca
 \ifthenelse{\equal{\@bancadois}{\@empty}}{}   % se 2. banca nao existir, nao
                                                 % produza nada
-{\vspace{\stretch{.4}}                        % caso contrario, escreva-a
-  \rule{\mylen}{1pt}\\
-  \@bancadois\\
+{
+  \@bancadois\hfill \\
 }
 
 \ifthenelse{\equal{\@bancatres}{\@empty}}{}   % se 3. banca nao existir, nao
                                                 % produza nada
-  {\vspace{\stretch{.4}}                        % caso contrario, escreva-a
-    \rule{\mylen}{1pt}\\
-    \@bancatres\\
+{
+    \@bancatres\hfill \\
 }
+\end{flushleft}
 
+\vspace{\stretch{1}}
 
-\vspace{\stretch{.4}}
+\vspace*{11pt}
 
-\rule{\mylen}{1pt}\\
 \@orientador\\
-(Orientador)
+Orientador
 
 \ifthenelse{\equal{\@coorientador}{\@empty}}{}% se coorientador nao existir, 
                                               % nao produza nada
-{\vspace{\stretch{.4}}                        % caso contrario, escreva-o
-     \rule{\mylen}{1pt}\\
+{\vspace*{11pt}
+
     \@coorientador \\
-    (Co-Orientador)
-}
-
-\ifthenelse{\equal{\@coorientadordois}{\@empty}}{}% se coorientador nao existir, 
-                                              % nao produza nada
-{\vspace{\stretch{.4}}                        % caso contrario, escreva-o
-     \rule{\mylen}{1pt}\\
-    \@coorientadordois\\
-    (Co-Orientador)
+    Co-Orientador
 }
 
 
-\vspace{\stretch{2}} 
+\vspace{\stretch{1}} 
 
-{\@local}\\
-\@date
+\textbf{\@local\\
+\@date}
 
 \newpage
-\null
 
-\end{titlepage}
-\pagestyle{plain}
+\end{center}
 }}
+
+% Define tabulacao do paragrafo.
+\setlength{\parindent}{1.25cm}
+
+\renewcommand{\@dotsep}{1}
+\newlength{\dotseplen}
+\setlength{\dotseplen}{4pt}
+
+\newlength{\defaultnumwidth}
+\setlength{\defaultnumwidth}{9ex}
+
+\def\scalenumwidth#1{\gdef\@scalenumwidth{#1}}
+\scalenumwidth{1}
+
+\renewcommand{\l@section}{\normalfont\normalsize\bfseries\@dottedtocline{1}{0ex}{\@scalenumwidth\defaultnumwidth}}
+\renewcommand{\l@subsection}{\normalfont\normalsize\bfseries\@dottedtocline{2}{0ex}{\@scalenumwidth\defaultnumwidth}}
+\renewcommand{\l@subsubsection}{\normalfont\normalsize\bfseries\@dottedtocline{3}{0ex}{\@scalenumwidth\defaultnumwidth}}
+\renewcommand{\l@paragraph}{\normalfont\normalsize\bfseries\@dottedtocline{4}{0ex}{\@scalenumwidth\defaultnumwidth}}
+\renewcommand{\l@subparagraph}{\normalfont\normalsize\bfseries\@dottedtocline{5}{0ex}{\@scalenumwidth\defaultnumwidth}}
+%\renewcommand{\l@figure}{\@dottedtocline{1}{0ex}{10ex}}
+%\renewcommand{\l@table}{\@dottedtocline{1}{0ex}{10ex}}
+
+%\renewcommand{\numberline}[1]{\bfseries #1 }
+%\def\figuresname{Lista de Figuras}
+%\def\tablesname{Lista de Tabelas}
+
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+\renewcommand{\tableofcontents}{
+\begin{center}\textbf{\MakeUppercase{\contentsname}}\end{center}
+\begin{singlespace}
+ \@starttoc{toc}
+\end{singlespace}
+\newpage
+}
+
+\renewcommand{\listoffigures}{
+\begin{center}\textbf{\MakeUppercase{\listfigurename}}\end{center}
+\begin{singlespace}
+ \@starttoc{lof}
+\end{singlespace}
+\newpage
+}
+
+\renewcommand{\listoftables}{
+\begin{center}\textbf{\MakeUppercase{\listtablename}}\end{center}
+\begin{singlespace}
+ \@starttoc{lot}
+\end{singlespace}
+\newpage
+}
+
+\RequirePackage{titletoc}
+\titlecontents{figure}[0pt]{\filright}{\contentspush{\begin{minipage}{10ex}\figurename\ \thecontentslabel{}\ \end{minipage}}}{}{\titlerule*[\dotseplen]{.}\contentspage}
+\titlecontents{table}[0pt]{\filright}{\contentspush{\begin{minipage}{10ex}\tablename\ \thecontentslabel{}\ \end{minipage}}}{}{\titlerule*[\dotseplen]{.}\contentspage}
