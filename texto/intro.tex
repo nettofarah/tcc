@@ -9,10 +9,10 @@ sistemas de monitoramento \cite{Freitas20092}.
 Uma maneira simples de se monitorar áreas de interesse é espalhar sensores por
 toda sua extensão. Contudo, um dos maiores desafios no desenvolvimento de tais
 aplicações em redes de sensores encontra-se em como prover coordenação entre os
-nós envolvidos, atentendendo assim, às necessidades dos usuários
+nós envolvidos, atendendo assim, às necessidades dos usuários
 \cite{Mhatre2005}.
 
-Este trabalho apresenta uma investigação de estratégias para coordenar um
+Este trabalho apresenta a investigação de uma estratégia para coordenar um
 conjunto de nós sensores terrestres estáticos (posicionados no solo) e de \uavs
 (\emph{Unmanned Aerial Vehicles} - UAV) que carregam uma variedade de sensores.
 Esta coordenação tem como objetivo prover monitoramento e detecção eficientes de
@@ -28,16 +28,16 @@ entre si localmente. Porém, pelas interações locais, promovem um comportament
 global emergente.
 
 Diversos nós sensores são distribuídos em uma área de interesse, bem como são
-distribuídos estrategicamente \vants sobrevoando a área de interesse. Os nós
+distribuídos estrategicamente \vants sobrevoando esta área. Os nós
 sensores terrestres são configurados para acionar alarmes na ocorrência de um
-dado evento de interesse, isto é, entrada de um intruso na área, enquanto os
+dado evento de interesse, enquanto os
 \vants recebem os alarmes e têm que decidir qual \vant é o mais hábil a tratar o
 alarme acionado.
 
 O sistema proposto por este trabalho é projetado para que os nó sensores e
 \vants se comuniquem e tomem decisões autonomamente, isto é, sem nenhum controle
 externo ou centralizado. Ao fim, é gerado um comportamento global emergente a
-partir das pequenas interações entre os indvíduos do sistema (nós sensores e
+partir das pequenas interações entre os indivíduos do sistema (nós sensores e
 UAVs).
 
 
@@ -48,7 +48,7 @@ UAVs).
 \wsn (RSSFs) são utilizadas para se aumentar a eficiência de uma gama de
 aplicações, tais como detecção de alvos, monitoramento, vigilância ou
 gerenciamento de desastres. \rssfs utilizando nós sensores estáticos têm sido
-desesnvolvidas, testadas e utilizadas em diversas aplicações de monitoramento
+desenvolvidas, testadas e utilizadas em diversas aplicações de monitoramento
 \cite{Mainwaring2002}.
 
 Contudo, nós sensores terrestres apresentam algumas limitações, especificamente,
@@ -64,7 +64,7 @@ RSSF, todavia, isto geralmente requer uma longa cadeia de troca de mensagens
 nó concentrador. Isto resulta em baixo desempenho do sistema, uso ineficiente da
 energia e desperdício de largura de banda \cite{Chang2007}.
 
-Neste contexto, tem-se a possibilidade de utilização de UAVs como nós sensores
+Neste contexto, tem-se a possibilidade de utilizar \vants como nós sensores
 móveis em uma RSSF. Autores como \cite{Lucchi2007} têm considerado o uso de nós
 sensores terrestres espalhados por uma área de interesse. Estes nós podem
 coletar diversos tipos de informação do ambiente, tais como temperatura,
@@ -75,7 +75,7 @@ posicionados.
 O uso de \vants como sensores móveis da rede pode prover a habilidade de se
 monitorar os eventos ocorridos em uma maior granularidade. Os nós sensores podem
 detectar a ocorrência de um evento, porém podem não conter recursos suficientes
-para análises mais detalhadas, passando assim a ocorrência a um \vant com
+para análises mais detalhadas, delegando assim a ocorrência a um \vant com
 habilidades específicas para tratar o problema.
 
 Neste contexto é que o presente trabalho propõe técnicas para a coordenação de
@@ -89,9 +89,9 @@ entregue ao \vant mais hábil para tratar o alarme de ocorrência destes eventos
 
 \subsection{Objetivos}
 
-Este trabalho tem por objetivo global desenvolver e aplicar técnicas de
-coordenação entre nós sensores sem fio e \uavs em aplicações de monitoramento
-e vigilância. Para o alcance deste objetivo serão utilizadas técnicas
+Este trabalho tem por objetivo global desenvolver e aplicar uma técnica de
+coordenação entre nós sensores sem fio e \uavs para aplicações de monitoramento
+e vigilância. Para o alcance deste objetivo o trabalho inspira-se em técnicas
 Auto-Organizáveis para a coordenação e controle da \rssf.
 
 \subsubsection{Objetivos Específicos}
@@ -100,23 +100,21 @@ Este trabalho tem como objetivos específicos:
 
 \begin{description}
 
-	\item [Pesquisa e elaboração de algoritmos de coordenação de nós
-sensores e \vants:] desenvolvimento de algoritmos para detecção e entrega de
-alarmes a partir dos nós sensores, desenvolvimento de uma heurística
-bio-inspirada para localização eficiente do \uav mais próximo e algoritmos para
-\emph{tracking} e perseguição de intrusos na área.
+	\item [Pesquisa e elaboração de algoritmo de coordenação de nós
+sensores e \vants:] desenvolvimento de um algoritmo para detecção e entrega de
+alarmes a partir dos nós sensores. Desenvolvimento de uma heurística
+bio-inspirada para localização eficiente do \uav mais próximo.
 
 	\item [Implementação dos algoritmos e técnicas no ambiente de simulação
-GRUBiX:] implementação de cada um dos algoritmos no ambiente de simulação
-\emph{open source} GRUBiX, desenvolvidos pelo Grupo de Redes Ubíquas do
+GRUBiX:] implementação do algoritmo no ambiente de simulação
+\emph{open source} GRUBiX, desenvolvido pelo Grupo de Redes Ubíquas do
 Departamento de Ciência da Computação da Universidade Federal de Lavras.
 Adicionalmente, acrescentar melhorias e funcionalidades à atual versão do
 simulador.
 
-	\item [Comparação entre algoritmos convencionais e os desenvolvidos no
+	\item [Comparação entre algoritmos convencionais e o desenvolvido no
 trabalho:] comparações quantitativas dos resultados a partir de experimentos
-computacionais considerando-se cada uma das técnicas em diferentes cenários e
-configurações.
+computacionais considerando-se cada uma das técnicas em determinado cenário e configuração.
 
 \end{description}
 
@@ -129,8 +127,7 @@ Este trabalho encontra-se organizado em cinco capítulos. O capítulo
 definição do problema estudado. No capítulo \ref{chap:Referencial Teórico} podem
 ser encontradas as definições e bases teóricas para o entendimento do problema.
 A metodologia para realização do trabalho encontra-se no capítulo
-\ref{chap:Metodologia}. Os capítulos \ref{chap:Resultados Esperados} e
-\ref{chap:Cronograma}, respectivamente, são compostos pelos resultados esperados
-e o cronograma de estudo a ser realizado.
+\ref{chap:Metodologia}. Os capítulos \ref{chap:Desenvolvimento} e
+\ref{chap:Resultados}, respectivamente, demonstram o funcionamento da aplicação e seus resultados. Por fim, capítulo \ref{chap:Conclusões} discute a conclusões em relação ao trabalho realizado.
 
 

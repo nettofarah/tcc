@@ -1,5 +1,8 @@
-\section{Resultados e Discussão}
-Este capítulo apresenta discussões acerca dos resultados obtidos nos experimentos dos algoritmos. O conteúdo divide-se em duas seções. A primeira sessão aborda os resultados das simulações envolvendo o processo de construção dos rastros de feromônio e detecção e propagação dos eventos. A segunda demonstra os resultados das simulações ao se adicionar o comportamento de reforço da conectividade da rede, onde são apresentados os resultados da combinação das estratégias, bem como os resultados da utilização independe do último algoritmo.
+\newpage\section{Resultados e Discussão}
+\label{chap:Resultados}
+
+Este capítulo apresenta discussões acerca dos resultados obtidos nos experimentos do algoritmo abordando os resultados das simulações envolvendo o processo de construção dos rastros de feromônio e detecção e propagação dos eventos. 
+%A segunda demonstra os resultados das simulações ao se adicionar o comportamento de reforço da conectividade da rede, onde são apresentados os resultados da combinação das estratégias, bem como os resultados da utilização independe do último algoritmo.
 
 \subsection{Construção dos Rastros de Feromônio e Propagação de Eventos}
 Os experimentos realizados para avaliar o desempenho da técnica desenvolvida no trabalho foram baseados na comparação desta técnica com uma abordagem tradicional: o envio de mensagens por \emph{flooding}. No caso da propagação de mensagens por \emph{flooding}, quando um evento é detectado, o nó sensor detector envia o alarme em \emph{broadcast} e todos os seus vizinhos repetem este alarme (também em \emph{broadcast}), de modo que todos os nós do sistema repitam o alarme, até que, em algum momento, a mensagem chegue ao \vant de destino.
@@ -14,7 +17,7 @@ As métricas avaliadas nesta comparação foram:
 \subsection{Configurações da Simulação}
 Foram realizadas 200 simulações (100 simulações em cada técnica). Os experimentos foram realizados com o intuito de avaliar o comportamento da rede de forma isolada no acontecimento de um evento de interesse. Portanto, optou-se por simular um cenário contendo apenas um \vant e com a ocorrência de apenas um evento de interesse, de modo que se consiga visualizar o comportamento específico do envio de mensagens através do \emph{backbone} sem a interferência de muitos eventos. O intervalo de tempo em que as métricas são analisadas é o tempo necessário para a ocorrência de um evento em adição ao tempo gasto para que a mensagem alcance seu destino.
 
-A escolha dos parâmetros de configuração da simulação, em relação às capacidades dos \vants, foi determinado baseando-se no uso de Mini e Micro-\vants. Baseando-se nas informações em \cite{uas_2009,Storvold2009}, optou-se por uma altitude de 250 metros. Em relação aos nós sensores terrestres, foram simuladas as funcionalidades de rádios do tipo IEE 802.15.4.
+A escolha dos parâmetros de configuração da simulação, em relação às capacidades dos \vants, foi determinado baseando-se no uso de Mini e Micro-\vants. Baseando-se nas informações em \cite{uas_2009,Storvold2009}, optou-se por uma altitude de 250 metros. Em relação aos nós sensores terrestres, foram simuladas as funcionalidades de rádios do tipo IEEE 802.15.4.
 
 Neste cenário, quando um \vant não está respondendo a um alarme, deve realizar sua rota de forma aleatória, de modo a construir seu rastro de feromônio. São distribuídos 140 nós sensores terrestres (com raio de comunicação de 300m) seguindo a distribuição de Poisson em uma área de 2Km x 2km, obtendo-se aproximadamente 100\% de probabilidade de que os nós formem um grafo conexo \cite{Bettstetter2002}.
 
@@ -84,4 +87,4 @@ Os resultados demonstram a possibilidade de se reduzir o número de mensagens tr
   \label{fig:global_mean}
  \end{figure}
 
-A próxima seção discute os resultados do segundo algoritmo proposto por este trabalho. 
+Os resultados comprovam a eficiência do uso do algoritmo utilizando rastros de feromônio para a entrega de alarmes na ocorrência de um evento de interesse. O próximo capítulo discute as considerações finais em relação aos resultados do trabalho desenvolvido.

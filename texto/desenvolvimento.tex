@@ -1,12 +1,13 @@
 \newpage\section{Desenvolvimento}
+\label{chap:Desenvolvimento}
 
-Este capítulo discute o funcionamento dos algoritmos desenvolvidos para a coordenação da \rssf em conjunto com 
-\vants. As próximas seções descrevem o problema tratado e apresentam soluções para a resolução destes problemas.
+Este capítulo discute o funcionamento do algoritmo desenvolvido para a coordenação da \rssf em conjunto com 
+\vants. As próximas seções descrevem o problema tratado e apresenta a solução para a resolução deste problema.
 
 
 \subsection{Descrição do Problema}
 
-Este trabalho preocupa-se em pesquisar e desenvolver estratégias para a
+Este trabalho preocupa-se em pesquisar e desenvolver uma estratégia para a
 coordenação de uma rede de sensores heterogênea. A rede em questão deve ser
 utilizada para prover tarefas de monitoramento e vigilância de um ambiente de
 interesse. Como ferramentas para se realizar estas tarefas de monitoramento são
@@ -36,7 +37,7 @@ relativamente mais caros justifica o uso de vários sensores simples espalhados
 pela área de interesse em conjunto com alguns poucos, ou apenas um, \vant para
 realizar as tarefas mais específicas. 
 
-Por fim, o problema tratado é o desenvolvimento de estratégias eficientes para detecção de um evento através dos
+Por fim, o problema tratado é o desenvolvimento de uma estratégia eficientes para detecção de um evento através dos
 nós sensores mais simples e garantir que as mensagens sejam entregues aos \vants
 mais hábeis a tratar o evento de forma específica.
 
@@ -45,7 +46,7 @@ podem ser citados:
 
 \begin{description}
  \item [Áreas Militares de Acesso Restrito:] Locais de acesso proibido, onde se deseja detectar a presença de intrusos.
- \item [Detecção de Fenômenos Físicos:] São áreas onde se pretende detecctar a ocorrência de fenômenos como alteração de
+ \item [Detecção de Fenômenos Físicos:] São áreas onde se pretende detectar a ocorrência de fenômenos como alteração de
 temperatura, umidade, sons, etc.
  \item [Observação de Animais:] Aplicações em que o objetivo seja o monitoramento de espécies de animais, como, por exemplo,
 a presença de uma espécie incomum em uma determinada área.
@@ -72,7 +73,7 @@ enviar uma mensagem de alarme para os \vants presentes na área. Esta mensagem
 deve encontrar o rastro de ferormônio formado em (a) e prosseguir até o \vant
 mais hábil para tratar o evento ocorrido.
 
-	\item[ (c) Reforço de Conectividade da Rede:] algoritmo utilizado para reforçar a conectividade da rede em casos de falhas em algum nó.
+%	\item[ (c) Reforço de Conectividade da Rede:] algoritmo utilizado para reforçar a conectividade da rede em casos de falhas em algum nó.
 
 %% Este aqui vai par os trabalhos futuros
 
@@ -154,7 +155,7 @@ A figura \ref{fig:ants} demonstra o fenômeno descrito.
 Inspirado no comportamento anteriormente descrito, torna-se possível criar uma adaptação do mesmo para implementação no uso de redes de sensores sem fio em conjunto com veículos aéreos não tripulados. Para isso, basta que se considere um \vant como uma formiga capaz de produzir um rastro feromônio. Este rastro resultará em uma espécie de \emph{backbone} de feromônios que otimizará a entrega de mensagens destinadas ao \vant. A estratégia utilizada para que este comportamento fosse mapeado para uma rede de sensores pode ser dividida em duas responsabilidades:
 
 \subsection{Entrega de Feromônios pelos \vants}
-Cada \vant sobrevoando a área de interesse exala seus feromônios digitais periodicamente durante seu vôo. Utilizando recursos de comunicação sem fio, o \vant simplemeste mente enviará pacotes \emph{beacon} periodicamente em \emph{broadcast}. Este comportamente garante que os pacotes são enviados a todo momento para todos os nós sensores que se encontram no alcance do raio de comunicação do \vant. Um ponto interessante a se ressaltar é o \vant deve enviar, em cada pacote, um atributo que indique o "sabor" de feromônio que este \vant possui. Isto garante que no caso de vários \vants sobrevoando a área de interesse os rastros não se sobreponham, de modo que em um mesmo local possam ser armazenador rastros distintos.
+Cada \vant sobrevoando a área de interesse exala seus feromônios digitais periodicamente durante seu vôo. Utilizando recursos de comunicação sem fio, o \vant simplemeste enviará pacotes \emph{beacon} periodicamente em \emph{broadcast}. Este comportamente garante que os pacotes são enviados a todo momento para todos os nós sensores que se encontram no alcance do raio de comunicação do \vant. Um ponto interessante a se ressaltar é o \vant deve enviar, em cada pacote, um atributo que indique o "sabor" de feromônio que este \vant possui. Isto garante que no caso de vários \vants sobrevoando a área de interesse os rastros não se sobreponham, de modo que em um mesmo local possam ser armazenador rastros distintos.
 
 A figura \ref{fig:broadcast} demonstra o item apresentado.
 
@@ -175,11 +176,12 @@ Os nós sensores espalhados pela área são responsáveis por armazenar os ferom
   \label{fig:flat}
  \end{figure}
 
-Além de armazenar o valor de feromônio recebido, o nó sensor deve agendar uma tarefa interna para reduzir seu valor de feromônio de acordo com o tempo. Um exemplo de tarefa é reduzir a cada 300 segundos o valor de feromônio armazenado a uma taxa de 10\%, de modo a simular a evaporação do feromônio. Esta evaporação garante que o rastro mantenha-se em maior concentração de feromônio na extremidade onde se encontra o \vant, e, em menor concentração na extremidade onde o rastro se originou.
+Além de armazenar o valor de feromônio recebido, o nó sensor deve agendar uma tarefa interna para reduzir (evaporar) seu valor de feromônio de acordo com o tempo. Um exemplo de tarefa é reduzir em vários intervalos de tempo o valor de feromônio armazenado a uma taxa de 10\%, de modo a simular a evaporação do feromônio. 
+Esta evaporação garante que o rastro mantenha-se em maior concentração de feromônio na extremidade onde se encontra o \vant, e, em menor concentração na extremidade onde o rastro se originou.
 
 
 
-Cada nó sensor armazenando os valores de feromônios representa o caminho por onde o \vant sobrevoou. Contudo, este rastro ainda pode conter certas ambiguidades. Observando-se o fato que diversos nós sensores recebem o mesmo valor de feromônio, verifica-se que em uma mesma região contida no raio de alcance do \vant (considerando-se que a propagação do sinal ocorre em formato circular) existem diversos nós sensores representando a mesma quantidade de feromônio, como demonstrado na figura \ref{fig:flat}. Ainda que os valores evaporem com o tempo, seguindo esta tendência, os nós sensores evaporarão com a mesma proporção, resultando em um rastro que somente encaminhará as mensagens a uma região (do mesmo tamanho do raio de propagação do \vant), não a um ponto específico na rede. Neste caso, encaminhar a mensagem a uma região pode não ser o ideal, visto que a mensagem não encontraria um sentido correto para ser encaminhada.
+Cada nó sensor armazenando os valores de feromônios representa o caminho por onde o \vant sobrevoou. Contudo, este rastro ainda pode conter certas ambiguidades. Observando-se o fato que diversos nós sensores recebem o mesmo valor de feromônio, verifica-se que em uma mesma região contida no raio de alcance do \vant (considerando-se que a propagação do sinal ocorre em diversas direções) existem diversos nós sensores representando a mesma quantidade de feromônio, como demonstrado na figura \ref{fig:flat}. Ainda que os valores evaporem com o tempo, seguindo esta tendência, os nós sensores evaporarão com a mesma proporção, resultando em um rastro que somente encaminhará as mensagens a uma região (do mesmo tamanho do raio de propagação do \vant), não a um ponto específico na rede. Neste caso, encaminhar a mensagem a uma região pode não ser o ideal, visto que a mensagem não encontraria um sentido correto para ser encaminhada.
 
 
 
@@ -233,85 +235,86 @@ O algoritmo básico, em psedocódigo, para este fenômeno pode ser visualizado a
 \end{algorithm}
 
 
+\begin{figure}[h!]
+\centering
+\includegraphics[width=12cm]{pictures/application.png}
+\caption{Propagação de um evento de interesse.}
+ \label{fig:app}
+\end{figure}
+
 Uma particularidade interessante deste algoritmo é que podem exister regiões na área de interesse em que ainda não se existe a presença de rastros de feromônio. Contudo, esta questão apresenta-se discutível, pois poderia-se considerar que o sistema só entraria em funcionamento no momento em que toda área já estivesse coberta pelo \vant. Entretanto, esta premissa não pode ser garantida em todos os casos. Para que este problema seja contornado, pode ser proposta uma variação deste algoritmo em que quando um nó sensor detectar um evento e o mesmo não possuir rastro de feromônio, este nó deverá encaminhar a mensagem para um de seus vizinhos, na esperança de que este visinho possua rastros. Existem algumas medidas para que se escolha o vizinho mais adequado para receber a mensagem de alarme. Contudo, devido a extensibilidade da explicação, não serão abordadas neste trabalho. Porém, vale ressaltar que esta particularidade ocorre em poucos casos e será abordada novamente no capítulo de resultados.
 
  A figura \ref{fig:app} demonstra um exemplo do funcionamento básico da propagação de eventos.
  
 
- \begin{figure}[h!]
- \centering
- \includegraphics[width=12cm]{pictures/application.png}
- \caption{Propagação de um evento de interesse.}
-  \label{fig:app}
- \end{figure}
 
 
-\subsection{Reforço da Conectividade da Rede}
-Esta seção aborda um último algoritmo deste trabalho. É válido salientar que este esta última técnica não influencia diretamente os resultados dos algoritmos apresentados anteriormente. Entretanto, as melhorias propostas nas seções anteriores propiciam o cenário para a implementação deste último algoritmo.
+%\subsection{Reforço da Conectividade da Rede}
+%Esta seção aborda um último algoritmo deste trabalho. É válido salientar que este esta última técnica não influencia diretamente os resultados dos algoritmos apresentados anteriormente. Entretanto, as melhorias propostas nas seções anteriores propiciam o cenário para a implementação deste último algoritmo.
 
-O algoritmo de Reforço de Conectividade da Rede utiliza os \vants que sobrevoam a área de interesse como nós sensores móveis, de modo que os \vants possam complementar a conectividade da rede em caso de falhas em nós sensores. Basicamente, falhas em nós sensores pode, ser consideradas como indisponibilidade de energia, falha em sensores, falha na interface de comunicação, etc.
+%O algoritmo de Reforço de Conectividade da Rede utiliza os \vants que sobrevoam a área de interesse como nós sensores móveis, de modo que os \vants possam complementar a conectividade da rede em caso de falhas em nós sensores. Basicamente, falhas em nós sensores pode, ser consideradas como indisponibilidade de energia, falha em sensores, falha na interface de comunicação, etc.
 
-Uma falha pode ser detectada pelo próprio nó, ou por seus vizinhos. Um exemplo de falha detectada pelo próprio nó é o mal funcionamento de um sensor, ou níveis muito baixos de energia. Falhas detectadas por vizinhos podem ser falência de um nó sensor ou ausência de interface de comunicação (não responde às mensagens de seus vizinhos), etc. A principal característica a se observar neste caso é que este problema pode ser mapeado em termos dos problemas anteriores; uma falha em um nó sensor pode ser considerada como um evento de interesse, e os rastros de feromônios podem ser utilizados para se carregar a mensagem de falha até o \vant mais próximo.
+%Uma falha pode ser detectada pelo próprio nó, ou por seus vizinhos. Um exemplo de falha detectada pelo próprio nó é o mal funcionamento de um sensor, ou níveis muito baixos de energia. Falhas detectadas por vizinhos podem ser falência de um nó sensor ou ausência de interface de comunicação (não responde às mensagens de seus vizinhos), etc. A principal característica a se observar neste caso é que este problema pode ser mapeado em termos dos problemas anteriores; uma falha em um nó sensor pode ser considerada como um evento de interesse, e os rastros de feromônios podem ser utilizados para se carregar a mensagem de falha até o \vant mais próximo.
 
-Ao receber uma mensagem de falha de um nó sensor, o \vant deve se preocupar em cobrir a conectividade da rede naquela região, atuando como um nó sensor da rede. Contudo, o \vant ainda possui suas responsabilidades em relação ao sistema de monitoramento de eventos. Para que se torne possível que o \vant realize todas as suas tarefas, a estratégia empregada é que o \vant apenas visite a área de falha em um determinado intervalo de tempo, e depois prossiga com seu itinerário.
+%Ao receber uma mensagem de falha de um nó sensor, o \vant deve se preocupar em cobrir a conectividade da rede naquela região, atuando como um nó sensor da rede. Contudo, o \vant ainda possui suas responsabilidades em relação ao sistema de monitoramento de eventos. Para que se torne possível que o \vant realize todas as suas tarefas, a estratégia empregada é que o \vant apenas visite a área de falha em um determinado intervalo de tempo, e depois prossiga com seu itinerário.
 
-Quando um \vant recebe mais de um alarme de falha de sensor, torna-se necessário que exista um escalonamento para que o \vant visite todas as regiões de falha. No desenvolvimento deste escalonamento, optou-se por uma implementação baseada em políticas. Neste caso, foi determinado um protocolo\footnote{Também pode ser considerado como uma Interface nos conceitos de Orientação a Objetos.} para a implementação de diferentes políticas. Isto permite que se desenvolva diferentes estratégias para o escalonamento das visitas às regiões de baixa cobertura da rede. Dentre estas políticas, podem ser destacadas:
+%Quando um \vant recebe mais de um alarme de falha de sensor, torna-se necessário que exista um escalonamento para que o \vant visite todas as regiões de falha. No desenvolvimento deste escalonamento, optou-se por uma implementação baseada em políticas. Neste caso, foi determinado um protocolo\footnote{Também pode ser considerado como uma Interface nos conceitos de Orientação a Objetos.} para a implementação de diferentes políticas. Isto permite que se desenvolva diferentes estratégias para o escalonamento das visitas às regiões de baixa cobertura da rede. Dentre estas políticas, podem ser destacadas:
 
-\begin{description}
-	\item[Agrupamento por Proximidade:] política para que o itinerário de visitas do \vant baseie-se em visitar sempre os nós mais próximos, de modo que a próxima região de visita seja a de menor distância do ponto atual.
-	\item[Agrupamento Crítico:] é uma política em que se preocupa, principalmente, no agrupamento dos nós de acordo com a criticidade da região de falha. Nesta estratégia, a primeira região a ser visitada é a que possui mais avarias.
-	\item[Agrupamento por Proximidade do \vant:] é uma especialização da primeira política. Todavia, mais complexa de se implementar, visto a necessidade de atualização da rota de acordo com a movimentação do \vant.
-\end{description}
+%\begin{description}
+%	\item[Agrupamento por Proximidade:] política para que o itinerário de visitas do \vant baseie-se em visitar sempre os nós mais próximos, de modo que a próxima região de visita seja a de menor distância do ponto atual.
+%	\item[Agrupamento Crítico:] é uma política em que se preocupa, principalmente, no agrupamento dos nós de acordo com a criticidade da região de falha. Nesta estratégia, a primeira região a ser visitada é a que possui mais avarias.
+%	\item[Agrupamento por Proximidade do \vant:] é uma especialização da primeira política. Todavia, mais complexa de se implementar, visto a necessidade de atualização da rota de acordo com a movimentação do \vant.
+%\end{description}
 
-Uma característica interessante desta abordagem é a possibilidade de se alternar as políticas nos momentos mais adequados. Um \vant pode trabalhar com uma política A e ser reprogramado, ainda que em operação, para utilizar uma política B. Ainda mais, diversos \vants, no mesmo cenário, podem empregar diferentes políticas para o reforço de conectividade da rede. Ampliando, assim, o dinamismo do algoritmo abordado.
+%Uma característica interessante desta abordagem é a possibilidade de se alternar as políticas nos momentos mais adequados. Um \vant pode trabalhar com uma política A e ser reprogramado, ainda que em operação, para utilizar uma política B. Ainda mais, diversos \vants, no mesmo cenário, podem empregar diferentes políticas para o reforço de conectividade da rede. Ampliando, assim, o dinamismo do algoritmo abordado.
 
-O protocolo para implementação desta políticas, apesar de dinâmico, apresenta-se simples, o desenvolvedor deve apenas oferecer um procedimento que compare duas regiões de falha.
+%O protocolo para implementação desta políticas, apesar de dinâmico, apresenta-se simples, o desenvolvedor deve apenas oferecer um procedimento que compare duas regiões de falha.
 
-Os blocos de código a seguir ilustram a implementação de uma política utilizada no trabalho.
+%Os blocos de código a seguir ilustram a implementação de uma política utilizada no trabalho.
 
-\begin{lstlisting}[caption=Procolo (Interface) para implementação de Políticas de Agrupamento.]
-package br.ufla.dcc.ucr.node.data;
-public interface CoverageInfoComparator {
-	int compare(CoverageInformation me, CoverageInformation other);
-}
-\end{lstlisting}
-
-
-\begin{lstlisting}[caption=Implementação de Agrupamento Crítico.]
-package br.ufla.dcc.ucr.node.data;
-/**
-*  Neste caso, coverage indica o grau de cobertura do no. Isto significa o quao danificado um no se encontra.
-*/
-public class SortByCoverage implements CoverageInfoComparator {
-	@Override
-	public int compare(CoverageInformation me, CoverageInformation other) {
-		if (me.getCoverage() == other.getCoverage())
-			return 0;
-		if(me.getCoverage() < other.getCoverage()){
-			return 1;
-		}else{
-			return -1;
-		}
-	}
-}
-\end{lstlisting}
+%\begin{lstlisting}[caption=Procolo (Interface) para implementação de Políticas de Agrupamento.]
+%package br.ufla.dcc.ucr.node.data;
+%public interface CoverageInfoComparator {
+%	int compare(CoverageInformation me, CoverageInformation other);
+%}
+%\end{lstlisting}
 
 
-\begin{lstlisting}[caption=Escolha da Política]
-package br.ufla.dcc.ucr.node.data;
-...
-public class CoverageInformation implements Comparable<CoverageInformation> {
-	//Escolha da politica de Agrupamento Critico. Basta mudar esta linha para trocar a politica.
-	private CoverageInfoComparator compareStrategy = new SortByCoverage();
-	...
-	@Override
-	public int compareTo(CoverageInformation other) {
-		return this.compareStrategy.compare(this, other);
-	}
-	...
-}
-\end{lstlisting}
+%\begin{lstlisting}[caption=Implementação de Agrupamento Crítico.]
+%package br.ufla.dcc.ucr.node.data;
+%/**
+%*  Neste caso, coverage indica o grau de cobertura do no. Isto significa o quao danificado um no se encontra.
+%*/
+%public class SortByCoverage implements CoverageInfoComparator {
+%	@Override
+%	public int compare(CoverageInformation me, CoverageInformation other) {
+%		if (me.getCoverage() == other.getCoverage())
+%			return 0;
+%		if(me.getCoverage() < other.getCoverage()){
+%			return 1;
+%		}else{
+%			return -1;
+%		}
+%	}
+%}
+%\end{lstlisting}
 
-Para este trabalho, foram desenvolvidas as políticas de Agrupamento por Proximidade e de Agrupamento Crítico. Contudo, o modelo proposto permite que diversas extensões sejam feitas ao algoritmo.
+
+%\begin{lstlisting}[caption=Escolha da Política]
+%package br.ufla.dcc.ucr.node.data;
+%...
+%public class CoverageInformation implements Comparable<CoverageInformation> {
+%	//Escolha da politica de Agrupamento Critico. Basta mudar esta linha para trocar %a politica.
+%	private CoverageInfoComparator compareStrategy = new SortByCoverage();
+%	...
+%	@Override
+%	public int compareTo(CoverageInformation other) {
+%%
+%	}
+%	...
+%}
+%\end{lstlisting}
+
+%Para este trabalho, foram desenvolvidas as políticas de Agrupamento por Proximidade e de Agrupamento Crítico. Contudo, o modelo proposto permite que diversas extensões sejam feitas ao algoritmo.
 
 O próximo capítulo demonstra os resultados dos experimentos realizados com os algoritmos apresentados neste capítulo.
