@@ -14,10 +14,10 @@ Ainda em relação às práticas metodológicas, a pesquisa também se classific
 
 Os experimentos realizados neste trabalho basearam-se em simulação. O uso de simulação justificou-se pela complexidade em se aplicar o algoritmo proposto em uma grande quantidade de nós sensores, seja em questões financeiras ou de tempo para se testar o algoritmo em uma grande variedade de cenários.
 
-A próxima seção introduz os conceitos referentes ao simulador utilizado, bem como os conceitos de Simulação Orientada a Eventos.
+A próxima seção introduz os conceitos referentes ao simulador utilizado, bem como os conceitos de simulação orientada a eventos.
 
 \subsubsection{\emph{GRUBiX} e Simulação Orientada a Eventos}
-Para desenvolvimento do algoritmo proposto neste trabalho, foi utilizado o simulador de redes sem fio \emph{GRUBiX}, desenvolvido no Departamento de Ciência da Computação, pelo grupo de pesquisas GRUBi, da Universidade Federal de Lavras.
+Para desenvolvimento do algoritmo proposto neste trabalho, foi utilizado o simulador de redes sem fio \emph{GRUBiX}, desenvolvido no Departamento de Ciência da Computação, pelo grupo de pesquisas GRUBi, da Universidade Federal de Lavras \cite{grubi}.
 
 Este simulador é uma evolução do projeto \emph{Shox}\cite{shox}. Assim como o \emph{Shox}, o simulador \emph{GRUBiX} caracteriza-se como um ambiente de simulação orientado a eventos. De forma simplificada, em um ambiente de simulação orientado a eventos, a linha do tempo de uma simulação é representada por uma lista de eventos, onde cada novo evento é inserido nesta lista. A posição em que cada evento é inserido nesta lista varia de acordo com o momento em que cada evento deve ocorrer.
 
@@ -25,10 +25,8 @@ Adicionalmente, estes simuladores disponibilizam uma API\footnote{\emph{Applicat
 
 Assim como o \emph{Shox}, o simulador \emph{GRUBiX} utiliza a linguagem de programação Java. O uso de uma linguagem orientada a objetos, neste caso Java, indica que as camadas da pilha de protocolos sejam modeladas como objetos. O uso desta modelagem orientada a objetos permite que cada camada seja personalizada através de mecanismos de herança. Portanto, basta que a nova camada personalizada herde as funcionalidades de uma camada base para que se tenha a possibilidade de alterar o comportamento padrão da camada.
 
-\subsubsection{Métodos}
-Compreendidos os conceitos apresentados na sessão anterior, o desenvolvimento deste trabalho caracteriza-se por um algoritmo desenvolvido sobre a camada de aplicação da pilha de protocolos dos nós sensores sem fio e dos \vants.
 
-Como discutido anteriormente, o \emph{GRUBiX} é escrito na linguagem de programação Java, e utiliza-se de conceitos de herança para o desenvolvimento das simulações. Portanto, o código das simulações deste trabalho foram todos escritos nesta linguagem de programação. Os próximos capítulos discutem o funcionamento do algoritmo e os resultados apresentados.
+O desenvolvimento deste trabalho caracteriza-se por um algoritmo sobre a camada de aplicação da pilha de protocolos dos nós sensores sem fio e dos \vants. Como discutido anteriormente, o \emph{GRUBiX} é escrito na linguagem de programação Java, e utiliza-se de conceitos de herança para o desenvolvimento das simulações. Portanto, o código das simulações deste trabalho foram todos escritos nesta linguagem de programação. Os próximos capítulos discutem o funcionamento do algoritmo e os resultados apresentados.
 
 
 
