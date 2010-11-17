@@ -106,7 +106,7 @@ FAE-PE Recovery TelEduc Williams Lyn-ch}
 % Dados da monografia, capa: autor, titulo, banca, etc... - SUBSTITUA DE ACORDO
 %==============================================================================
 \author{Ivayr Dieb Farah Netto}
-\title{Monitoramento de Áreas Utilizando Redes de Sensores Sem Fio e Veículos Aéreos Não Tripulados}
+\title{Algoritmo para entrega de alarmes em Redes de Sensores Sem Fio utilizando Veículos Aéreos Não Tripulados}
 \date{2010}
 \tipo{Monografia apresentada ao Colegiado do Curso de Sistemas de Informação, para a obtenção do título de Bacharel em Sistemas de Informação.}
 \areaconcentracao{Redes de Sensores Sem Fio}
@@ -116,9 +116,9 @@ FAE-PE Recovery TelEduc Williams Lyn-ch}
 \bancaum{Prof. Dr. João Carlos Giacomin}
 \bancadois{Msc. Samuel R. Salles Campos} % comente se sua banca tiver só um professor
 %\bancatres{Fulanim de Sicrano}% comente se sua banca tiver só um professor
-\defesa{26 de Novembro de 2010}
+\defesa{24 de Novembro de 2010}
 \palchaves{Redes de Sensores Sem Fio; Veículos Aéreos Não Tripulados; Auto-Organização; RSSF, UAV.}
-\keywords{Wireless Sensor Networks; Umanned Aerial Vehicles, Self-Organization, WSN, UAV.}
+\keywords{Wireless Sensor Networks; Unmanned Aerial Vehicles, Self-Organization, WSN, UAV.}
 %==============================================================================
 %
 %%% dados para ficha catalográfica
@@ -139,12 +139,6 @@ FAE-PE Recovery TelEduc Williams Lyn-ch}
 \fcclasii{005.43}
 
 
-
-
-
-
-
-
 % Aqui começa o documento propriamente dito
 \begin{document}
 \hidepagenumber
@@ -156,7 +150,7 @@ FAE-PE Recovery TelEduc Williams Lyn-ch}
 
 \resumo{Este trabalho apresenta a investigação de uma estratégia para coordenar um conjunto de nós sensores terrestres estáticos (posicionados no solo) e de Veículos Aéreos Não Tripulados (VANTs) que carregam uma variedade de sensores. Esta coordenação tem como objetivo prover monitoramento e detecção eficientes de intrusos em uma determinada área de interesse. Para o desenvolvimento desta coordenação tem-se o uso de técnicas de Auto-Organização Emergente. Estas técnicas não utilizam controles externos ou centralizados, contudo, é gerado um comportamento global emergente a partir das pequenas e simples interações locais entre os indivíduos do sistema. Os nós sensores terrestres são configurados para acionar alarmes na ocorrência de entrada de um intruso na área, enquanto os UAVs recebem os alarmes e têm que decidir qual UAV é o mais hábil a tratar o alarme acionado.
 }
-\resumoingles{This work presents an investigation of a strategie to coordinate a set of static ground sensor nodes (deployed on the ground) and Unmanned Aerial Vehicles (UAVs) carrying a variety of sensors. This coordination aims to provide efficient surveillance and intrusion detection in a given area of interest. To develop this coordination has been used techniques of Emergent Self-Organization. These techniques do not use external or centralized controls, however, generate an emerging global behavior from the small and simple local interactions among the individuals of the system. The ground nodes are setup to trigger alarms in the event of an intruder entrance in the area, while the UAVs receive the alarms and must decide which one is the most skilled to handle the received alarm.}
+\resumoingles{This work presents an investigation of a strategy to coordinate a set of static ground sensor nodes (deployed on the ground) and Unmanned Aerial Vehicles (UAVs) carrying a variety of sensors. This coordination aims to provide efficient surveillance and intrusion detection in a given area of interest. To develop this coordination has been used techniques of Emergent Self-Organization. These techniques do not use external or centralized controls, however, generate an emerging global behavior from the small and simple local interactions among the individuals of the system. The ground nodes are setup to trigger alarms in the event of an intruder entrance in the area, while the UAVs receive the alarms and must decide which one is the most skilled to handle the received alarm.}
 
 \listoffigures
 \listoftables
@@ -174,6 +168,8 @@ FAE-PE Recovery TelEduc Williams Lyn-ch}
 \input{conclusao}
 
 \newpage
+
+\bibliography{bib_tcc}
 %==============================================================================
 % Incluindo bibliografia
 %\bibliographystyle{plain}             % estilo para labels em numeros
@@ -181,7 +177,7 @@ FAE-PE Recovery TelEduc Williams Lyn-ch}
 \bibliographystyle{abnt-alf}           % estilo para referências usando ABNT, 
                                        % precisa instalar o abntex para usar!!!
 %\bibliographystyle{apalike}
-\bibliography{bib_tcc}
+
 
 
 \end{document}
