@@ -11,8 +11,10 @@ import br.ufla.dcc.grubix.simulator.event.Packet;
 import br.ufla.dcc.grubix.simulator.event.StartSimulation;
 import br.ufla.dcc.grubix.simulator.event.WakeUpCall;
 import br.ufla.dcc.grubix.simulator.kernel.SimulationManager;
+import br.ufla.dcc.mu.packet.AlarmPacket;
 import br.ufla.dcc.mu.packet.PheromonePacket;
 import br.ufla.dcc.mu.packet.TrailPropagationPacket;
+import br.ufla.dcc.mu.utils.Alarm;
 import br.ufla.dcc.mu.wuc.LayPheromoneWakeUpCall;
 
 public class UAV extends GenericNode {
@@ -32,6 +34,19 @@ public class UAV extends GenericNode {
 	public void lowerSAP(Packet packet) throws LayerException {
 		if(packet instanceof TrailPropagationPacket)
 			this.propagateTrails( (TrailPropagationPacket) packet);
+		
+		if (packet instanceof AlarmPacket){
+			Alarm alarm = ((AlarmPacket) packet).getAlarm();
+			this.handleAlarm(alarm);
+		}
+	}
+
+	private void handleAlarm(Alarm alarm) {
+		boolean isMyAlarm = alarm.getFlavor().equals(this.getId());
+		if(isMyAlarm){
+			RegularNode.isTracking = false;
+			SimulationManager.logNodeState(getId(), "Alarm Received", "int", "80");
+		}
 	}
 
 	public void processWakeUpCall(WakeUpCall wuc){

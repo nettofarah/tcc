@@ -13,6 +13,9 @@ public class Converter {
 		if (nodeName.equals("REGULAR")){
 			result = "2";
 		}
+		if(nodeName.equals("INTRUDER")){
+			result = "30";
+		}
 		
 		return result;
 	}

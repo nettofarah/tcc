@@ -23,7 +23,51 @@
     </bitmanglingmodel>
     
     <nodes>   
-    	<node name="REGULAR" count="100">
+    
+    	<node name="INTRUDER" count="1">
+        	<layers>
+        		<operatingSystem>
+        			<class>br.ufla.dcc.grubix.simulator.node.user.os.NullOperatingSystemLayer</class>
+        		</operatingSystem>
+        		<logLink>
+        			<class>br.ufla.dcc.grubix.simulator.node.user.LogLinkDebug</class>
+        		</logLink>
+        		<energyManager>
+        			<class>br.ufla.dcc.grubix.simulator.node.energy.BasicEnergyManager</class>
+        		</energyManager>
+	        	<physical>
+	        		<class>br.ufla.dcc.grubix.simulator.node.user.PHY_802_11bg</class>
+	        		<params>
+	            		<param name="standard">g</param>
+	            		<param name="preamble">short</param>
+	        			<param name="channelCount">1</param>
+	        			<param name="signalStrength">0.0</param>
+	        			<param name="minSignalStrength">0.0</param>
+	        			<param name="maxSignalStrength">100.0</param>
+	        			<param name="minFrequency">2.4e9</param>
+	        			<param name="maxFrequency">2.4e9</param>
+	        		</params>
+	        	</physical>
+	            <mac>
+	            	<class>br.ufla.dcc.grubix.simulator.node.user.MAC_IEEE802_11bg_DCF</class>
+	            	<params>
+	            		<param name="retryLimit">10</param>
+	            		<param name="rateAdaption">AARF</param>
+	            		<param name="raUpLevel">10</param>
+	            		<param name="raDownLevel">2</param>
+	            		<param name="raUpMult">2</param>
+	            		<param name="raTimeout">10</param></params>
+	            </mac>
+	            <network>
+	                <class>br.ufla.dcc.grubix.simulator.node.user.OptimalSourceRouting</class>
+	            </network>
+	            <application>
+	            	<class>br.ufla.dcc.mu.node.Intruder</class>
+	            </application>
+	        </layers>
+        </node>
+    
+    	<node name="REGULAR" count="180">
         	<layers>
         		<operatingSystem>
         			<class>br.ufla.dcc.grubix.simulator.node.user.os.NullOperatingSystemLayer</class>
@@ -65,6 +109,8 @@
 	            </application>
 	        </layers>
         </node>
+      
+      	
         
         <node name="UAV" count="2">
         	<layers>
@@ -142,5 +188,5 @@
             <targetfile>startpositions.xml</targetfile>
         </generated>
     </positions>
-    <simulationtime stepspersecond="100" base="seconds">1000</simulationtime>
+    <simulationtime stepspersecond="100" base="seconds">2000</simulationtime>
 </configuration>

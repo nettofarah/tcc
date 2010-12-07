@@ -3,33 +3,31 @@
 \vants são definidos por \cite{uav_roadmap2005} como veículos aéreos que não carregam operadores humanos que são capazes de voar autonomamente ou serem pilotados remotamente e não são limitados por restrições humanas. Pelo fato de não carregarem pilotos, estes tipos de aeronaves podem ser sujeitos aos mais variados tipos de aplicação.
 Exemplos básicos são áreas de baixo oxigênio, áreas contaminadas por resíduos tóxicos ou produtos químicos nocivos à saúde humana.
 
-Estes veículos recentemente alcançaram um crescimento não previsto. Diversas aplicações em áreas civis e militares têm sido desenvolvidas nos mais diversos domínios \cite{Valavanis2007}.
+Estes veículos recentemente alcançaram um crescimento não previsto e diversas aplicações em áreas civis e militares têm sido desenvolvidas nos mais diversos domínios \cite{Valavanis2007}.
 
 
-Um forte fator de motivação no desenvolvimento de \vants é o fato dos mesmos ultrapassarem algumas barreiras onde as limitações humanas são fatores que restringem a execução de missões. Como exemplos, podem ser citados recuperação de desastres, áreas envenenadas ou com limitação de oxigênio, locais de difícil acesso onde necessitam-se de aeronaves de menor porte, entre outros casos \cite{uas_2009}. 
-
-Atualmente existe uma grande diversidade de modelos de UAVs. Podendo variar em vários tamanhos, formatos, configurações e propósito.
+Atualmente existe uma grande diversidade de modelos de VANTs. Podendo variar em vários tamanhos, formatos, configurações e propósito.
 Determinados \vants variam de aeronaves do tamanho de insetos à \vants com porte relativo a aviões comerciais \cite{Bone2003}.
 
 Não se considerando apenas aspectos como segurança, mas também aspectos como extensão, \vants de vários tamanhos e modelos podem ser utilizados para monitoramento em recuperação de desastres, detecção de eventos, ente outros. 
 
-Em aplicações militares, \vants trabalham por meio de execução de missões "3-D" ( \emph{Dull} - Tediosas, \emph{Dirty} - Sujas e \emph{Dangerous} - Perigosas) que não necessitam do uso de pilotos \cite{Bone2003}.
+Em aplicações militares, \vants trabalham por meio de execução de missões que não necessitam do uso de pilotos \cite{Bone2003}. Essas missões são classificadas como 3-D.
 
 
-\cite{uav_roadmap2005} define missões 3-D como:
+Em \cite{uav_roadmap2005} 3-D são definidas como:
 \begin{description}
-\item[Tedioso: ]
+\item[\emph{Dull} - Tedioso: ]
 \vants podem realizar missões consideradas tediosas para pilotos. Como exemplo a viagem rotineira de um vôo de 30 horas realizada por uma equipe do exército americano de Missouri até a Sérvia por 34 dias no conflito de Kosovo em 1999 \cite{uav_roadmap2005}. 
 
-\item[Sujo: ]
+\item[\emph{Dirty} - Sujo: ]
 Casos em que se torna necessário o monitoramento de alguma região contaminada. Entre 1946 e 1948, a força aérea (\emph{The Air Force}) e a marinha (\emph{The Navy}) americanos utilizaram \vants para recolherem amostras radioativas após detonação de bombas nucleares \cite{uav_roadmap2005}.
 
-\item[Perigoso: ]
+\item[\emph{Dangerous} - Perigoso: ]
 Missões de exploração ou reconhecimento podem apresentar riscos aos pilotos. Segundo \cite{uav_roadmap2005}, 25\%  dos pilotos dos grupos de reconhecimento do exército americano foram perdidos durante a Segunda Guerra Mundial no norte da África, enquanto somente 5\% dos pilotos de bombardeiros foram perdidos sobrevoando a Alemanha.
 
 \end{description}
 
-O restante desta sessão se preocupa em apresentar, de forma resumida, os avanços e pesquisa em \uavs. Na próxima subsessão serão apresentados os modelos básicos de \vants.
+O restante dessa sessão apresenta, de forma resumida, os avanços e pesquisa em VANTs. Na próxima subsessão serão apresentados os modelos básicos de \vants.
 
 \subsubsection{Modelos e Arquiteturas de \vants}
 
@@ -37,7 +35,7 @@ Esta seção apresenta, de forma condensada, os avanços das pesquisas em modelo
 
 Os principais modelos de \vants da atualidade foram projetados primeiramente com propósito de missões de reconhecimento e vigilância. Porém, esforços têm sido realizados para o desenvolvimento de \vants que representem maior representatividade em campos de batalha, como detectar alvos aéreos, monitorar movimento de tropas inimigas à auxílio de artilharia em batalhas \cite{Bone2003}.
 
-A tabela ~\ref{tbl:categorization} apresenta as categorias de \vants reconhecidas pelos especialistas no assunto. Porém, por não ser objetivo deste trabalho realizar uma investigação detalhada a respeito dos modelos de \vants, será adotada a convenção proposta por \cite{Drew2005} para que o assunto não se extenda demasiadamente.
+A Tabela ~\ref{tbl:categorization} apresenta as categorias de \vants reconhecidas pelos especialistas no assunto. Porém, por não ser objetivo deste trabalho realizar uma investigação detalhada a respeito dos modelos de \vants, será adotada a convenção proposta por \cite{Drew2005} para que o assunto não se extenda demasiadamente.
 \begin{table}[h!]
 \centering
 \small
@@ -76,7 +74,7 @@ A tabela ~\ref{tbl:categorization} apresenta as categorias de \vants reconhecida
 %		\hline
 	\end{tabular}
 	
-	\caption{Categorias de \vants. Fonte: 2009/2010 UAS Yearbook - UAS: The Global Perspective - 7th Edition}
+	\caption{Categorias de \vants.}
 	\label{tbl:categorization}
 \end{table}
 
@@ -84,23 +82,23 @@ A tabela ~\ref{tbl:categorization} apresenta as categorias de \vants reconhecida
 
 \cite{Drew2005} dividem os \vants em duas principais classes baseadas na extensão das aeronaves. Neste trabalho serão consideradas como Grande Porte e Pequeno Porte (Micro, Portáteis e Multi-missões).
 
-O foco deste trabalho não é uma investigação sobre os modelos e arquiteturas de \vants. Portanto,  neste tópico serão apresentados, de forma resumida, alguns modelos comuns de UAVs. Mais informações sobre arquiteturas de \vants podem ser encontradas em \cite{Drew2005,uav_roadmap2005, Bone2003,Holder2001}.
+%O foco deste trabalho não é uma investigação sobre os modelos e arquiteturas de \vants. Portanto,  neste tópico serão apresentados, de forma resumida, alguns modelos comuns de UAVs. Mais informações sobre arquiteturas de \vants podem ser encontradas em \cite{Drew2005,uav_roadmap2005, Bone2003,Holder2001}.
 
 \footnotetext[1]{Peso Máximo de Decolagem - É o peso máximo permitido para que um avião consiga realizar vôos em plena capacidade. }
 \addtocounter{footnote}{1}
 
-\paragraph{\vants de Grande Porte}
-Segundo \cite{Drew2005}, \vants de grande porte têm sistemas de lançamento e recuperação que podem ser separados dos seus sistemas de controle e exploração de dados. Ou seja, apresentam mecanismos que podem ser controlados separadamente, como por exemplo, coleta das informações e comunicação via satélite.
+\paragraph{\vants de Grande Porte:}
+Segundo \cite{Drew2005}, \vants de grande porte têm sistemas de lançamento e recuperação que podem ser separados dos seus sistemas de controle e exploração de dados. Os VANTs apresentam mecanismos que podem ser controlados separadamente, como por exemplo, coleta das informações e comunicação via satélite.
 
 
 
- \subparagraph{\emph{Global Hawk} }
+ \subparagraph{\emph{Global Hawk}: }
 
- É o \vant mais caro já produzido. Este \vant é capaz de alcançar altitudes elevadas (65.000 pés\footnote{A medida de 1 pé é de aproximadamente 30cm.}), e longos períodos de ativididade de 28 a 32 horas. Este modelo é capaz de prover imagens próximas a tempo real em grandes áreas geográficas (cerca de 40.000 nm$^{2}$ \footnote{Milhas náuticas quadradas. 1 milha náutica representa 1,828 km.} por dia) \cite{uav_roadmap2005}.
+ É o \vant mais caro já produzido. Este \vant é capaz de alcançar altitudes elevadas (65.000 pés\footnote{A medida de 1 pé é de aproximadamente 30cm.}), e longos períodos de ativididade de 28 a 32 horas. Este modelo é capaz de prover imagens próximas a tempo real em grandes áreas geográficas (cerca de 40.000 nm\footnote{Milhas náuticas quadradas. 1 milha náutica representa 1,828 km.} por dia) \cite{uav_roadmap2005}.
 
-Segundo \cite{Drew2005}, o \emph{Global Hawk} foi o primeiro \vant a realizar uma viagem trans-pacífico, quando voou da Califórnia à Austrália em 22-23 de Abril de 2001.
+Segundo \cite{Drew2005}, o \emph{Global Hawk} foi o primeiro \vant a realizar uma viagem trans-pacífico, quando voou da Califórnia à Austrália de 22 a 23 de Abril de 2001.
 
-O preço de um \emph{Global Hawk} completo é próximo de 54 milhões de dólares. E o preço de cada estação terrestre para controle
+O preço de um \emph{Global Hawk} completo é próximo de 54 milhões de dólares e o preço de cada estação terrestre para controle
 é de 16 milhões.
 
 \begin{figure}[h!]
@@ -111,14 +109,10 @@ O preço de um \emph{Global Hawk} completo é próximo de 54 milhões de dólare
 \end{figure}
 
 
-Este modelo apresenta 13,5 metros de extensão, peso de 12.144 quilos e possui o tamanho comparável ao de um jato comercial de médio porte. 
+Este modelo apresenta 13,5 metros de extensão, peso de 12.144 quilos e possui o tamanho comparável ao de um jato comercial de médio porte \cite{Drew2005,uav_roadmap2005,Bone2003}.
 
 
-
-Mais informações podem ser encontradas em:  \cite{Drew2005,uav_roadmap2005,Bone2003}.
-
-
-\subparagraph{ \emph{Predator} }
+\subparagraph{ \emph{Predator}: }
 
  O modelo \emph{Predator} é um \vant  de grande porte, considerado de média a alta altitude (15.000 a 25.000 pés), apresenta 
 uma extensão de aproximadamente 11 metros,  4.767 quilos de peso e autonomia de vôo de 16 a 30 horas.
@@ -133,9 +127,7 @@ uma extensão de aproximadamente 11 metros,  4.767 quilos de peso e autonomia de
 A primeiro propósito deste modelo de \vant é atuar como vigilante em uma determinada área de interesse. Este \vant é equipado com uma variedade de sensores para capturar imagens de alta resolução em determinadas áreas.
 O segundo propósito para o desenvolvimento deste modelo de aeronave é atuar em conjunto de inteligente de \uavs. 
 
-Cada \emph{Predator} tem um custo aproximado de 4.5 milhões de dólares. Um sistema completo de \emph{Predator}s custa em média 30 milhões de dólares.
-
-Para mais informações sobre este modelo:  \cite{Drew2005,uav_roadmap2005,Bone2003}.
+Cada \emph{Predator} tem um custo aproximado de 4.5 milhões de dólares. Um sistema completo de \emph{Predator}s custa em média 30 milhões de dólares \cite{Drew2005,uav_roadmap2005,Bone2003}.
 
 
 
@@ -149,7 +141,7 @@ Em \cite{Drew2005}, \vants de Pequeno Porte são divididos nas seguintes subclas
 São aeronaves de menor porte e geralmente são utilizadas para missões de reconhecimento, pois seu tamanho reduzido permite uma grande versatilidade. Uma característica importante é que estes modelos são indicados somente para operações durante o dia e com boas condições climáticas, visto que as restrições de tamanho dificultam a locomoção em más condições climáticas. Estes modelos são projetados para carregarem cargas de peso inferior a 200g.
 
 \item[Portáteis: ]
-São modelos direcionados à aplicações de pequenos times de \vants. Estes modelos se adaptam bem à aplicações colaborativas. Podem ser carregados e lançados por uma pessoa. Geralmente estes \vants apresentam autonomia de vôo de aproximadamente 1 a 2 horas, e normalmente carregam cargas de até 25 kg.
+São modelos direcionados à aplicações de pequenos times de \vants. Esses modelos se adaptam bem à aplicações colaborativas. Podem ser carregados e lançados por uma pessoa. Geralmente estes \vants apresentam autonomia de vôo de aproximadamente 1 a 2 horas, e normalmente carregam cargas de até 25 kg.
 
 \item[Multi-Missão: ]
 Conhecidos como \vants  de propósito geral, estes são os maiores entre os menores modelos de \vants e geralmente apresentam autonomia de voo de 10 a 12 horas e possuem capacidade para carregar cargas de 25 a 110 kg. Estes \vants são projetados para missões operacionais variadas, sendo considerados as aeronaves mais versáteis da categoria. Exemplos comuns de aplicações são: carregamento de suprimentos para o campo de batalha, distribuição (\emph{deployment}) de sensores em uma região, monitoramento, entre outros.
@@ -157,7 +149,7 @@ Conhecidos como \vants  de propósito geral, estes são os maiores entre os meno
 \end{description}
 
 
-\subparagraph{\emph{RAVEN}}
+\subparagraph{\emph{RAVEN}:}
 É um \vant portátil que carrega câmeras infra-vermelho frontais e laterais. Este modelo pode ser pilotado remotamente ou através de vôo autônomo baseado em GPS. Em muitos casos 
 este modelo é utilizado para missões de reconhecimento e vigilância, destacando-se no uso para reconhecimento noturno devido o uso de suas câmeras infra-vermelhas.
 
@@ -166,7 +158,7 @@ Este modelo pode sobrevoar altitudes de no máximo 14.000 pés, porém seus usos
 
 A instalação de um sistema composto por dois \emph{RAVENs} custa aproximadamente 139.000 dólares \cite{Drew2005}. 
 
-Nas figuras ~\ref{fig:raven} e  pode ser vista a operação de lançamento de um \vant do tipo \emph{RAVEN}.
+Na Figura ~\ref{fig:raven} pode ser vista a operação de lançamento de um \vant do tipo \emph{RAVEN}.
 
 \begin{figure}[h!]
 \centering
@@ -178,11 +170,11 @@ Nas figuras ~\ref{fig:raven} e  pode ser vista a operação de lançamento de um
 
 
 
-\subparagraph{ \emph{Pointer}}
+\subparagraph{ \emph{Pointer}:}
 Este \vant  portátil foi desenvolvido para prover dados em tempo real em uma grande variedade de aplicações. Sua missão primária é a de reconhecimento e vigilância de áreas
 utilizando sensores EO\footnote{Sensor Eletro-Óptico.} e IR\footnote{Infra-red, em português: Infra-Vermelho.}, bem como sensores de detecção química. Este modelo apresenta comprimento de asa de 9 pés e pesa apenas 3,7 kg. Um \emph{Pointer} tem autonomia de vôo de aproximadamente 2 horas e pode alcançar altitudes de até 500 pés carregando cargas de no máximo 500g \cite{uas_2009}. Um sistema de dois \emph{Pointers} custa aproximadamente 133.000 dólares \cite{Bone2003}. 
 
-Na figura ~\ref{fig:launching_pointer} pode ser visto o lançamento de um \emph{Pointer}. 
+Na Figura ~\ref{fig:launching_pointer} pode ser visto o lançamento de um \emph{Pointer}. 
 
 \begin{figure}[h!]
 \centering
@@ -192,16 +184,15 @@ Na figura ~\ref{fig:launching_pointer} pode ser visto o lançamento de um \emph{
 \end{figure}
 
 
-\subparagraph{ \emph{BATCAM}}
+\subparagraph{ \emph{BATCAM}:}
 O \emph{The Battlefield Air Targeting Camera Micro Air
-Vehicle} (BATCAM) é um modelo altamente avançado de Micro-\vant. Este \vant  é menor que outros modelos como \emph{Pointer}, \emph{Raven} e \emph{FPASS}.
+Vehicle} (BATCAM) é um modelo altamente avançado de Micro-VANT. Esse \vant  é menor que outros modelos como \emph{Pointer}, \emph{Raven} e \emph{FPASS}.
 O \emph{BATCAM} tem um peso de aproximadamente700g, apresenta uma autonomia de vôo de apenas 30 minutos, altitude de vôo de 500 pés e uma capacidade de carga de
 apenas 200g. Este modelo foi construído para missões de reconhecimento e carrega sensores IR e EO.
 
+
+
 Devido o seu tamanho reduzido. Este modelo pode ser utilizado em diversos tipos de operação, como infiltração, monitoramento e vigilância \cite{Drew2005}. 
-
-
-Na figura ~\ref{fig:holding_batcam} é apresentado um sistema \emph{BATCAM}.
 
 \begin{figure}[h!]
 \centering
@@ -210,16 +201,18 @@ Na figura ~\ref{fig:holding_batcam} é apresentado um sistema \emph{BATCAM}.
  \label{fig:holding_batcam}
 \end{figure}
 
+Na Figura ~\ref{fig:holding_batcam} é apresentado um sistema \emph{BATCAM}.
 
-\subparagraph{ \emph{Dragon Eye}}
+
+
+\subparagraph{ \emph{Dragon Eye}:}
 O \vant \emph{Dragon Eye} foi projetado para missões de reconhecimento, vigilância e detecção de alvos. Com um comprimento de asa de apenas 18 cm e peso de 2,5 kg, este modelo pode ser carregado ate mesmo em uma mochila e ser lançado facilmente em diversos tipos de situação.
 
 Este modelo pode voar em velocidades de aproximadamente 75 km/h, cobrindo uma área de até 10km e retornando em 1 hora. Geralmente alcança altitudes de 300 a 500 pés.
 Devido a sua grande versatilidade, este \vant tem sido utilizado em diversas aplicações urbanas \cite{Drew2005,uav_roadmap2005}.
 
 Um sistema \emph{Dragon Eye} é composto por 2 veículos aéreos, 4 câmeras, 2 frentes removíveis e uma estação terrestre de controle. O custo de um sistema \emph{Dragon Eye} é
-de aproximadamente 65.000 dólares. Na figura ~\ref{fig:dragon_eye} pode ser visto um sistema \emph{Dragon Eye}.
-
+de aproximadamente 65.000 dólares. Na Figura ~\ref{fig:dragon_eye} pode ser visto um sistema \emph{Dragon Eye}.
 
 \begin{figure}[h!]
 \centering
@@ -229,12 +222,10 @@ de aproximadamente 65.000 dólares. Na figura ~\ref{fig:dragon_eye} pode ser vis
 \end{figure}
 
 
-
-
 \subsubsection{Aplicações utilizando \vants}
-Atualmente, a pesquisa em \vants tem se concentrado fortamente em aplicações militares, variando de aplicações de monitoramento, vigilância, suporte de ataque aéreo, entre outros. Atualmente, segundo \cite{Valavanis2007} a pesquisa em diferentes tipos de aplicação (não somente militares) tem crescido e ampliado os horizontes de desenvolvimento.
+Atualmente, a pesquisa em \vants tem se concentrado fortemente em aplicações militares, variando de aplicações de monitoramento, vigilância, suporte de ataque aéreo, entre outros. Atualmente, segundo \cite{Valavanis2007} a pesquisa em diferentes tipos de aplicação (não somente militares) tem crescido e ampliado os horizontes de desenvolvimento.
 
-Na tabela~\ref{tbl:vants_por_ano} é possível visualizar o desenvolvimento das aplicações utilizando \vants nos últimos anos.
+Na Tabela~\ref{tbl:vants_por_ano} é possível visualizar o desenvolvimento das aplicações utilizando \vants nos últimos anos \cite{Bryner2007}. Bem como na Figura~\ref{fig:qt_uav_app} podem ser visualizadas as quantidades de \vants utilizadas nos diferentes tipos de aplicações \cite{Bryner2007}. Pode-se notar um aumento significativo no número de aplicações comerciais e de propósito geral nos anos de 2008 e 2009.
 
 
 \begin{table}[h!]
@@ -257,27 +248,27 @@ Na tabela~\ref{tbl:vants_por_ano} é possível visualizar o desenvolvimento das 
 		\hline
 	\end{tabular}
 
-	\caption{Aplicações de \vants por ano. Fonte: 2009/2010 UAS Yearbook - UAS: The Global Perspective - 7th Edition}
+	\caption{Aplicações de \vants por ano.}
 	\label{tbl:vants_por_ano}
 \end{table}
 
-Na figura~\ref{fig:qt_uav_app} podem ser visualizadas as quantidades de \vants utilizadas nos diferentes tipos de aplicações.
+
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=13cm]{pictures/qt_uavs_app.png}
-\caption{Quantidade de \vants por classe de aplicação. Fonte: 2009/2010 UAS Yearbook - UAS: The Global Perspective - 7th Edition}
+\caption{Quantidade de \vants por classe de aplicação. }
  \label{fig:qt_uav_app}
 \end{figure}
 
-Pode-se notar um aumento significativo no número de aplicações comerciais e de propósito geral nos anos de 2008 e 2009.
+
 
 \subsubsection{Desenvolvimento de \vants}
 
-Diversas nações têm se destacado quanto ao desenvolvimento de \vants. Os Estados Unidos é o país que atualmente possui mais aeronaves produzidas (386), e representa 32,44\% da
+Diversas nações têm se destacado quanto ao desenvolvimento de VANTs. Os Estados Unidos é o país que atualmente possui mais aeronaves produzidas (386), e representa 32,44\% da
 produção mundial de aeronaves não tripuladas. Outras nações como Israel (83 - 6,97\%),  França (77 unidades - 6,47\%), Rússia (59 unidades - 4,96\%) e Reino Unido (65 - 5,46\%) também têm apresentado resultados significativos quanto ao número de \vants produzidos. O Brasil, ainda iniciando suas pesquisa em \vants, possui 6 unidades produzidas, contabilizando apenas 0,5\% das aeronaves não tripuladas produzidas no mundo.
 
-Na tabela~\ref{tbl:country} encontram-se os dados resumidos do desenvolvimento de \vants em âmbito mundial. Informações mais detalhadas encontram-se em anexo.
+Na Tabela~\ref{tbl:country} encontram-se os dados resumidos do desenvolvimento de \vants em âmbito mundial \cite{Bryner2007}.
 
 \begin{table}[h!]
 \centering
@@ -295,13 +286,13 @@ Na tabela~\ref{tbl:country} encontram-se os dados resumidos do desenvolvimento d
 		\hline
 	\end{tabular}
 
-	\caption{Desenvolvimento de \vants por nação. Fonte: 2009/2010 UAS Yearbook - UAS: The Global Perspective - 7th Edition}
+	\caption{Desenvolvimento de \vants por nação.}
 	\label{tbl:country}
 \end{table}
 
 
 \subsubsection{Pesquisas em \vants}
-Diversos esforços têm sido realizados nas pesquisas sobre \uavs, bem como diversas aplicações têm sido desenvolvidas. Este tópico demonstrará alguns avanços da pesquisa e
+Diversos esforços têm sido realizados nas pesquisas sobre VANTs, bem como diversas aplicações têm sido desenvolvidas. Este tópico apresentará alguns avanços da pesquisa e
 utilização prática de \vants em diversos cenários.
 
 \begin{description}

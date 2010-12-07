@@ -14,6 +14,7 @@ public abstract class GenericNode extends ApplicationLayer{
 	@Override
 	public void processEvent(Initialize init) {
 		SimulationManager.logNodeState(this.node.getId(), "TypeOfNode", "int", Converter.convertNodeNameToType(this.node));
+		SimulationManager.logNodeState(this.node.getId(), "NodeId", "int", this.node.getId().toString());
 	}
 
 

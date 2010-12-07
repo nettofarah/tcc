@@ -1,12 +1,10 @@
 package br.ufla.dcc.mu.packet;
 
-import java.util.List;
 import java.util.Map;
 
 import br.ufla.dcc.grubix.simulator.Address;
 import br.ufla.dcc.grubix.simulator.NodeId;
 import br.ufla.dcc.grubix.simulator.event.Packet;
-import br.ufla.dcc.mu.utils.Pheromone;
 
 public class TrailPropagationPacket extends Packet {
 

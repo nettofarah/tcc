@@ -185,12 +185,12 @@ Cada nó sensor armazenando os valores de feromônios representa o caminho por o
 
 
 
-Para sobrepor esse problema, pode-se adicionar uma restrição ao se armazenar um valor de feromônio em um dado nó sensor. Neste caso, em específico, utiliza-se a informação de intensidade com que o pacote foi recebido (RSSI) pelo nó sensor. A informação recebida garante que se armazene valores de feromônio proporcionais à distância entre os nós sensores e o emissor dos pacotes. Este armazenamento promoverá, em nível macro, um rastro em formato de gradiente, que será resultante da variação dos valores de feromônio em relação ao tempo em que o nó sensor recebeu o pacote e à distância entre o nó sensor e o \vant emissor do pacote. Este gradiente é demonstrado na figura \ref{fig:gradient}.
+Para sobrepor esse problema, pode-se adicionar uma restrição ao se armazenar um valor de feromônio em um dado nó sensor. Neste caso, em específico, utiliza-se a informação de intensidade com que o pacote foi recebido (RSSI) pelo nó sensor. A informação recebida garante que se armazene valores de feromônio proporcionais à distância entre os nós sensores e o emissor dos pacotes. Este armazenamento promoverá, em nível macro, um rastro em formato de gradiente, que será resultante da variação dos valores de feromônio em relação ao tempo em que o nó sensor recebeu o pacote e à distância entre o nó sensor e o \vant emissor do pacote. Este gradiente é demonstrado na figura \ref{fig:gradient}. Os tons de vermelho variam de acordo com a distância do nó sensor em relação ao \vant, bem como varia a transparência do nó em relação ao tempo.
 
  \begin{figure}[h!]
  \centering
  \includegraphics[width=10cm]{pictures/gradient.png}
- \caption{Pheromônios esmaecendo em função do tempo e da distância relativa ao \vant. Os toms de vermelho variam de acordo com a distância do nó sensor em relação ao \vant, bem como varia a transparência do nó em relação ao tempo.}
+ \caption{Feromônios esmaecendo em função do tempo e da distância relativa ao \vant.}
   \label{fig:gradient}
  \end{figure}
 

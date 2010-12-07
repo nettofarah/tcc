@@ -197,7 +197,7 @@ public class RandomWalkColisionAvoidance extends MovementManager {
 				
 				currentToGoal[0] /= steps;
 				currentToGoal[1] /= steps;
-				System.out.println(steps);
+				//System.out.println(steps);
 				double nextx = currentPos.getXCoord();
 				double nexty = currentPos.getYCoord();
 				for (int i = 1; i <= steps; i++) {
@@ -225,7 +225,7 @@ public class RandomWalkColisionAvoidance extends MovementManager {
     		try {
     			this.moveLists.get(param.getId().asInt() - 1).clear();
 			} catch (Exception e) {
-				System.out.println("...");
+				//System.out.println("...");
 			}
     		//SimulationManager.logMessage(param.getSender(), 0, "moveTo Called");
     	}

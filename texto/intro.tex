@@ -2,7 +2,7 @@
 \label{chap:Introdução}
 
 Uma tendência que tem ganhado força na área de redes de sensores sem fio é o uso
-de nós sensores heterogêneos. Este nós podem ser utilizados como ferramentas
+de nós sensores heterogêneos. Esses nós podem ser utilizados como ferramentas
 para se cumprir os requisitos de sofisticadas aplicações emergentes, tais como
 sistemas de monitoramento \cite{Freitas20092}.
 
@@ -15,19 +15,19 @@ nós envolvidos, atendendo assim, às necessidades dos usuários
 Este trabalho apresenta a investigação de uma estratégia para coordenar um
 conjunto de nós sensores terrestres estáticos (posicionados no solo) e de \uavs
 (VANTs) que carregam uma variedade de sensores.
-Esta coordenação tem como objetivo prover monitoramento e detecção eficientes de
-intrusos em uma determinada área de interesse. Preocupações como economia de
-energia, latência e largura de banda são exploradas para que se alcance um
-monitoramento eficiente considerando-se as limitações e desafios de uma rede de
-sensores sem fio.
+Essa coordenação tem como objetivo prover monitoramento e detecção eficientes de
+intrusos em uma determinada área de interesse. %Preocupações como economia de
+%energia, latência e largura de banda são exploradas para que se alcance um
+%monitoramento eficiente considerando-se as limitações e desafios de uma rede de
+%sensores sem fio.
 
-Dentre as estratégias utilizadas, destaca-se a Auto-Organização
-Emergente, que se apresenta como técnica que não utiliza controles externos
-ou centrais. Em sistemas auto-organizados, as entidades individuais interagem
-entre si localmente. As interações locais promovem um comportamento
-global emergente.
+%Dentre as estratégias utilizadas, destaca-se a Auto-Organização
+%Emergente, que se apresenta como técnica que não utiliza controles externos
+%ou centrais. Em sistemas auto-organizados, as entidades individuais interagem
+%entre si localmente. As interações locais promovem um comportamento
+%global emergente.
 
-Diversos nós sensores são distribuídos em uma área de interesse, bem como inseridos 
+São distribuídos diversos nós sensores em uma área de interesse, bem como inseridos 
 estrategicamente \vants sobrevoando esta área. Os nós
 sensores terrestres são configurados para acionar alarmes na ocorrência de um
 dado evento de interesse, enquanto os
@@ -35,10 +35,10 @@ dado evento de interesse, enquanto os
 alarme acionado.
 
 O sistema proposto por este trabalho é projetado para que os nó sensores e
-\vants se comuniquem e tomem decisões autonomamente, isto é, sem nenhum controle
+\vants se comuniquem e tomem decisões autonomamente, sem nenhum controle
 externo ou centralizado. Ao fim, é gerado um comportamento global emergente a
 partir das pequenas interações entre os indivíduos do sistema (nós sensores e
-UAVs).
+VANTs).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -56,16 +56,16 @@ neste caso, em relação ao raio de comunicação de cada nó. O uso de nós sen
 móveis em tais situações pode prover melhorias significativas. Nós sensores
 móveis podem prover habilidades para que a rede possa se adaptar dinamicamente
 aos eventos ocorridos no ambiente, bem como colaboram para se aumentar a
-conectividade dentre da rede  \cite{Aware}.
+conectividade dentro da rede  \cite{Aware}.
 
 Um nó concentrador estático é geralmente localizado nas extremidades de uma
-RSSF, todavia, isto geralmente requer uma longa cadeia de troca de mensagens
+RSSF. Todavia, isso geralmente requer uma longa cadeia de troca de mensagens
 (\emph{multi hop}) para que um nó sensor consiga transmitir uma mensagem para o
-nó concentrador. Isto resulta em baixo desempenho do sistema, uso ineficiente da
+nó concentrador. Isso resulta em baixo desempenho do sistema, uso ineficiente da
 energia e desperdício de largura de banda \cite{Chang2007}.
 
 Neste contexto, tem-se a possibilidade de utilizar \vants como nós sensores
-móveis em uma RSSF. Autores como \cite{Lucchi2007} têm considerado o uso de nós
+móveis em uma RSSF. Autores como \cite{Lucchi2007,Aware} têm considerado o uso de nós
 sensores terrestres espalhados por uma área de interesse. Estes nós podem
 coletar diversos tipos de informação do ambiente, tais como temperatura,
 pressão, umidade, etc, e possuem a capacidade de se comunicar com o \vant no
@@ -78,19 +78,19 @@ detectar a ocorrência de um evento, porém podem não conter recursos suficient
 para análises mais detalhadas, delegando assim a ocorrência a um \vant com
 habilidades específicas para tratar o problema.
 
-Neste contexto é que o presente trabalho propõe técnicas para a coordenação de
-uma \rssf heterogênea. O cenário principal é a distribuição de milhares de
-sensores terrestres simples e de pouca capacidade computacional, utilizados
-somente para a detecção de eventos de interesse e algumas poucas aeronaves não
-tripuladas especializadas no tratamento de diferentes eventos. Detectados os
-eventos, os nós sensores devem se coordenar e garantir que a mensagem seja
-entregue ao \vant mais hábil para tratar o alarme de ocorrência destes eventos.
+%Neste contexto é que o presente trabalho propõe técnicas para a coordenação de
+%uma \rssf heterogênea. O cenário principal é a distribuição de milhares de
+%sensores terrestres simples e de pouca capacidade computacional, utilizados
+%somente para a detecção de eventos de interesse e algumas poucas aeronaves não
+%tripuladas especializadas no tratamento de diferentes eventos. Detectados os
+%eventos, os nós sensores devem se coordenar e garantir que a mensagem seja
+%entregue ao \vant mais hábil para tratar o alarme de ocorrência destes eventos.
 
 
 \subsection{Objetivos}
 
 Este trabalho tem por objetivo global desenvolver e aplicar uma técnica de
-coordenação entre nós sensores sem fio e \uavs para aplicações de monitoramento
+coordenação entre nós sensores sem fio e \uavs (VANT) para aplicações de monitoramento
 e vigilância. Para o alcance deste objetivo o trabalho inspira-se em técnicas
 Auto-Organizáveis para a coordenação e controle da \rssf.
 
@@ -102,8 +102,7 @@ Este trabalho tem como objetivos específicos:
 
 	\item [Pesquisa e elaboração de algoritmo de coordenação de nós
 sensores e \vants:] desenvolvimento de um algoritmo para detecção e entrega de
-alarmes a partir dos nós sensores. Desenvolvimento de uma heurística
-bio-inspirada para localização eficiente do \uav mais próximo.
+alarmes a partir dos nós sensores.
 
 	\item [Implementação dos algoritmos e técnicas no ambiente de simulação
 GRUBiX:] implementação do algoritmo no ambiente de simulação
@@ -128,6 +127,6 @@ definição do problema estudado. No capítulo \ref{chap:Referencial Teórico} p
 ser encontradas as definições e bases teóricas para o entendimento do problema.
 A metodologia para realização do trabalho encontra-se no capítulo
 \ref{chap:Metodologia}. Os capítulos \ref{chap:Desenvolvimento} e
-\ref{chap:Resultados}, respectivamente, demonstram o funcionamento da aplicação e seus resultados. Por fim, capítulo \ref{chap:Conclusões} discute a conclusões em relação ao trabalho realizado.
+\ref{chap:Resultados}, respectivamente, demonstram o funcionamento da aplicação e seus resultados. Por fim, capítulo \ref{chap:Conclusões} apresenta as conclusões em relação ao trabalho realizado.
 
 
