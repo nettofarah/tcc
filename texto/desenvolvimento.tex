@@ -97,9 +97,7 @@ mais hábil para tratar o evento ocorrido.
 \end{description}
 
 As próximas seções discutem o problema apresentado em diferentes perspectivas, apresentando suas peculiaridades e possíveis
-soluções. Os algoritmos são introduzidos em uma sequência lógica para que se torne possível o entendimento do problema em questão. Vale 
-ressaltar que esta ordem foi escolhida para um melhor entendimento do problema, visto que cada seção apresenta dependência em relação aos conceitos
-apresentados nas seções anteriores. 
+soluções. Os algoritmos são introduzidos em uma sequência lógica para que se torne possível o entendimento do problema em questão, sendo que cada seção apresenta dependência em relação aos conceitos apresentados nas seções anteriores. 
 
 \subsection{Detecção de Eventos}
 Para que um sistema de monitoramento realize seu papel de forma eficaz, espera-se, no mínimo, que este seja capaz de detectar eventos. Todo o funcionamento
@@ -107,7 +105,7 @@ de um sistema deste tipo depende da detecção dos eventos de interesse. Contudo
 detecção de eventos. Portanto, adotou-se uma abordagem básica para a detecção de eventos pela \rssf, visto que a preocupação principal deste trabalho não se concentra neste problema.
 
 A estratégia de detecção dos eventos de interesse escolhida pode ser considerada simples. Entretanto, apresenta-se eficaz para o desenvolvimento deste trabalho.
-Cada nó sensor dá rede possui sensores dos mais variados tipos: umidade, temperatura, pressão, eletro-magnético, etc. Cada um destes sensores pode ser
+Cada nó sensor da rede possui sensores dos mais variados tipos: umidade, temperatura, pressão, eletro-magnético, etc. Cada um destes sensores pode ser
 configurado de modo que possua um limite\footnote{O termo limite pode ser encontrado em literaturas internacionais como \emph{threshold}} aceitável de medição em determinado parâmetro. Definidos os limites, são agendadas algumas medições para aquele sensor. Em caso de uma medição exceder o limite aceitável
 para aquele parâmetro o nó sensor pode considerar este fenômeno como um evento de interesse detectado. Se a medição não exceder o limite, o nó simplesmente
 deverá agendar outra leitura em tempo futuro.
@@ -130,7 +128,7 @@ O algoritmo a seguir demonstra o algoritmo em formato simplificado. \\
 		}
 			\agendarAproximaMedicao(AtrasoParaProximaMedicao) \;
 	}
-\caption{Algorítmo para a detecção de eventos no ambiente.}
+\caption{Algoritmo para a detecção de eventos no ambiente.}
 \end{algorithm}
 
 
@@ -138,31 +136,36 @@ O algoritmo a seguir demonstra o algoritmo em formato simplificado. \\
 Este algoritmo tem como objetivo a construção de um rastro de feromônios sobre a rede de sensores. A construção deste rastro possibilita que cada \vant receba mensagens de
 maneira mais rápida e mais eficiente, bem como otimiza os caminhos para que uma mensagem alcance seu destino.
 
- \begin{figure}
- \centering
- \includegraphics[width=12cm]{pictures/ants.png}
- \caption{Fenômeno Biológico de Distribuição de Feromônio.}
-  \label{fig:ants}
- \end{figure}
 
 Para a composição destes rastros é utilizada uma heurística inspirada em fenômenos biológicos, mais especificamete no comportamento de formigas quando buscam alimento.
-O princípio deste comportamento, de forma simplificada,  é que uma formiga libera seu rastro através de um caminho no momento em que começa sua viagem em busca de alimento. Este rastro é composto por feromônios que exalam um odor específico para marcar o caminho percorrido. Um ponto importante a se ressaltar é que este rastro se evapora com o passar do tempo, isto, por fim, resulta em um gradiente que decresce de acordo com o tempo. Consequentemente, este caminho possuirá duas extremidades, uma extremidade com baixo valor de feromônio (início do caminho) e uma extremidade com altíssima concentração de feromônio (posição atual da formiga). Este rastro possibilita que a formiga (detentora do rastro) possa ser alcançada por qualquer outro indivíduo (outras formigas) que possua capacidades de interpretar o odor do feromônio.
-
-A figura \ref{fig:ants} demonstra o fenômeno descrito.
 
 
+O princípio deste comportamento, de forma simplificada,  é que uma formiga libera seu rastro através de um caminho no momento em que começa sua viagem em busca de alimento. Este rastro é composto por feromônios que exalam um odor específico para marcar o caminho percorrido. 
 
-Inspirado no comportamento anteriormente descrito, torna-se possível criar uma adaptação do mesmo para implementação no uso de redes de sensores sem fio em conjunto com veículos aéreos não tripulados. Para isso, basta que se considere um \vant como uma formiga capaz de produzir um rastro feromônio. Este rastro resultará em uma espécie de \emph{backbone} de feromônios que otimizará a entrega de mensagens destinadas ao \vant. A estratégia utilizada para que este comportamento fosse mapeado para uma rede de sensores pode ser dividida em duas responsabilidades:
+Um ponto importante a se ressaltar é que este rastro se evapora com o passar do tempo, isto, por fim, resulta em um gradiente que decresce de acordo com o tempo. Consequentemente, este caminho possuirá duas extremidades, uma extremidade com baixo valor de feromônio (início do caminho) e uma extremidade com altíssima concentração de feromônio (posição atual da formiga). Este rastro possibilita que a formiga (detentora do rastro) possa ser alcançada por qualquer outro indivíduo (outras formigas) que possua capacidades de interpretar o odor do feromônio.
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=12cm]{pictures/ants.png}
+\caption{Fenômeno Biológico de Distribuição de Feromônio.}
+ \label{fig:ants}
+\end{figure}
+
+
+A Figura \ref{fig:ants} demonstra o fenômeno descrito.
+
+
+
+Inspirado no comportamento anteriormente descrito, torna-se possível criar uma adaptação do mesmo para implementação no uso de redes de sensores sem fio em conjunto com veículos aéreos não tripulados. Para isso, basta que se considere um \vant como uma formiga capaz de produzir um rastro feromônio. Este rastro resultará em uma espécie de \emph{backbone} de feromônios que otimizará a entrega de mensagens destinadas ao \vant. A estratégia utilizada para que este comportamento seja mapeado para uma rede de sensores pode ser dividida em duas responsabilidades:
 
 \subsection{Entrega de Feromônios pelos \vants}
-Cada \vant sobrevoando a área de interesse exala seus feromônios digitais periodicamente durante seu vôo. Utilizando recursos de comunicação sem fio, o \vant simplemeste enviará pacotes \emph{beacon} periodicamente em \emph{broadcast}. Este comportamente garante que os pacotes são enviados a todo momento para todos os nós sensores que se encontram no alcance do raio de comunicação do \vant. Um ponto interessante a se ressaltar é o \vant deve enviar, em cada pacote, um atributo que indique o "sabor" de feromônio que este \vant possui. Isto garante que no caso de vários \vants sobrevoando a área de interesse os rastros não se sobreponham, de modo que em um mesmo local possam ser armazenador rastros distintos.
-
-A figura \ref{fig:broadcast} demonstra o item apresentado.
+Cada \vant sobrevoando a área de interesse exala seus feromônios digitais periodicamente durante seu vôo. Utilizando recursos de comunicação sem fio, o \vant simplemeste enviará pacotes \emph{beacon} periodicamente em \emph{broadcast}. Este comportamente garante que os pacotes são enviados a todo momento para todos os nós sensores que se encontram no alcance do raio de comunicação do VANT. Um ponto interessante a se ressaltar é o \vant deve enviar, em cada pacote, um atributo que indique o "sabor" de feromônio que este \vant possui. Isto garante que no caso de vários \vants sobrevoando a área de interesse os rastros não se sobreponham, de modo que em um mesmo local possam ser armazenador rastros distintos. Como demonstra a Figura \ref{fig:broadcast}, cada cor nas setas representa um sabor de feromônio..
 
  \begin{figure}[h!]
  \centering
  \includegraphics[width=10cm]{pictures/broadcast.png}
- \caption{Envio de um pacote em broadcast. Cada cor nas setas representa um sabor de feromônio.}
+ \caption{Envio de um pacote em broadcast. }
   \label{fig:broadcast}
  \end{figure}
 
@@ -177,7 +180,7 @@ Os nós sensores espalhados pela área são responsáveis por armazenar os ferom
  \end{figure}
 
 Além de armazenar o valor de feromônio recebido, o nó sensor deve agendar uma tarefa interna para reduzir (evaporar) seu valor de feromônio de acordo com o tempo. Um exemplo de tarefa é reduzir em vários intervalos de tempo o valor de feromônio armazenado a uma taxa de 10\%, de modo a simular a evaporação do feromônio. 
-Esta evaporação garante que o rastro mantenha-se em maior concentração de feromônio na extremidade onde se encontra o \vant, e, em menor concentração na extremidade onde o rastro se originou.
+Esta evaporação garante que o rastro mantenha-se em maior concentração de feromônio na extremidade onde se encontra o VANT, e em menor concentração na extremidade onde o rastro se originou.
 
 
 
@@ -185,12 +188,12 @@ Cada nó sensor armazenando os valores de feromônios representa o caminho por o
 
 
 
-Para sobrepor esse problema, pode-se adicionar uma restrição ao se armazenar um valor de feromônio em um dado nó sensor. Neste caso, em específico, utiliza-se a informação de intensidade com que o pacote foi recebido (RSSI) pelo nó sensor. A informação recebida garante que se armazene valores de feromônio proporcionais à distância entre os nós sensores e o emissor dos pacotes. Este armazenamento promoverá, em nível macro, um rastro em formato de gradiente, que será resultante da variação dos valores de feromônio em relação ao tempo em que o nó sensor recebeu o pacote e à distância entre o nó sensor e o \vant emissor do pacote. Este gradiente é demonstrado na figura \ref{fig:gradient}. Os tons de vermelho variam de acordo com a distância do nó sensor em relação ao \vant, bem como varia a transparência do nó em relação ao tempo.
+Para sobrepor esse problema, pode-se adicionar uma restrição ao se armazenar um valor de feromônio em um dado nó sensor. Neste caso, em específico, utiliza-se a informação de intensidade com que o pacote foi recebido (RSSI) pelo nó sensor. A informação recebida garante que se armazene valores de feromônio proporcionais à distância entre os nós sensores e o emissor dos pacotes. Este armazenamento promoverá, em nível macro, um rastro em formato de gradiente, que será resultante da variação dos valores de feromônio em relação ao tempo em que o nó sensor recebeu o pacote e à distância entre o nó sensor e o \vant emissor do pacote. Este gradiente é mostrado na figura \ref{fig:gradient}. Os tons de vermelho variam de acordo com a distância do nó sensor em relação ao \vant, bem como varia a transparência do nó em relação ao tempo.
 
  \begin{figure}[h!]
  \centering
  \includegraphics[width=10cm]{pictures/gradient.png}
- \caption{Feromônios esmaecendo em função do tempo e da distância relativa ao \vant.}
+ \caption{Feromônios esmaecendo em função do tempo e da distância relativa ao VANT.}
   \label{fig:gradient}
  \end{figure}
 
@@ -209,7 +212,7 @@ O primeiro passo para o funcionamento deste algoritmo é a definição de alarme
 
 O funcionamento básico desta propagação de eventos baseia-se em repassar o alarme do ponto inicial (ponto de detecção do evento) ao ponto final (posição do \vant). Visto que neste ponto já existem diversos gradientes formados pelos rastros dos \vants, a tarefa do nó sensor detector do evento resume-se em determinar o "sabor"  que mais se adequa ao evento em questão e encaminhar o alarme, de modo que o mesmo alcance seu destino (\vant mais apropriado).
 
-Para a propagação do alarme criado, o nó sensor deve encaminhá-lo somento a outros nós sensores que estejam dentro do mesmo rastro de feromônio. Uma observação importante neste método é que o alarme só deve ser encaminhado para nós sensores que possuam concentração de feromônio superior ao do nó sensor criador do alarme. Para que essa premissa seja garantida,  torna-se imprescindível que a estrutura de Alarme carregue a informação da quantidade de feromônio presente no alarme. Seguindo-se esta idéia, o nó sensor detector deve encaminhar seu alarme em mensagens do tipo \emph{broadcast}, de modo que seus vizinhos recebem a informação de alarme. 
+Para a propagação do alarme criado, o nó sensor deve encaminhá-lo somento a outros nós sensores que estejam dentro do mesmo rastro de feromônio. Uma observação importante neste método é que o alarme só deve ser encaminhado para nós sensores que possuam concentração de feromônio superior ao do nó sensor criador do alarme. Para que essa premissa seja garantida,  torna-se imprescindível que a estrutura de Alarme carregue a informação da quantidade de feromônio presente no alarme. Seguindo-se esta idéia, o nó sensor detector deve encaminhar seu alarme em mensagens do tipo \emph{broadcast}, de modo que seus vizinhos recebam a informação de alarme. 
 
 Uma vez que um vizinho do nó sensor propagador receber o pacote contendo o alarme, deverá analisar o alarme recebido e decidir se encaminha a mensagem ou não.  Se a quantidade de feromônio armazenada no nó sensor receptor for menor que a quantidade do alarme, o nó receptor simplesmente deve descartar o alarme. Contudo, se a quantidade armazenada no nó receptor for superior à quantidade de feromônio recebida, o nó receptor deve atualizar atualizar o valor de feromônio do alarme com seu próprio valor e repassar a mensagem também em formato de \emph{broadcast}. 
 
@@ -242,9 +245,9 @@ O algoritmo básico, em psedocódigo, para este fenômeno pode ser visualizado a
  \label{fig:app}
 \end{figure}
 
-Uma particularidade interessante deste algoritmo é que podem exister regiões na área de interesse em que ainda não se existe a presença de rastros de feromônio. Contudo, esta questão apresenta-se discutível, pois poderia-se considerar que o sistema só entraria em funcionamento no momento em que toda área já estivesse coberta pelo \vant. Entretanto, esta premissa não pode ser garantida em todos os casos. Para que este problema seja contornado, pode ser proposta uma variação deste algoritmo em que quando um nó sensor detectar um evento e o mesmo não possuir rastro de feromônio, este nó deverá encaminhar a mensagem para um de seus vizinhos, na esperança de que este visinho possua rastros. Existem algumas medidas para que se escolha o vizinho mais adequado para receber a mensagem de alarme. Contudo, devido a extensibilidade da explicação, não serão abordadas neste trabalho. Porém, vale ressaltar que esta particularidade ocorre em poucos casos e será abordada novamente no capítulo de resultados.
+Uma particularidade interessante deste algoritmo é que podem exister regiões na área de interesse em que ainda não se existe a presença de rastros de feromônio. Contudo, esta questão apresenta-se discutível, pois poderia-se considerar que o sistema só entraria em funcionamento no momento em que toda área já estivesse coberta pelo \vant. Entretanto, esta premissa não pode ser garantida em todos os casos. Para que este problema seja contornado, pode ser proposta uma variação deste algoritmo em que quando um nó sensor detectar um evento e o mesmo não possuir rastro de feromônio, este nó deverá encaminhar a mensagem para um de seus vizinhos, na esperança de que este vizinho possua rastros. Existem algumas medidas para que se escolha o vizinho mais adequado para receber a mensagem de alarme. Contudo, devido a extensibilidade da explicação, não serão abordadas neste trabalho. Porém, vale ressaltar que esta particularidade ocorre em poucos casos e será abordada novamente no capítulo de resultados.
 
- A figura \ref{fig:app} demonstra um exemplo do funcionamento básico da propagação de eventos.
+ A Figura \ref{fig:app} demonstra um exemplo do funcionamento básico da propagação de eventos.
  
 
 
@@ -317,4 +320,4 @@ Uma particularidade interessante deste algoritmo é que podem exister regiões n
 
 %Para este trabalho, foram desenvolvidas as políticas de Agrupamento por Proximidade e de Agrupamento Crítico. Contudo, o modelo proposto permite que diversas extensões sejam feitas ao algoritmo.
 
-O próximo capítulo demonstra os resultados dos experimentos realizados com os algoritmos apresentados neste capítulo.
+O próximo capítulo apresenta os resultados dos experimentos realizados com os algoritmos apresentados neste capítulo.

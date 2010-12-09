@@ -9,7 +9,7 @@ public class LayPheromoneWakeUpCallCommand extends WakeUpCallCommand {
 
 	@Override
 	public void execute() {
-		System.out.println("Hey, I am a concrete wakeupcall handler! ;)");
+		//System.out.println("Hey, I am a concrete wakeupcall handler! ;)");
 	}
 
 }

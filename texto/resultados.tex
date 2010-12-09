@@ -19,9 +19,9 @@ Foram realizadas 200 simulações (100 simulações em cada técnica). Os experi
 
 A escolha dos parâmetros de configuração da simulação, em relação às capacidades dos \vants, foi determinado baseando-se no uso de Mini e Micro-\vants. Baseando-se nas informações em \cite{uas_2009,Storvold2009}, optou-se por uma altitude de 250 metros. Em relação aos nós sensores terrestres, foram simuladas as funcionalidades de rádios semelhantes àqueles que seguem o padrão IEEE 802.15.4.
 
-Neste cenário, quando um \vant não está respondendo a um alarme, deve realizar sua rota de forma aleatória, de modo a construir seu rastro de feromônio. São distribuídos 140 nós sensores terrestres (com raio de comunicação de 300m) seguindo a distribuição de Poisson em uma área de 2Km x 2km, obtendo-se aproximadamente 100\% de probabilidade de que os nós formem um grafo conexo \cite{Bettstetter2002}.
+Neste cenário, quando um \vant não está respondendo a um alarme deve realizar sua rota de forma aleatória, de modo a construir seu rastro de feromônio. São distribuídos 140 nós sensores terrestres (com raio de comunicação de 300m) seguindo a distribuição de Poisson em uma área de 2Km x 2km, obtendo-se aproximadamente 100\% de probabilidade de que os nós formem um grafo conexo \cite{Bettstetter2002}.
 
-A tabela \ref{tbl:setup} resume os parâmetros utilizados para as simulações.
+A Tabela \ref{tbl:setup} resume os parâmetros utilizados para as simulações.
 
 \begin{table}[h!]
 \centering
@@ -41,10 +41,47 @@ A tabela \ref{tbl:setup} resume os parâmetros utilizados para as simulações.
 	\label{tbl:setup}
 \end{table}
 
+A Tabela \ref{tbl:setup_network} apresenta as configurações da rede utilizada nos experimentos.
+\begin{table}[h!]
+\centering
+	\begin{tabular}{| p{10cm} | l |}
+		\hline
+		\multicolumn{2}{|c|}{\textbf{Configuração}} \\
+		\hline
+		Composição  & Heterogênea\\
+		\hline
+		Organização & Plana\\
+		\hline
+		Mobilidade & Móvel  \\
+		\hline
+		Densidade & Balanceada  \\
+		\hline
+		Distribuição & Irregular \\
+		\hline
+		
+		\hline
+		\multicolumn{2}{|c|}{\textbf{Sensoriamento}} \\
+		\hline
+		Coleta  & Periódica\\
+		\hline
+		
+		
+		\hline
+		\multicolumn{2}{|c|}{\textbf{Processamento}} \\
+		\hline
+		Cooperação  & Localizada\\
+		\hline
+		
+	\end{tabular}
+
+	\caption{Parâmetros da Rede de Sensores utilizada para os experimentos.}
+	\label{tbl:setup_network}
+\end{table}
+
 
 \subsubsection{Resultados}
 
- A Figura \ref{fig:hops} demonstra os resultados da simulação em relação ao número de saltos ocorridos até que o \vant recebesse o alarme. O eixo x representa o número da simulação e o eixo y representa o número de saltos necessário para que o alarme alcançasse o destino. Pode-se notar uma proximidade nestes resultados em relação aos valores, isto deve-se ao fato de que esta métrica avalia o caminho percorrido pelo alarme em um mesmo cenário para ambas as simulações. É importante verificar que no algoritmo baseado em feromônios, a mensagem percorre uma única faixa (caminho) até alcançar seu receptor. Em contrapartida, na estratégia baseada em \emph{flooding}, são percorridos todos os possíveis caminhos contidos no grafo formado pelos nós sensores. Isto implica que em um determinado momento, dentre todos os caminhos, um deles encontrará o \vant. Neste caso, o número de saltos com valores próximos é justificado pelo fato de que um dos caminhos encontrados na estratégia de \emph{flooding} (exatamente o caminho que foi contabilizado no experimento) é um caminho muito parecido com o utilizado pelo algoritmo de feromônio. A figura \ref{fig:hops_mean} apresenta a média dos resultados para este experimento.
+ A Figura \ref{fig:hops} demonstra os resultados da simulação em relação ao número de saltos ocorridos até que o \vant recebesse o alarme. O eixo x representa o número da simulação e o eixo y representa o número de saltos necessário para que o alarme alcançasse o destino. Pode-se notar uma proximidade nestes resultados em relação aos valores, isto deve-se ao fato de que esta métrica avalia o caminho percorrido pelo alarme em um mesmo cenário para ambas as simulações. É importante verificar que no algoritmo baseado em feromônios, a mensagem percorre uma única faixa (caminho) até alcançar seu receptor. Em contrapartida, na estratégia baseada em \emph{flooding}, são percorridos todos os possíveis caminhos contidos no grafo formado pelos nós sensores. Isto implica que em um determinado momento, dentre todos os caminhos, um deles encontrará o \vant. Neste caso, o número de saltos com valores próximos é justificado pelo fato de que um dos caminhos encontrados na estratégia de \emph{flooding} (exatamente o caminho que foi contabilizado no experimento) é um caminho muito parecido com o utilizado pelo algoritmo de feromônio. A Figura \ref{fig:hops_mean} apresenta a média dos resultados para este experimento. Adicionalmente, a Figura \ref{fig:hops_hist} demonstra o histograma dos dados em relação a essa métrica.
 
 
  \begin{figure}[h!]
@@ -62,7 +99,14 @@ A tabela \ref{tbl:setup} resume os parâmetros utilizados para as simulações.
   \label{fig:hops_mean}
  \end{figure}
 
-Os resultados anteriores não justificam a utilização do algoritmo de feromônios. Contudo, ao se analisar os resultados em relação ao número de mensagens enviadas, é possível verificar a eficiência deste algoritmo em relação ao método tradicional de \emph{flooding}. As figuras \ref{fig:messages} e \ref{fig:messages_mean}, respectivamente, exibem os resultados obtidos em cada simulação e a média do número de mensagens enviadas pelo sistema durante a entrega de um alarme. Nota-se uma relação na ordem de aproximadamente 9,7 vezes nos resultados para o número de mensagens. Este resultado complementa os dados apresentados anteriormente, mostrando a real diferença entre as duas técnicas. A diferença pode ser vista pelo fato de que, mesmo realizando valores de saltos muito próximos, os algoritmos diferenciam-se na quantidade utilizada de mensagens para a entrega de um alarme. O uso do rastro de feromônio garante que somente um caminho será tomado para a busca do \vant, ao contrário da abordagem tradicional, em que todos os possíveis caminhos são verificados.
+\begin{figure}[h!]
+ \centering
+ \includegraphics[width=13cm]{results/hops_hist.png}
+ \caption{Histograma do Número de Saltos.}
+  \label{fig:hops_hist}
+ \end{figure}
+
+Os resultados anteriores não justificam a utilização do algoritmo de feromônios. Contudo, ao se analisar os resultados em relação ao número de mensagens enviadas, é possível verificar a eficiência deste algoritmo em relação ao método tradicional de \emph{flooding}. As figuras \ref{fig:messages}, \ref{fig:messages_mean} e \ref{fig:messages_hist}, respectivamente, exibem os resultados obtidos em cada simulação, a média e o histograma do número de mensagens enviadas pelo sistema durante a entrega de um alarme. Nota-se uma relação na ordem de aproximadamente 8 vezes nos resultados para o número de mensagens. Este resultado complementa os dados apresentados anteriormente, mostrando a real diferença entre as duas técnicas. A diferença pode ser vista pelo fato de que, mesmo realizando valores de saltos muito próximos, os algoritmos diferenciam-se na quantidade utilizada de mensagens para a entrega de um alarme. O uso do rastro de feromônio garante que somente um caminho será tomado para a busca do \vant, ao contrário da abordagem tradicional, em que todos os possíveis caminhos são verificados.
 
  \begin{figure}[h!]
  \centering
@@ -78,13 +122,13 @@ Os resultados anteriores não justificam a utilização do algoritmo de feromôn
   \label{fig:messages_mean}
  \end{figure}
 
-Os resultados demonstram a possibilidade de se reduzir o número de mensagens trafegadas em uma rede de sensores sem fio no que se refere a detecção e propagação de eventos em uma área de interesse. Observando-se o gráfico \ref{fig:global_mean}, tem-se o resultado geral da simulação, onde podem ser visualizados os resultados anteriores em uma mesma escala.
-
 \begin{figure}[h!]
  \centering
- \includegraphics{results/global_mean.png}
- \caption{Média geral dos resultados.}
-  \label{fig:global_mean}
+ \includegraphics[width=13cm]{results/hist_messages.png}
+ \caption{Histograma do Número de Mensagens.}
+  \label{fig:messages_hist}
  \end{figure}
+
+Os resultados demonstram a possibilidade de se reduzir o número de mensagens trafegadas em uma rede de sensores sem fio no que se refere a detecção e propagação de eventos em uma área de interesse. 
 
 Os resultados comprovam a eficiência do uso do algoritmo utilizando rastros de feromônio para a entrega de alarmes na ocorrência de um evento de interesse. O próximo capítulo discute as considerações finais em relação aos resultados do trabalho desenvolvido.
